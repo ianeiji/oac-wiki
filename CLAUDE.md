@@ -11,12 +11,14 @@ Civilization4のMOD「Fall from Heaven 2（FfH2）」と、そのMODMOD「OAC」
   - `oac-notes/`（`OAC_` / `OAC-note_`）: OACの解説・考察（考察は執筆時点のバージョン準拠で古い場合がある）
   - `ffh2/`（`FfH2_` / `FfH2-note_`）: FfH2本家（BtS 0.41o）。OACでは変更されていることが多い。OAC版があるデータページは収録していない
   - `patchnotes/`: 0.57以降のパッチノート
+  - `python/`: OAC 0.57 の Python ソース（UTF-8に変換済み）。呪文・イベント・文明固有能力など、XMLにない効果の実装
 - 表中の `[ハンマー]` `[食料]` `[商業]` `[ゴールド]` などは、元ページのアイコンを文字に置き換えたもの。
 - `patchnotes/` のパッチノートは、0.57以降の変更点の正本。
 
 ## 調べ方
 - まず `INDEX.md` で対象ファイルを決め、grepで項目名（日本語名・英語名の両方）を探してから該当箇所を読む。
 - `oac-057/` は見出しが `### 英語名 - 日本語名` 形式なので、名前でgrepして該当ブロックを読む。「その他の設定」のタグ名（例: `iWarWearinessModifier`）は Civ4/FfH2 の XML の項目名として解釈する。
+- 呪文の具体的な効果は、`oac-057/OAC-057_SpellData.md` の `PyResult`／`PyRequirement` に書かれた関数名で `python/entrypoints/CvSpellInterface.py` を検索して読む。ターン処理や固有能力は `python/CvEventManager.py`・`python/CustomFunctions.py` を検索する。コードから読み取った内容を答えるときは、コード由来であることを添える。
 - 大きいファイルは丸ごと読まず、grepで行番号を出してから前後を読む。
 
 ## 答え方

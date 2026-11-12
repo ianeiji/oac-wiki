@@ -25,6 +25,16 @@
 - `oac-057/OAC-057_EquipmentData.md`: 装備品（`tools/gen_infos.py`）
 - `oac-057/OAC-057_EffectData.md`: 効果（`tools/gen_infos.py`）
 
+## OAC 0.57 の Python ソース（python/、UTF-8に変換済み）
+
+- `python/entrypoints/CvSpellInterface.py`: 呪文・特殊技能の実装（`req*` が実行条件、`spell*` が効果）
+- `python/CvEventManager.py`: ターン開始・戦闘・建設などのイベント処理（文明固有能力、遺産の効果など）
+- `python/CustomFunctions.py`: 上記から呼ばれる共通処理
+- `python/CvFfHGameUtils.py`, `python/CvGameUtils.py`: 生産・研究の可否判定、AIの判断
+- `python/entrypoints/CvRandomEventInterface.py`: ランダムイベントの条件と結果
+- `python/entrypoints/CvPostCombatInterface.py`: 戦闘後の処理
+- `python/entrypoints/CvUnitAIInterface.py`, `python/entrypoints/CvGameInterface.py`: AI・ゲーム進行のフック
+
 ## OAC 0.56 非公式Patch29 のデータ（oac-p29/）
 
 - `oac-p29/OAC-P29_AbilityData.md`: その他の呪文・特殊技能

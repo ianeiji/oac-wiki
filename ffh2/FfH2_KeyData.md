@@ -1,0 +1,733 @@
+# BtS/キー一覧
+
+- 対象: FfH2本家（BtS 0.41o）。OACでは変更されている場合あり
+- 出典: http://kentasis.web.fc2.com/FfH2/data/KeyData.htm
+
+## キー一覧
+
+### 文明
+
+Assets\XML\Civilizations\CIV4CivilizationInfos.xmlより
+
+| CIVILIZATION_BANNOR | バンノール |
+|---|---|
+| CIVILIZATION_MALAKIM | マラキム |
+| CIVILIZATION_ELOHIM | エロヒム |
+| CIVILIZATION_MERCURIANS | マーキュリアン |
+| CIVILIZATION_LUCHUIRP | ルシェイアープ |
+| CIVILIZATION_KURIOTATES | クリオテイテ |
+| CIVILIZATION_LJOSALFAR | リョースアールヴ |
+| CIVILIZATION_KHAZAD | カザード |
+| CIVILIZATION_SIDAR | シダー |
+| CIVILIZATION_LANUN | ラヌーン |
+| CIVILIZATION_GRIGORI | グリゴリ |
+| CIVILIZATION_HIPPUS | ヒッパス |
+| CIVILIZATION_AMURITES | アムリテ |
+| CIVILIZATION_DOVIELLO | ドヴィエロ |
+| CIVILIZATION_BALSERAPHS | バルセラフ |
+| CIVILIZATION_CLAN_OF_EMBERS | 残り火一族 |
+| CIVILIZATION_SVARTALFAR | スヴァルトアールヴ |
+| CIVILIZATION_CALABIM | カラビム |
+| CIVILIZATION_SHEAIM | シェアイム |
+| CIVILIZATION_INFERNAL | 地獄の軍勢 |
+| CIVILIZATION_ILLIANS | イリアン |
+| CIVILIZATION_BARBARIAN | 蛮族 |
+| CIVILIZATION_RANDOM | ランダム（属性による） |
+
+### 指導者
+
+Assets\XML\Civilizations\CIV4LeaderHeadInfos.xmlより
+
+| LEADER_BARBARIAN | 蛮族 |
+|---|---|
+| LEADER_RANDOM_GOOD | ランダム指導者（善） |
+| LEADER_RANDOM_NEUTRAL | ランダム指導者（中立） |
+| LEADER_RANDOM_EVIL | ランダム指導者（邪悪） |
+| LEADER_SABATHIEL | サバシエル |
+| LEADER_CAPRIA | カプリア |
+| LEADER_TETHIRA | テシラ |
+| LEADER_DECIUS | デキウス |
+| LEADER_VARN | ヴァーン・ゴッサム |
+| LEADER_KANE | ケイン |
+| LEADER_ETHNE | 白のエスネ |
+| LEADER_EINION | エイニオン・ロゴス |
+| LEADER_THESSALONICA | テサロニカ |
+| LEADER_BASIUM | バシウム |
+| LEADER_GARRIM | ガリム・ギュール |
+| LEADER_BEERI | ビーリ・バウル |
+| LEADER_CARDITH | カーディス・ローダ |
+| LEADER_AMELANCHIER | アメランキエル |
+| LEADER_ARENDEL | アレンデル・バイドラ |
+| LEADER_THESSA | テッサ |
+| LEADER_ARTURUS | アーチュラス・ソーン |
+| LEADER_KANDROS | カンドロス・ファー |
+| LEADER_SANDALPHON | サンダルフォン |
+| LEADER_SHEKINAH | シェキナ |
+| LEADER_FALAMAR | ファラマー |
+| LEADER_HANNAH | ハンナ・ジ・イリン |
+| LEADER_CASSIEL | カシエル |
+| LEADER_KOUN | コウン大臣 |
+| LEADER_TASUNKE | タスンケ |
+| LEADER_RHOANNA | ロアンナ |
+| LEADER_OSTANES | オスタネス隊長 |
+| LEADER_ULDANOR | ウルダンノール隊長 |
+| LEADER_VALLEDIA | 均等なるヴァレディア |
+| LEADER_DAIN | デイン・ザ・カスワラウン |
+| LEADER_TYA | ティヤ・キリ |
+| LEADER_CHARADON | キャラドン |
+| LEADER_MAHALA | マヘイラ |
+| LEADER_DUIN | 半獣のデュイン男爵 |
+| LEADER_KEELYN | キーリン |
+| LEADER_PERPENTACH | パーペンタク |
+| LEADER_WEEVIL | ウィーヴィルとビクルとハイド |
+| LEADER_FURIA | 狂気のフューリア |
+| LEADER_MELISANDRE | メリサンドラ |
+| LEADER_JONAS | ヨナス |
+| LEADER_SHEELBA | シェルバ |
+| LEADER_HAFGAN | 追放者ハウゲン |
+| LEADER_FAERYL | ファエリル・ヴィコーニア |
+| LEADER_RIVANNA | 死霊の主リヴァンナ |
+| LEADER_VOLANNA | ヴォランナ |
+| LEADER_ALEXIS | アレクシス |
+| LEADER_FLAUROS | フラウロス |
+| LEADER_MAHON | 皆殺しのマホン |
+| LEADER_TEBRYN | テブリン・アルバンディ |
+| LEADER_OS-GABELLA | オズ=ガベラ |
+| LEADER_AVERAX | 半妖のアヴェラクス |
+| LEADER_GOSEA | ゴセア |
+| LEADER_MALCHAVIC | マルキャヴィーク |
+| LEADER_HYBOREM | ハイボレム |
+| LEADER_JUDECCA | ジュデッカ |
+| LEADER_SALLOS | サロス公爵 |
+| LEADER_OUZZA | オウザ |
+| LEADER_MERESIN | メレシン |
+| LEADER_STATIUS | 救世主スタティウス |
+| LEADER_LETHE | 嘆きの女王レテ |
+| LEADER_AURIC | オーリック・ウルヴィン |
+| LEADER_BRAEDEN | 静かなるブリーデン |
+| LEADER_DUMANNIOS | デュマンニオス |
+| LEADER_RIUROS | リウロス |
+| LEADER_ANAGANTIOS | アナガンティオス |
+
+### テクノロジー
+
+Assets\XML\Technologies\CIV4TechInfos.xmlより
+
+| TECH_AGRICULTURE | Agriculture | 農業 |
+|---|---|---|
+| TECH_ALTERATION | Alteration | 変成術 |
+| TECH_ANCIENT_CHANTS | Ancient Chants | 原初の祈り |
+| TECH_ANIMAL_HANDLING | Animal Handling | 動物の馴致 |
+| TECH_ANIMAL_HUSBANDRY | Animal Husbandry | 牧畜 |
+| TECH_ANIMAL_MASTERY | Animal Mastery | 動物の極意 |
+| TECH_ARCANE_LORE | Arcane Lore | 秘術の知識 |
+| TECH_ARCHERY | Archery | 弓術 |
+| TECH_ARETE | Arete | 千仞の尾根 |
+| TECH_ASTRONOMY | Astronomy | 天文学 |
+| TECH_BLASTING_POWDER | Blasting Powder | 爆薬 |
+| TECH_BOWYERS | Bowyers | 弓師 |
+| TECH_BRONZE_WORKING | Bronze Working | 青銅器 |
+| TECH_CALENDAR | Calendar | 暦 |
+| TECH_CARTOGRAPHY | Cartography | 地図 |
+| TECH_CODE_OF_LAWS | Code of Laws | 法律 |
+| TECH_COMMUNE_WITH_NATURE | Commune with Nature | 自然との共生 |
+| TECH_CONSTRUCTION | Construction | 建築 |
+| TECH_CORRUPTION_OF_SPIRIT | Corruption of Spirit | 魂の堕落 |
+| TECH_CRAFTING | Crafting | 道具の作成 |
+| TECH_CURRENCY | Currency | 通貨 |
+| TECH_DECEPTION | Deception | 詐欺 |
+| TECH_DIVINATION | Divination | 予言術 |
+| TECH_DIVINE_ESSENCE | Divine Essence | 神々の本質 |
+| TECH_DRAMA | Drama | 演劇 |
+| TECH_EDUCATION | Education | 教育 |
+| TECH_ELEMENTALISM | Elementalism | 四大元素 |
+| TECH_ENGINEERING | Engineering | 工学 |
+| TECH_EXPLORATION | Exploration | 探検 |
+| TECH_FANATICISM | Fanaticism | 狂信 |
+| TECH_FERAL_BOND | Feral Bond | 野生の触れ合い |
+| TECH_FESTIVALS | Festivals | 祝祭 |
+| TECH_FEUDALISM | Feudalism | 封建制 |
+| TECH_FISHING | Fishing | 漁業 |
+| TECH_FUTURE_TECH | Future Tech | 未来技術 |
+| TECH_GUILDS | Guilds | ギルド |
+| TECH_HIDDEN_PATHS | Hidden Paths | 秘密の抜け道 |
+| TECH_HONOR | Honor | 名誉 |
+| TECH_HORSEBACK_RIDING | Horseback Riding | 騎乗 |
+| TECH_HUNTING | Hunting | 狩猟 |
+| TECH_INFERNAL_PACT | Infernal Pact | 地獄の契約 |
+| TECH_IRON_WORKING | Iron Working | 鉄器 |
+| TECH_KNOWLEDGE_OF_THE_ETHER | Knowledge of the Ether | エーテルの知識 |
+| TECH_MACHINERY | Machinery | 機械 |
+| TECH_MALEVOLENT_DESIGNS | Malevolent Designs | 悪意の企み |
+| TECH_MASONRY | Masonry | 石工 |
+| TECH_MATHEMATICS | Mathematics | 数学 |
+| TECH_MEDICINE | Medicine | 医術 |
+| TECH_MERCANTILISM | Mercantilism | 重商主義思想 |
+| TECH_MESSAGE_FROM_THE_DEEP | Message from the Deep | 深海からの神託 |
+| TECH_MILITARY_STRATEGY | Military Strategy | 軍事戦略 |
+| TECH_MIND_STAPLING | Mind Stapling | 精神圧搾 |
+| TECH_MINING | Mining | 採掘 |
+| TECH_MITHRIL_WEAPONS | Mithril Weapons | ミスリルの武具 |
+| TECH_MITHRIL_WORKING | Mithril Working | ミスリルの加工 |
+| TECH_MYSTICISM | Mysticism | 神秘主義 |
+| TECH_NECROMANCY | Necromancy | 屍霊術 |
+| TECH_OMNISCIENCE | Omniscience | 全知 |
+| TECH_OPTICS | Optics | 光学 |
+| TECH_ORDERS_FROM_HEAVEN | Orders from Heaven | 天界からの指令 |
+| TECH_PASS_THROUGH_THE_ETHER | Pass Through the Ether | エーテル移動 |
+| TECH_PHILOSOPHY | Philosophy | 哲学 |
+| TECH_POISONS | Poisons | 毒物 |
+| TECH_PRECISION | Precision | 精密射撃 |
+| TECH_PRIESTHOOD | Priesthood | 聖職 |
+| TECH_RAGE | Rage | 狂暴 |
+| TECH_RELIGIOUS_LAW | Religious Law | 宗教法 |
+| TECH_RIGHTEOUSNESS | Righteousness | 高潔の証 |
+| TECH_SAILING | Sailing | 帆走 |
+| TECH_SANITATION | Sanitation | 衛生設備 |
+| TECH_SEAFARING | Seafaring | 海洋志向 |
+| TECH_SMELTING | Smelting | 製錬 |
+| TECH_SORCERY | Sorcery | 魔術 |
+| TECH_STIRRUPS | Stirrups | 鐙 |
+| TECH_STRENGTH_OF_WILL | Strength of Will | 意志の力 |
+| TECH_TAXATION | Taxation | 税制 |
+| TECH_THEOLOGY | Theology | 神学 |
+| TECH_TRADE | Trade | 交易 |
+| TECH_WARFARE | Warfare | 軍事行動 |
+| TECH_WARHORSES | Warhorses | 軍馬 |
+| TECH_WAY_OF_THE_EARTHMOTHER | Way of the Earthmother | 母なる大地への道 |
+| TECH_WAY_OF_THE_FORESTS | Way of the Forests | 深き森への道 |
+| TECH_WAY_OF_THE_WICKED | Way of the Wicked | 邪悪への道 |
+| TECH_WAY_OF_THE_WISE | Way of the Wise | 英知への道 |
+| TECH_WRITING | Writing | 筆記 |
+
+### 資源
+
+Assets\XML\Terrain\CIV4BonusInfos.xmlより
+
+| BONUS_MANA | マナ |
+|---|---|
+| BONUS_GUNPOWDER | 火薬 |
+| BONUS_COPPER | 銅 |
+| BONUS_HORSE | 馬 |
+| BONUS_IRON | 鉄 |
+| BONUS_MARBLE | 大理石 |
+| BONUS_MANA_DEATH | 死のマナ |
+| BONUS_NIGHTMARE | ナイトメア |
+| BONUS_MANA_FIRE | 炎のマナ |
+| BONUS_BANANA | バナナ |
+| BONUS_CLAM | 貝 |
+| BONUS_CORN | トウモロコシ |
+| BONUS_COW | 牛 |
+| BONUS_CRAB | 蟹 |
+| BONUS_DEER | 鹿 |
+| BONUS_FISH | 魚 |
+| BONUS_PIG | 豚 |
+| BONUS_RICE | 米 |
+| BONUS_SHEEP | 羊 |
+| BONUS_WHEAT | 小麦 |
+| BONUS_DYE | 染料 |
+| BONUS_FUR | 毛皮 |
+| BONUS_GEMS | 宝石 |
+| BONUS_GOLD | 金 |
+| BONUS_INCENSE | 香木 |
+| BONUS_IVORY | 象牙 |
+| BONUS_SILK | 染料 |
+| BONUS_MITHRIL | ミスリル |
+| BONUS_REAGENTS | 秘薬 |
+| BONUS_SUGAR | 砂糖 |
+| BONUS_WINE | ワイン |
+| BONUS_WHALE | 鯨 |
+| BONUS_FRUIT_OF_YGGDRASIL | ユグドラシルの果実 |
+| BONUS_SHEUT_STONE | 影石 |
+| BONUS_TOAD | 蛙 |
+| BONUS_PEARL | 真珠 |
+| BONUS_MANA_AIR | 大気のマナ |
+| BONUS_MANA_BODY | 肉体のマナ |
+| BONUS_MANA_CHAOS | 混沌のマナ |
+| BONUS_MANA_EARTH | 大地のマナ |
+| BONUS_MANA_ENCHANTMENT | 呪付のマナ |
+| BONUS_MANA_ENTROPY | 不可逆のマナ |
+| BONUS_MANA_ICE | 氷のマナ |
+| BONUS_MANA_LAW | 法のマナ |
+| BONUS_MANA_LIFE | 生命のマナ |
+| BONUS_MANA_METAMAGIC | 超魔術のマナ |
+| BONUS_MANA_MIND | 精神のマナ |
+| BONUS_MANA_NATURE | 自然のマナ |
+| BONUS_MANA_SPIRIT | 魂のマナ |
+| BONUS_MANA_WATER | 水のマナ |
+| BONUS_MANA_SUN | 太陽のマナ |
+| BONUS_MANA_SHADOW | 影のマナ |
+| BONUS_COTTON | 綿花 |
+| BONUS_GULAGARM | グラガルム |
+| BONUS_ALE | エール酒 |
+| BONUS_FINE_CLOTHES | 上等な服 |
+| BONUS_JEWELS | 宝飾品 |
+| BONUS_RAZORWEED | 剃刀草 |
+
+### 昇進
+
+Assets\XML\Units\CIV4PromotionInfos.xmlより
+
+| PROMOTION_ACCURACY | 精密砲撃 |
+|---|---|
+| PROMOTION_AERONS_CHOSEN | アーロンに選ばれし者 |
+| PROMOTION_AIR1 | 大気 I |
+| PROMOTION_AIR2 | 大気 II |
+| PROMOTION_AIR3 | 大気 III |
+| PROMOTION_AMPHIBIOUS | 水陸両用 |
+| PROMOTION_ANGEL | 天使 |
+| PROMOTION_ATHAME | アセイミー |
+| PROMOTION_AVATAR | 化身 |
+| PROMOTION_BARRAGE1 | 弾幕 I |
+| PROMOTION_BARRAGE2 | 弾幕 II |
+| PROMOTION_BARRAGE3 | 弾幕 III |
+| PROMOTION_BLACK_MIRROR | 黒の鏡 |
+| PROMOTION_BLESSED | 祝福 |
+| PROMOTION_BLITZ | 電撃戦 |
+| PROMOTION_BLUR | 陽炎 |
+| PROMOTION_BOARDING | 接舷攻撃 |
+| PROMOTION_BODY1 | 肉体 I |
+| PROMOTION_BODY2 | 肉体 II |
+| PROMOTION_BODY3 | 肉体 III |
+| PROMOTION_BOUNTY_HUNTER | 賞金稼ぎ |
+| PROMOTION_BRONZE_WEAPONS | 青銅の武器 |
+| PROMOTION_BUCCANEERS | 乗組員- 海賊 |
+| PROMOTION_BURNING_BLOOD | 燃えたぎる血 |
+| PROMOTION_CANNIBALIZE | 人食い |
+| PROMOTION_CENTAUR | ケンタウロス |
+| PROMOTION_CHANNELING1 | 精神集中 I |
+| PROMOTION_CHANNELING2 | 精神集中 II |
+| PROMOTION_CHANNELING3 | 精神集中 III |
+| PROMOTION_CHAOS1 | 混沌 I |
+| PROMOTION_CHAOS2 | 混沌 II |
+| PROMOTION_CHAOS3 | 混沌 III |
+| PROMOTION_CHARMED | 魅了 |
+| PROMOTION_CITY_GARRISON1 | 都市駐留 I |
+| PROMOTION_CITY_GARRISON2 | 都市駐留 II |
+| PROMOTION_CITY_GARRISON3 | 都市駐留 III |
+| PROMOTION_CITY_RAIDER1 | 都市襲撃 I |
+| PROMOTION_CITY_RAIDER2 | 都市襲撃 II |
+| PROMOTION_CITY_RAIDER3 | 都市襲撃 III |
+| PROMOTION_COLD_RESISTANCE | 冷気抵抗 |
+| PROMOTION_COMBAT1 | 戦闘 I |
+| PROMOTION_COMBAT2 | 戦闘 II |
+| PROMOTION_COMBAT3 | 戦闘 III |
+| PROMOTION_COMBAT4 | 戦闘 IV |
+| PROMOTION_COMBAT5 | 戦闘 V |
+| PROMOTION_COMMAND1 | 折伏 I |
+| PROMOTION_COMMAND2 | 折伏 II |
+| PROMOTION_COMMAND3 | 折伏 III |
+| PROMOTION_COMMAND4 | 折伏 IV |
+| PROMOTION_COMMANDO | 特別奇襲 |
+| PROMOTION_COURAGE | 勇気 |
+| PROMOTION_COVER | 掩護 I |
+| PROMOTION_COVER2 | 掩護 II |
+| PROMOTION_CRAZED | 発狂 |
+| PROMOTION_CROWN_OF_AKHARIEN | アハリエンの宝冠 |
+| PROMOTION_CROWN_OF_BRILLANCE | 輝きの王冠 |
+| PROMOTION_CROWN_OF_COMMAND | 折伏の王冠 |
+| PROMOTION_DANCE_OF_BLADES | 剣の舞 |
+| PROMOTION_DARK_ELF | エルフ |
+| PROMOTION_DEATH1 | 死 I |
+| PROMOTION_DEATH2 | 死 II |
+| PROMOTION_DEATH3 | 死 III |
+| PROMOTION_DEFENSIVE | 鉄壁 |
+| PROMOTION_DEMON | 悪魔 |
+| PROMOTION_DEMON_SLAYING | 魔族狩り |
+| PROMOTION_DEXTEROUS | 強弓 |
+| PROMOTION_DISEASED | 病気 |
+| PROMOTION_DIVINE | 神術 |
+| PROMOTION_DRAGON | ドラゴン |
+| PROMOTION_DRAGON_SLAYING | ドラゴン退治 |
+| PROMOTION_DRAGONS_HORDE | 竜の財宝 |
+| PROMOTION_DRILL1 | 教練 I |
+| PROMOTION_DRILL2 | 教練 II |
+| PROMOTION_DRILL3 | 教練 III |
+| PROMOTION_DRILL4 | 教練 IV |
+| PROMOTION_DWARF | ドワーフ |
+| PROMOTION_EARTH1 | 大地 I |
+| PROMOTION_EARTH2 | 大地 II |
+| PROMOTION_EARTH3 | 大地 III |
+| PROMOTION_ELEMENTAL | 精霊 |
+| PROMOTION_ELF | エルフ |
+| PROMOTION_EMPOWER1 | 強化 I |
+| PROMOTION_EMPOWER2 | 強化 II |
+| PROMOTION_EMPOWER3 | 強化 III |
+| PROMOTION_EMPOWER4 | 強化 IV |
+| PROMOTION_EMPOWER5 | 強化 V |
+| PROMOTION_EMPTY_BIER | 骸なき棺台 |
+| PROMOTION_ENCHANTED_BLADE | 呪付の刃 |
+| PROMOTION_ENCHANTMENT1 | 呪符 I |
+| PROMOTION_ENCHANTMENT2 | 呪符 II |
+| PROMOTION_ENCHANTMENT3 | 呪符 III |
+| PROMOTION_ENRAGED | 狂乱 |
+| PROMOTION_ENTROPY1 | 不可逆 I |
+| PROMOTION_ENTROPY2 | 不可逆 II |
+| PROMOTION_ENTROPY3 | 不可逆 III |
+| PROMOTION_EXPANDED_HULL | 船体拡張 |
+| PROMOTION_EXTENSION1 | 呪文伸長 I |
+| PROMOTION_EXTENSION2 | 呪文伸長 II |
+| PROMOTION_FAIR_WINDS | 順風 |
+| PROMOTION_FATIGUED | 疲労 |
+| PROMOTION_FEAR | 恐怖 |
+| PROMOTION_FIRE_RESISTANCE | 火炎抵抗 |
+| PROMOTION_FIRE1 | 炎 I |
+| PROMOTION_FIRE2 | 炎 II |
+| PROMOTION_FIRE3 | 炎 III |
+| PROMOTION_FLAMING_ARROWS | 炎の矢 |
+| PROMOTION_FLANKING1 | 側面攻撃 I |
+| PROMOTION_FLANKING2 | 側面攻撃 II |
+| PROMOTION_FLANKING3 | 側面攻撃 III |
+| PROMOTION_FLYING | 飛行 |
+| PROMOTION_FORMATION | 隊形 I |
+| PROMOTION_FORMATION2 | 隊形 II |
+| PROMOTION_FROSTLING | フロストリング |
+| PROMOTION_GELA | ゲラ |
+| PROMOTION_GODSLAYER | ゴッドスレイヤー |
+| PROMOTION_GOLDEN_HAMMER | ゴールデンハンマー |
+| PROMOTION_GOLEM | ゴーレム |
+| PROMOTION_GREAT_COMMANDER | 偉大な指揮官の統率 |
+| PROMOTION_GUARDSMAN | 護衛 |
+| PROMOTION_GUERILLA1 | ゲリラ I |
+| PROMOTION_GUERILLA2 | ゲリラ II |
+| PROMOTION_HASTED | 快速 |
+| PROMOTION_HEALING_SALVE | 治癒の軟膏 |
+| PROMOTION_HEAVY | 重量級 |
+| PROMOTION_HELD | 拘束 |
+| PROMOTION_HERO | 英雄 |
+| PROMOTION_HEROIC_DEFENSE | 英雄の盾 I |
+| PROMOTION_HEROIC_DEFENSE2 | 英雄の盾 II |
+| PROMOTION_HEROIC_STRENGTH | 英雄の力 I |
+| PROMOTION_HEROIC_STRENGTH2 | 英雄の力 II |
+| PROMOTION_HIDDEN | 身隠し |
+| PROMOTION_HIDDEN_NATIONALITY | 国籍秘匿 |
+| PROMOTION_HOMELAND | 母国 |
+| PROMOTION_HORSELORD | 駿馬 |
+| PROMOTION_ICE1 | 氷 I |
+| PROMOTION_ICE2 | 氷 II |
+| PROMOTION_ICE3 | 氷 III |
+| PROMOTION_ILLUSION | 幻影 |
+| PROMOTION_ILLUSIONIST | 幻術士 |
+| PROMOTION_IMMORTAL | 不死身 |
+| PROMOTION_IMMUNE_COLD | 冷気無効 |
+| PROMOTION_IMMUNE_DISEASE | 病気無効 |
+| PROMOTION_IMMUNE_FIRE | 火炎無効 |
+| PROMOTION_IMMUNE_LIGHTNING | 電撃無効 |
+| PROMOTION_INFERNAL_GRIMOIRE | 地獄全書 |
+| PROMOTION_INQUISITOR | 異端審問 |
+| PROMOTION_INVISIBLE | 不可視 |
+| PROMOTION_IRON_WEAPONS | 鉄の武器 |
+| PROMOTION_JADE_TORC | 翡翠の腕輪 |
+| PROMOTION_KEEN_SIGHT | 鷹の目 |
+| PROMOTION_LAW1 | 法 I |
+| PROMOTION_LAW2 | 法 II |
+| PROMOTION_LAW3 | 法 III |
+| PROMOTION_LIFE1 | 生命 I |
+| PROMOTION_LIFE2 | 生命 II |
+| PROMOTION_LIFE3 | 生命 III |
+| PROMOTION_LIGHT | 軽量級 |
+| PROMOTION_LIGHTNING_RESISTANCE | 電撃抵抗 |
+| PROMOTION_LIZARDMAN | リザードマン |
+| PROMOTION_LONGSHOREMEN | 乗組員- 船乗り |
+| PROMOTION_LOYALTY | 忠誠 |
+| PROMOTION_MAGIC_IMMUNE | 魔法無効 |
+| PROMOTION_MAGIC_RESISTANCE | 魔法抵抗 |
+| PROMOTION_MARCH | 行軍 |
+| PROMOTION_MARKSMAN | 狙撃 |
+| PROMOTION_MEDIC1 | 衛生兵 I |
+| PROMOTION_MEDIC2 | 衛生兵 II |
+| PROMOTION_MEDIC3 | 衛生兵 III |
+| PROMOTION_METAMAGIC1 | 超魔術 I |
+| PROMOTION_METAMAGIC2 | 超魔術 II |
+| PROMOTION_METAMAGIC3 | 超魔術 III |
+| PROMOTION_MIND1 | 精神 I |
+| PROMOTION_MIND2 | 精神 II |
+| PROMOTION_MIND3 | 精神 III |
+| PROMOTION_MITHRIL_WEAPONS | ミスリルの武器 |
+| PROMOTION_MOBILITY1 | 機動 I |
+| PROMOTION_MOBILITY2 | 機動 II |
+| PROMOTION_MORALE | 士気 |
+| PROMOTION_MUTATED | 異形 |
+| PROMOTION_NATURE1 | 自然 I |
+| PROMOTION_NATURE2 | 自然 II |
+| PROMOTION_NATURE3 | 自然 III |
+| PROMOTION_NAVIGATION1 | 航海術 I |
+| PROMOTION_NAVIGATION2 | 航海術 II |
+| PROMOTION_NETHER_BLADE | ネザー・ブレイド |
+| PROMOTION_NIGHTMARE | ナイトメア |
+| PROMOTION_NOMAD | 砂漠の民 |
+| PROMOTION_ORC | オーク |
+| PROMOTION_ORTHUSS_AXE | オルタスの斧 |
+| PROMOTION_PERFECT_SIGHT | 看破の目 |
+| PROMOTION_PIECES_OF_BARNAXUS | バルナクサスのかけら |
+| PROMOTION_PLAGUE_CARRIER | 保菌者 |
+| PROMOTION_PLAGUED | 疫病 |
+| PROMOTION_POISON_RESISTANCE | 毒抵抗 |
+| PROMOTION_POISONED | 毒 |
+| PROMOTION_POISONED_BLADE | 毒の刃 |
+| PROMOTION_POTENCY | 潜在力 |
+| PROMOTION_POTION_OF_INVISIBILITY | 透明化の飲み薬 |
+| PROMOTION_POTION_OF_RESTORATION | 魔力回復の飲み薬 |
+| PROMOTION_PRECISION | 精密射撃 |
+| PROMOTION_PROPHECY_MARK | 黙示録の証 |
+| PROMOTION_PUPPET | 人形 |
+| PROMOTION_RECRUITER | 募兵官 |
+| PROMOTION_REGENERATION | 再生 |
+| PROMOTION_ROD_OF_WINDS | 風のロッド |
+| PROMOTION_RUSTED | 武器の腐食 |
+| PROMOTION_SCORCHED_STAFF | 灼熱の杖 |
+| PROMOTION_SCOURGE | 災厄 |
+| PROMOTION_SENTRY | 歩哨 I |
+| PROMOTION_SENTRY2 | 歩哨 II |
+| PROMOTION_SHADOW1 | 影 I |
+| PROMOTION_SHADOW2 | 影 II |
+| PROMOTION_SHADOW3 | 影 III |
+| PROMOTION_SHADOWWALK | 影歩き |
+| PROMOTION_SHEUT_STONE | 影石 |
+| PROMOTION_SHIELD_OF_FAITH | 信仰の盾 |
+| PROMOTION_SHOCK | 強襲 I |
+| PROMOTION_SHOCK2 | 強襲 II |
+| PROMOTION_SINISTER | 凶刃 |
+| PROMOTION_SKELETON_CREW | 乗組員- 基幹要員のみ |
+| PROMOTION_SLOW | 鈍足 |
+| PROMOTION_SPELLSTAFF | 呪文の杖 |
+| PROMOTION_SPIRIT_GUIDE | 聖霊の導き |
+| PROMOTION_SPIRIT1 | 魂 I |
+| PROMOTION_SPIRIT2 | 魂 II |
+| PROMOTION_SPIRIT3 | 魂 III |
+| PROMOTION_STAFF_OF_SOULS | 霊魂の杖 |
+| PROMOTION_STARTING_SETTLER | 初期開拓者ボーナス |
+| PROMOTION_STEALTH | 隠密 |
+| PROMOTION_STIGMATA | 烙印 |
+| PROMOTION_STONESKIN | 石の皮膚 |
+| PROMOTION_STRONG | 怪力 |
+| PROMOTION_SUBDUE_ANIMAL | 動物調教 |
+| PROMOTION_SUBDUE_BEASTS | 魔獣調教 |
+| PROMOTION_SUMMONER | 召喚術師 |
+| PROMOTION_SUN1 | 太陽 I |
+| PROMOTION_SUN2 | 太陽 II |
+| PROMOTION_SUN3 | 太陽 III |
+| PROMOTION_SUNDERED | 呪刻 |
+| PROMOTION_SYLIVENS_PERFECT_LYRE | シリヴェンの完璧なる竪琴 |
+| PROMOTION_TIMOR_MASK | ティモールの仮面 |
+| PROMOTION_TWINCAST | 双つ術 |
+| PROMOTION_UNDEAD | 屍人 |
+| PROMOTION_UNDEAD_SLAYING | 屍人狩り |
+| PROMOTION_UNHOLY_TAINT | 不浄の聖痕 |
+| PROMOTION_VALOR | 武勇 |
+| PROMOTION_VAMPIRE | 吸血鬼 |
+| PROMOTION_VILE_TOUCH | 忌まわしき抱擁 |
+| PROMOTION_VULNERABLE_TO_FIRE | 可燃性 |
+| PROMOTION_WAR | いくさ丸 |
+| PROMOTION_WARCRY | 鬨の声 |
+| PROMOTION_WATER_WALKING | 水上歩行 |
+| PROMOTION_WATER1 | 水 I |
+| PROMOTION_WATER2 | 水 II |
+| PROMOTION_WATER3 | 水 III |
+| PROMOTION_WEAK | 虚弱 |
+| PROMOTION_WEREWOLF | 狼人間 |
+| PROMOTION_WINTERBORN | 寒冷種 |
+| PROMOTION_WITHERED | 衰弱 |
+| PROMOTION_WOODSMAN1 | 森番 I |
+| PROMOTION_WOODSMAN2 | 森番 II |
+
+### 地形改善
+
+Assets\XML\Terrain\CIV4ImprovementInfos.xmlより
+
+| IMPROVEMENT_AIFON_ISLE | マエナルス島 |
+|---|---|
+| IMPROVEMENT_BARROW | 土塚 |
+| IMPROVEMENT_BEAR_DEN | 熊の巣穴 |
+| IMPROVEMENT_BRADELINES_WELL | ブラデリンの井戸 |
+| IMPROVEMENT_BROKEN_SEPULCHER | 暴かれた玄室 |
+| IMPROVEMENT_CAGE | 檻 |
+| IMPROVEMENT_CAMP | 狩猟場 |
+| IMPROVEMENT_CASTLE | 城 |
+| IMPROVEMENT_CITADEL | 城塞 |
+| IMPROVEMENT_CITY_RUINS | 都市の廃墟 |
+| IMPROVEMENT_COTTAGE | 小屋 |
+| IMPROVEMENT_DRAGON_BONES | 竜骨の化石 |
+| IMPROVEMENT_DUNGEON | 地下迷宮 |
+| IMPROVEMENT_ENCLAVE | 自治区 |
+| IMPROVEMENT_FARM | 農場 |
+| IMPROVEMENT_FISHING_BOATS | 漁船 |
+| IMPROVEMENT_FORT | 砦 |
+| IMPROVEMENT_GOBLIN_FORT | ゴブリン砦 |
+| IMPROVEMENT_GOODY_HUT | 部族集落 |
+| IMPROVEMENT_GRAVEYARD | 墓地 |
+| IMPROVEMENT_GUARDIAN | プリスティン峠の道祖神 |
+| IMPROVEMENT_HAMLET | 部落 |
+| IMPROVEMENT_HELLFIRE | 地獄の業火 |
+| IMPROVEMENT_JUNGLE_ALTA | 密林の供養台 |
+| IMPROVEMENT_LAND_WORKED |  |
+| IMPROVEMENT_LETUM_FRIGUS | 荒涼たる死 |
+| IMPROVEMENT_LION_DEN | ライオンのねぐら |
+| IMPROVEMENT_LUMBERMILL | 製材所 |
+| IMPROVEMENT_MAELSTROM | 大渦潮 |
+| IMPROVEMENT_MANA_AIR | 大気のノード |
+| IMPROVEMENT_MANA_BODY | 肉体のノード |
+| IMPROVEMENT_MANA_CHAOS | 混沌のノード |
+| IMPROVEMENT_MANA_DEATH | 死のノード |
+| IMPROVEMENT_MANA_EARTH | 大地のノード |
+| IMPROVEMENT_MANA_ENCHANTMENT | 呪符のノード |
+| IMPROVEMENT_MANA_ENTROPY | 不可逆のノード |
+| IMPROVEMENT_MANA_FIRE | 火のノード |
+| IMPROVEMENT_MANA_LAW | 法のノード |
+| IMPROVEMENT_MANA_LIFE | 生命のノード |
+| IMPROVEMENT_MANA_METAMAGIC | 超魔術のノード |
+| IMPROVEMENT_MANA_MIND | 精神のノード |
+| IMPROVEMENT_MANA_NATURE | 自然のノード |
+| IMPROVEMENT_MANA_SHADOW | 影のノード |
+| IMPROVEMENT_MANA_SPIRIT | 魂のノード |
+| IMPROVEMENT_MANA_SUN | 太陽のノード |
+| IMPROVEMENT_MANA_WATER | 水のノード |
+| IMPROVEMENT_MINE | 鉱山 |
+| IMPROVEMENT_MIRROR_OF_HEAVEN | 天界の鏡 |
+| IMPROVEMENT_MONSTER_SKELETON | 古代の化石 |
+| IMPROVEMENT_MUSHROOMS | キノコ |
+| IMPROVEMENT_NECROTOTEM | ネクロトーテム |
+| IMPROVEMENT_ODIOS_PRISON | オディオの牢獄 |
+| IMPROVEMENT_PASTURE | 牧草地 |
+| IMPROVEMENT_PENGUINS | ペンギン |
+| IMPROVEMENT_PIRATE_COVE | 海賊の隠れ家 |
+| IMPROVEMENT_PIRATE_HARBOR | 海賊の港 |
+| IMPROVEMENT_PIRATE_PORT | 海賊の港町 |
+| IMPROVEMENT_PLANTATION | 大農園 |
+| IMPROVEMENT_POOL_OF_TEARS | 涙の池 |
+| IMPROVEMENT_PYRE_OF_THE_SERAPHIC | 熾天使の火葬 |
+| IMPROVEMENT_QUARRY | 採石場 |
+| IMPROVEMENT_REMNANTS_OF_PATRIA | パトリアの名残 |
+| IMPROVEMENT_RING_OF_CARCER | カルセルの輪光 |
+| IMPROVEMENT_RUINS | 廃墟 |
+| IMPROVEMENT_SEVEN_PINES | 七本松 |
+| IMPROVEMENT_SHIP_WRECK | 難破船 |
+| IMPROVEMENT_SMOKE | 燻る煙 |
+| IMPROVEMENT_SNAKE_PILLAR | 蛇の柱 |
+| IMPROVEMENT_STANDING_STONES | そびえ立つ巨石 |
+| IMPROVEMENT_TOMB_OF_SUCELLUS | スケルスの墓所 |
+| IMPROVEMENT_TOWER | 古代の塔 |
+| IMPROVEMENT_TOWN | 町 |
+| IMPROVEMENT_VILLAGE | 村 |
+| IMPROVEMENT_WARNING_POST | 警標 |
+| IMPROVEMENT_WATER_WORKED |  |
+| IMPROVEMENT_WHALING_BOATS | 捕鯨船 |
+| IMPROVEMENT_WINDMILL | 風車 |
+| IMPROVEMENT_WINERY | ワイン鋳造所 |
+| IMPROVEMENT_WORKSHOP | 工房 |
+| IMPROVEMENT_YGGDRASIL | ユグドラシルの樹 |
+| IMPROVEMENT_PORTAL | 転移門 |
+
+### 宗教
+
+Assets\XML\GameInfo\CIV4ReligionInfo.xmlより
+
+| RELIGION_FELLOWSHIP_OF_LEAVES | 緑葉の同胞 |
+|---|---|
+| RELIGION_THE_ORDER | 秩序の修道会 |
+| RELIGION_OCTOPUS_OVERLORDS | 深海の旧支配者 |
+| RELIGION_RUNES_OF_KILMORPH | キルモフのルーン |
+| RELIGION_THE_ASHEN_VEIL | 蒼褪めたヴェール |
+| RELIGION_THE_EMPYREAN | 至光なる天空 |
+| RELIGION_COUNCIL_OF_ESUS | エススの枢密院 |
+
+### 属性
+
+Assets\XML\Basicinfos\CIV4AlignmentInfos.xmlより
+
+| ALIGNMENT_GOOD | 善良 |
+|---|---|
+| ALIGNMENT_NEUTRAL | 中立 |
+| ALIGNMENT_EVIL | 邪悪 |
+
+### FfH2固有の志向
+
+Assets\XML\Civilizations\CIV4TraitInfos.xmlより
+
+| TRAIT_ARCANE | 秘術志向 |
+|---|---|
+| TRAIT_AGNOSTIC | 無神論志向 |
+| TRAIT_BARBARIAN | 蛮族志向 |
+| TRAIT_RAIDERS | 侵略志向 |
+| TRAIT_SUMMONER | 召喚志向 |
+| TRAIT_DEFENDER | 防御志向 |
+| TRAIT_INGENUITY | 工夫 |
+| TRAIT_ADAPTIVE | 適応志向 |
+| TRAIT_INSANE | 狂気 |
+| TRAIT_TOLERANT | 寛容志向 |
+| TRAIT_FOOLISH | 愚鈍 |
+| TRAIT_MAGIC_RESISTANT | 魔法抵抗 |
+| TRAIT_WEAK | 虚弱 |
+| TRAIT_PHILOSOPHICAL | 大規模志向 |
+| TRAIT_FALLOW | 休耕 |
+| TRAIT_DEXTEROUS | 強弓 |
+| TRAIT_HORSELORD | 駿馬 |
+| TRAIT_GUARDSMAN | 護衛 |
+| TRAIT_SINISTER | 凶刃 |
+| TRAIT_SUNDERED | 呪刻 |
+
+### 社会制度種別
+
+Assets\XML\Gameinfo\CIV4CivicOptionInfos.xmlより
+
+| CIVICOPTION_GOVERNMENT | Government | 政治体制 |
+|---|---|---|
+| CIVICOPTION_CULTURAL_VALUES | Cultural Values | 文化制度 |
+| CIVICOPTION_LABOR | Labor | 労働制度 |
+| CIVICOPTION_ECONOMY | Economy | 経済制度 |
+| CIVICOPTION_MEMBERSHIP | Membership | 所属 |
+
+### 社会制度
+
+Assets\XML\Gameinfo\CIV4CivicInfos.xmlより
+
+#### 政治体制(Government)
+
+| CIVIC_DESPOTISM | Despotism | 専制政治 |
+|---|---|---|
+| CIVIC_CITY_STATES | City States | 都市国家 |
+| CIVIC_GOD_KING | God King | 現人神制 |
+| CIVIC_ARISTOCRACY | Aristocracy | 貴族制 |
+| CIVIC_THEOCRACY | Theocracy | 神権政治 |
+| CIVIC_REPUBLIC | Republic | 共和制 |
+
+#### 文化制度(Cultural Values)
+
+| CIVIC_RELIGION | Religion | 宗教主義 |
+|---|---|---|
+| CIVIC_PACIFISM | Pacifism | 平和主義 |
+| CIVIC_NATIONHOOD | Nationhood | 国民国家 |
+| CIVIC_SACRIFICE_THE_WEAK | Sacrifice the Weak | 弱肉強食 |
+| CIVIC_SOCIAL_ORDER | Social Order | 秩序社会 |
+| CIVIC_CONSUMPTION | Consumption | 大量消費 |
+| CIVIC_SCHOLARSHIP | Scholarship | 奨学金制 |
+| CIVIC_LIBERTY | Liberty | 自由主義 |
+| CIVIC_CRUSADE | Crusade | 聖戦 |
+
+#### 労働制度(Labor)
+
+| CIVIC_TRIBALISM | Tribalism | 部族社会 |
+|---|---|---|
+| CIVIC_APPRENTICESHIP | Apprenticeship | 徒弟制 |
+| CIVIC_SLAVERY | Slavery | 奴隷制 |
+| CIVIC_ARETE | Arete | 連峰制 |
+| CIVIC_MILITARY_STATE | Military State | 軍事国家 |
+| CIVIC_CASTE_SYSTEM | Caste System | カースト制 |
+| CIVIC_GUILDS | Guilds | ギルド制 |
+
+#### 経済制度(Economy)
+
+| CIVIC_DECENTRALIZATION | Decentralization | 地方分権 |
+|---|---|---|
+| CIVIC_AGRARIANISM | Agrarianism | 農地改革 |
+| CIVIC_CONQUEST | Conquest | 軍需優先 |
+| CIVIC_MERCANTILISM | Mercantilism | 重商主義 |
+| CIVIC_FOREIGN_TRADE | Foreign Trade | 対外貿易 |
+| CIVIC_GUARDIAN_OF_NATURE | Guardian of Nature | 大自然の守護者 |
+
+#### 所属(Membership)
+
+| CIVIC_NO_MEMBERSHIP | No Membership | 無所属 |
+|---|---|---|
+| CIVIC_OVERCOUNCIL | Overcouncil | 天上評議会 |
+| CIVIC_UNDERCOUNCIL | Undercouncil | 地下評議会 |

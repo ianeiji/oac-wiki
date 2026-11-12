@@ -4,7 +4,26 @@
 
 ## OAC 0.57 のデータ（oac-057/、ゲームのXMLから生成）
 
-- `oac-057/OAC-057_TechData.md`: テクノロジー（`tools/gen_tech.py` で生成。Pythonで実装された効果と文明固有の別ルートは含まない）
+`tools/` のスクリプトで生成。Pythonで実装された効果は含まない。テクノロジー以外は、主要項目以外の設定をXMLのタグ名のまま「その他の設定」に列挙している。
+
+- `oac-057/OAC-057_TechData.md`: テクノロジー（`tools/gen_tech.py`）
+- `oac-057/OAC-057_UnitData.md`: ユニット（`tools/gen_infos.py`）
+- `oac-057/OAC-057_BuildingData.md`: 建造物・文化遺産（`tools/gen_infos.py`）
+- `oac-057/OAC-057_CivicData.md`: 社会制度（`tools/gen_infos.py`）
+- `oac-057/OAC-057_ProjectData.md`: 大儀式（`tools/gen_infos.py`）
+- `oac-057/OAC-057_PromotionData.md`: 昇進（`tools/gen_infos.py`）
+- `oac-057/OAC-057_SpellData.md`: 呪文・特殊技能（`tools/gen_infos.py`）
+- `oac-057/OAC-057_ReligionData.md`: 宗教（`tools/gen_infos.py`）
+- `oac-057/OAC-057_TraitData.md`: 志向（`tools/gen_infos.py`）
+- `oac-057/OAC-057_CivData.md`: 文明（`tools/gen_infos.py`）
+- `oac-057/OAC-057_LeaderData.md`: 指導者（`tools/gen_infos.py`）
+- `oac-057/OAC-057_BonusData.md`: 資源（`tools/gen_infos.py`）
+- `oac-057/OAC-057_ImprovementData.md`: 地形改善・名所旧跡（`tools/gen_infos.py`）
+- `oac-057/OAC-057_TerrainData.md`: 地形（`tools/gen_infos.py`）
+- `oac-057/OAC-057_FeatureData.md`: 地物（`tools/gen_infos.py`）
+- `oac-057/OAC-057_SpecialistData.md`: 専門家（`tools/gen_infos.py`）
+- `oac-057/OAC-057_EquipmentData.md`: 装備品（`tools/gen_infos.py`）
+- `oac-057/OAC-057_EffectData.md`: 効果（`tools/gen_infos.py`）
 
 ## OAC 0.56 非公式Patch29 のデータ（oac-p29/）
 

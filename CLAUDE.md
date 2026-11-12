@@ -5,7 +5,7 @@ Civilization4のMOD「Fall from Heaven 2（FfH2）」と、そのMODMOD「OAC」
 ## 資料
 - Markdownファイルは、Civ4/FfH2情報局（kentasis.web.fc2.com）のページを変換したもの。どのファイルに何があるかは `INDEX.md` を見る。
 - フォルダとファイル名の接頭辞でバージョンが分かる。
-  - `oac-057/`（`OAC-057_`）: OAC 0.57 のデータ。インストール済みのゲームのXMLから `tools/` のスクリプトで生成したもの（現状はテクノロジーのみ）
+  - `oac-057/`（`OAC-057_`）: OAC 0.57 のデータ。インストール済みのゲームのXMLから `tools/` のスクリプトで生成したもの。データページ（P29・0.56）より網羅的だが、説明文は少なくXMLのタグ名が残る
   - `oac-p29/`（`OAC-P29_`）: OAC 0.56 非公式Patch29 のデータ
   - `oac-056/`（`OAC-056_`）: OAC 0.56（公式開発版）のデータ
   - `oac-notes/`（`OAC_` / `OAC-note_`）: OACの解説・考察（考察は執筆時点のバージョン準拠で古い場合がある）
@@ -16,6 +16,7 @@ Civilization4のMOD「Fall from Heaven 2（FfH2）」と、そのMODMOD「OAC」
 
 ## 調べ方
 - まず `INDEX.md` で対象ファイルを決め、grepで項目名（日本語名・英語名の両方）を探してから該当箇所を読む。
+- `oac-057/` は見出しが `### 英語名 - 日本語名` 形式なので、名前でgrepして該当ブロックを読む。「その他の設定」のタグ名（例: `iWarWearinessModifier`）は Civ4/FfH2 の XML の項目名として解釈する。
 - 大きいファイルは丸ごと読まず、grepで行番号を出してから前後を読む。
 
 ## 答え方

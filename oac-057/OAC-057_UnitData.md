@@ -1,0 +1,19989 @@
+# OAC/ユニット（0.57、XMLから生成）
+
+- 対象: OAC 0.57（インストール済みのゲームファイル `Assets/XML` から自動生成）
+- 生成元: `Units/CIV4UnitInfos.xml`
+- 読み方: 主要な項目は日本語ラベル付きで先頭に、それ以外の既定値でない設定は「その他の設定」にXMLのタグ名のまま列挙する。値の内部名は日本語名に置き換えている。Pythonで実装された効果はXMLにないため含まない（ゲーム内ヘルプの説明文があれば載せている）。
+
+## NONE
+
+### Settler - 開拓者
+
+- 内部名: `UNIT_SETTLER`
+- ユニットクラス: 開拓者
+- 移動力: 2
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 輜重隊
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `bOnlyDefensive`: 1
+  - `bFound`: 1
+  - `ProductionTraits`: 拡張志向 iProductionTrait=100
+  - `iExtraCost`: 100
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Supplies - 輜重隊
+
+- 内部名: `UNIT_SUPPLIES`
+- ユニットクラス: 輜重隊
+- 移動力: 1
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 輜重隊
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bQuickCombat`: 1
+  - `BuildingClasses`: 錬金術ラボ / 水道橋 / 弓術射撃場 / ビール醸造所 / 巡業サーカス / 裁判所 / 地下牢 / 鍛冶屋 / 穀倉 / 港 / 狩猟小屋 / 診療所 / 宿屋 / 図書館 / 灯台 / 魔術師ギルド / 土着の神殿 / 防護柵 / 公衆浴場 / 厩舎 / 造船所 / 攻城兵器工廠 / 燻製場 / 酒場 / キルモフの神殿 / 緑葉の神殿 / 至天の神殿 / 秩序の神殿 / 深海の神殿 / ヴェールの神殿 / 劇場 / 練兵場 / 防壁
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Shade - 朧人
+
+- 内部名: `UNIT_SHADE`
+- ユニットクラス: 朧人
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 世代: 4
+- 必要な文明: シダー
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `GreatPeoples`: 偉大な吟遊詩人 / 偉大な技師 / 偉大な商人 / 偉大な賢者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Manes - マネス
+
+- 内部名: `UNIT_MANES`
+- ユニットクラス: マネス
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 世代: 1
+- 必要な文明: 地獄の軍勢
+- 初期昇進: 魔族
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iBaseHurry`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Hawk - 鷹
+
+- 内部名: `UNIT_HAWK`
+- ユニットクラス: 鷹
+- コスト[ハンマー]: 20
+- 世代: 1
+- 必要テクノロジー: 追跡術
+- 初期昇進: 飛行
+- ダメージ上限: 100
+- 間接攻撃の射程: 3
+- その他の設定:
+  - `Special`: SPECIALUNIT_BIRD
+  - `Domain`: DOMAIN_AIR
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bCanMoveAllTerrain`: 1
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `PrereqBuildingClass`: 狩猟小屋
+
+### Floating Eye - 浮遊する眼
+
+- 内部名: `UNIT_EYE`
+- ユニットクラス: 浮遊する眼
+- 移動力: 1
+- 初期昇進: 歩哨Ⅰ
+- ダメージ上限: 100
+- 間接攻撃の射程: 6
+- その他の設定:
+  - `Special`: SPECIALUNIT_SPELL
+  - `Domain`: DOMAIN_AIR
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bRivalTerritory`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+
+### Fireball - 火球
+
+- 内部名: `UNIT_FIREBALL`
+- ユニットクラス: 火球
+- 防御力: -2
+- 移動力: 2
+- 世代: 1
+- 初期昇進: 精霊
+- ダメージ上限: 100
+- 巻き添え被害: 50
+- その他の設定:
+  - `Special`: SPECIALUNIT_SPELL
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bQuickCombat`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bFlatMovementCost`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `bSuicide`: 1
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `iBombardRate`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExplodeInCombat`: 1
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=2
+  - `DamageTypeResists`: 火炎 iResist=100
+
+### Meteor - 隕石
+
+- 内部名: `UNIT_METEOR`
+- ユニットクラス: 隕石
+- 防御力: -6
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 精霊
+- ダメージ上限: 100
+- 巻き添え被害: 100
+- その他の設定:
+  - `Special`: SPECIALUNIT_SPELL
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bQuickCombat`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bFlatMovementCost`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `bSuicide`: 1
+  - `iCollateralDamageLimit`: 60
+  - `iCollateralDamageMaxUnits`: 4
+  - `iBombardRate`: 15
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExplodeInCombat`: 1
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=8
+  - `DamageTypeResists`: 火炎 iResist=100
+
+### Air Elemental - 大気の精霊
+
+- 内部名: `UNIT_AIR_ELEMENTAL`
+- ユニットクラス: 大気の精霊
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 2
+- 世代: 3
+- 初期昇進: 歩哨Ⅰ / 歩哨Ⅱ / 飛行 / 精霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `UnitCreateFromCombat`: 稲妻の精霊
+  - `iUnitCreateFromCombatChance`: 100
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 電撃 iCombat=2
+  - `DamageTypeResists`: 電撃 iResist=100
+  - `BonusAffinities`: 大気のマナ iAffinity=100
+
+### Aurealis - オーリアリス
+
+- 内部名: `UNIT_AUREALIS`
+- ユニットクラス: オーリアリス
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 1
+- 世代: 4
+- 初期昇進: 精霊 / 護衛
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `UnitCombatTargets`: 偵察ユニット
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `BonusAffinities`: 太陽のマナ iAffinity=200
+
+### Djinn - 魔人
+
+- 内部名: `UNIT_DJINN`
+- ユニットクラス: 魔人
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 精霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iBombardRate`: 20
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `BonusAffinities`: 死のマナ iAffinity=200 / 炎のマナ iAffinity=200 / 大気のマナ iAffinity=200 / 肉体のマナ iAffinity=200 / 混沌のマナ iAffinity=200 / 大地のマナ iAffinity=200 / 呪付のマナ iAffinity=200 / 不可逆のマナ iAffinity=200 / 法のマナ iAffinity=200 / 生命のマナ iAffinity=200 / 超魔術のマナ iAffinity=200 / 精神のマナ iAffinity=200 / 自然のマナ iAffinity=200 / 魂のマナ iAffinity=200 / 水のマナ iAffinity=200 / 太陽のマナ iAffinity=200 / 影のマナ iAffinity=200 / 氷のマナ iAffinity=200 / 次元のマナ iAffinity=200
+
+### Earth Elemental - 大地の精霊
+
+- 内部名: `UNIT_EARTH_ELEMENTAL`
+- ユニットクラス: 大地の精霊
+- 攻撃力: 4
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 精霊
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iBombardRate`: 10
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `BonusAffinities`: 大地のマナ iAffinity=100
+
+### Fire Elemental - 炎の精霊
+
+- 内部名: `UNIT_FIRE_ELEMENTAL`
+- ユニットクラス: 炎の精霊
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 精霊
+- ダメージ上限: 100
+- 巻き添え被害: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `TerrainImpassables`: 氷原
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 30
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=2
+  - `DamageTypeResists`: 火炎 iResist=100
+  - `BonusAffinities`: 炎のマナ iAffinity=100
+
+### Guardian Vines - 生きている蔦
+
+- 内部名: `UNIT_GUARDIAN_VINES`
+- ユニットクラス: 生きている蔦
+- 攻撃力: 4
+- 防御力: 4
+- 世代: 2
+- 初期昇進: 拘束 / 可燃性 / 植物
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_IMMOBILE
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `UnitCombatDefenders`: 白兵ユニット
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoMaintenanceCost`: 1
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Lightning Elemental - 稲妻の精霊
+
+- 内部名: `UNIT_LIGHTNING_ELEMENTAL`
+- ユニットクラス: 稲妻の精霊
+- 移動力: 2
+- 世代: 1
+- 初期昇進: 電撃戦 / 精霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatHeal50
+  - `DamageTypeCombats`: 電撃 iCombat=2
+  - `DamageTypeResists`: 電撃 iResist=100
+
+### Severed Soul - 人魂
+
+- 内部名: `UNIT_SEVERED_SOUL`
+- ユニットクラス: 人魂
+- 移動力: 2
+- 世代: 2
+- 初期昇進: 精霊 / 飛行
+- ダメージ上限: 100
+- その他の設定:
+  - `Special`: SPECIALUNIT_SPELL
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bNoCapture`: 1
+  - `bInvisible`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoMaintenanceCost`: 1
+  - `bNoWarWeariness`: 1
+
+### Water Elemental - 水の精霊
+
+- 内部名: `UNIT_WATER_ELEMENTAL`
+- ユニットクラス: 水の精霊
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 水上歩行 / 精霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `PythonPostCombatLost`: postCombatSplit
+  - `BonusAffinities`: 水のマナ iAffinity=100
+
+### Wraith - 死霊
+
+- 内部名: `UNIT_WRAITH`
+- ユニットクラス: 死霊
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 屍人 / 忌まわしき抱擁 / 恐怖
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 死 iCombat=3
+  - `BonusAffinities`: 死のマナ iAffinity=100
+
+### Puppet - 操り人形
+
+- 内部名: `UNIT_PUPPET`
+- ユニットクラス: 操り人形
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 人形
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoMaintenanceCost`: 1
+  - `bNoWarWeariness`: 1
+
+### Auric Ascended - 冬の化身オーリック
+
+- 内部名: `UNIT_AURIC_ASCENDED`
+- ユニットクラス: 冬の化身オーリック
+- 攻撃力: 40
+- 防御力: 40
+- 移動力: 3
+- 世代: 4
+- 初期昇進: 教練Ⅰ / 教練Ⅱ / 教練Ⅲ / 教練Ⅳ / 飛行 / 化身 / 長身
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 死亡すると指導者の志向を全て失い停滞は解除される
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 80
+  - `iXPValueDefense`: 40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Auric Ascended.dds
+  - `PythonPostCombatLost`: postCombatAuricAscendedLost
+  - `PythonPostCombatWon`: postCombatAuricAscendedWon
+  - `DamageTypeCombats`: 冷気 iCombat=20
+  - `DamageTypeResists`: 冷気 iResist=100
+
+### Adventurer - 冒険者
+
+- 内部名: `UNIT_ADVENTURER`
+- ユニットクラス: 冒険者
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 必要な文明: グリゴリ
+- 初期昇進: 英雄 / 冒険者
+- 昇格先: 術使い / 戦士 / 斥候 / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 英雄としての経験点獲得の対象外
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Great Bard - 偉大な吟遊詩人
+
+- 内部名: `UNIT_ARTIST`
+- ユニットクラス: 偉大な吟遊詩人
+- 移動力: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bGoldenAge`: 1
+  - `GreatPeoples`: 偉大な吟遊詩人
+  - `Buildings`: 豊穣の賛歌
+  - `iBaseDiscover`: 1000
+  - `iDiscoverMultiplier`: 2
+  - `iGreatWorkCulture`: 4000
+  - `iGoldenAgeModifier`: 50
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Great Commander - 偉大な指揮官
+
+- 内部名: `UNIT_COMMANDER`
+- ユニットクラス: 偉大な指揮官
+- 移動力: 2
+- 初期昇進: 募兵官
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bGoldenAge`: 1
+  - `Buildings`: ユーニルの法典
+  - `ForceBuildings`: 指揮所
+  - `iBaseDiscover`: 1000
+  - `iDiscoverMultiplier`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Decius - デキウス
+
+- 内部名: `UNIT_DECIUS`
+- ユニットクラス: 偉大な指揮官
+- 移動力: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Great Engineer - 偉大な技師
+
+- 内部名: `UNIT_ENGINEER`
+- ユニットクラス: 偉大な技師
+- 移動力: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bGoldenAge`: 1
+  - `GreatPeoples`: 偉大な技師
+  - `Buildings`: ボンブールの銘板
+  - `iBaseDiscover`: 1000
+  - `iDiscoverMultiplier`: 2
+  - `iBaseHurry`: 500
+  - `iHurryMultiplier`: 20
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Great Merchant - 偉大な商人
+
+- 内部名: `UNIT_MERCHANT`
+- ユニットクラス: 偉大な商人
+- 移動力: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bRivalTerritory`: 1
+  - `bGoldenAge`: 1
+  - `GreatPeoples`: 偉大な商人
+  - `Buildings`: ノクス=ノクティス
+  - `iBaseDiscover`: 1000
+  - `iDiscoverMultiplier`: 2
+  - `iBaseTrade`: 500
+  - `iTradeMultiplier`: 200
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Great Prophet - 偉大な預言者
+
+- 内部名: `UNIT_PROPHET`
+- ユニットクラス: 偉大な預言者
+- 移動力: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bGoldenAge`: 1
+  - `GreatPeoples`: 偉大な神官
+  - `Buildings`: ユーニルの法典 / ボンブールの銘板 / ネクロノミコン / ノクス=ノクティス / 豊穣の賛歌 / 宿命の烙印 / ディエス=ディエイ / ルオンノタルの祭壇 / ルオンノタルの祭壇（塗油） / ルオンノタルの祭壇（祝福） / ルオンノタルの祭壇（奉献） / ルオンノタルの祭壇（神授） / ルオンノタルの祭壇（高貴） / ワイアーム砦 / 呪詛の魔法陣 / 復活の魔法陣 / 憤怒の魔法陣 / 虚無の魔法陣
+  - `iBaseDiscover`: 1000
+  - `iDiscoverMultiplier`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Great Sage - 偉大な賢者
+
+- 内部名: `UNIT_SCIENTIST`
+- ユニットクラス: 偉大な賢者
+- 移動力: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bGoldenAge`: 1
+  - `GreatPeoples`: 偉大な賢者
+  - `Buildings`: 宿命の烙印 / 呪詛の魔法陣 / 復活の魔法陣 / 憤怒の魔法陣 / 虚無の魔法陣
+  - `ForceBuildings`: アカデミー
+  - `iBaseDiscover`: 1500
+  - `iDiscoverMultiplier`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Treasure Chest - 宝箱
+
+- 内部名: `UNIT_TREASURE`
+- ユニットクラス: 宝箱
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 宝箱
+  - `Domain`: DOMAIN_IMMOBILE
+  - `bQuickCombat`: 1
+  - `bInvisible`: 1
+  - `bMechanized`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bStillObject`: 1
+
+### Treasure Chest - 宝箱
+
+- 内部名: `UNIT_TREASURE_ADVENTURE_MODE`
+- ユニットクラス: 宝箱
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 宝箱
+  - `Domain`: DOMAIN_IMMOBILE
+  - `bQuickCombat`: 1
+  - `bMechanized`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bStillObject`: 1
+
+### Damien - ダミアン
+
+- 内部名: `UNIT_DAMIEN`
+- ユニットクラス: ダミアン
+- コスト[ハンマー]: 50
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 邪悪への道
+- 必要な文明: ドロアウム
+- 初期昇進: 悪魔の子
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 蛮族以外のユニットとの戦闘に敗北するとアルマゲドンカウンタが上昇 / そのユニットが英雄の昇進を持っていない場合、精神錯乱を与える
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `UnitCombatDefenders`: 偵察ユニット / 弓術ユニット / 騎乗ユニット / 白兵ユニット / 秘術ユニット / 信奉ユニット
+  - `iWorkRate`: 999
+  - `iCultureGarrison`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `Image`: Art_Kaijin/Droaum/Interface/Popups/DAMIEN_DROAUM_Popups.dds
+  - `PythonPostCombatLost`: postCombatDamienDroaum
+
+### Gardener - 庭師
+
+- 内部名: `UNIT_GARDENER`
+- ユニットクラス: 庭師
+- 移動力: 3
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bPillage`: 1
+  - `bGoldenAge`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `Buildings`: ユーニルの法典 / ボンブールの銘板 / ネクロノミコン / ノクス=ノクティス / 豊穣の賛歌 / 宿命の烙印 / ディエス=ディエイ / ワイアーム砦
+  - `iWorkRate`: 100
+  - `iBaseDiscover`: 1000
+  - `iDiscoverMultiplier`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Dark Emperor - 常闇ノ皇
+
+- 内部名: `UNIT_TOKOYAMI`
+- ユニットクラス: 常闇ノ皇
+- コスト[ハンマー]: 600
+- 攻撃力: 20
+- 防御力: 20
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: 常闇ノ国
+- 初期昇進: 飛行 / 恐怖 / 魔族
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 人間プレイヤーが常闇ノ皇を戦闘によって失った場合、指導者の志向をほとんど全て失います
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `iModifyGlobalCounter`: 6
+  - `Image`: Art_Kaijin/Interface/popups/TOKOYAMI_Pop.dds
+  - `PythonPostCombatLost`: postCombatTokoyami
+  - `DamageTypeCombats`: 死 iCombat=10
+
+### Awakened - 覚醒者
+
+- 内部名: `UNIT_AWAKENED`
+- 固有: パトリアの後継者（開拓者 の代替）
+- ユニットクラス: 開拓者
+- 移動力: 2
+- 世代: 1
+- 必要な建造物: 後継者の神殿
+- 初期昇進: 屍人
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 輜重隊
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `bOnlyDefensive`: 1
+  - `bFound`: 1
+  - `ProductionTraits`: 拡張志向 iProductionTrait=100
+  - `BonusProductionModifiers`: パトリアのアーティファクト iProductonModifier=10 / トウモロコシ iProductonModifier=5 / 米 iProductonModifier=5 / 小麦 iProductonModifier=5 / ジャガイモ iProductonModifier=5 / 亜麻 iProductonModifier=5 / 塩 iProductonModifier=5 / キノコ iProductonModifier=5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Reborn - 再誕者
+
+- 内部名: `UNIT_REBORN`
+- ユニットクラス: 再誕者
+- 移動力: 2
+- 世代: 1
+- 必要テクノロジー: 宗教法
+- 追加で必要なテクノロジー: ギフト
+- 必要な建造物: 再誕の大聖堂
+- 初期昇進: 屍人
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 輜重隊
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `bOnlyDefensive`: 1
+  - `bFound`: 1
+  - `BonusProductionModifiers`: 肉体のマナ iProductonModifier=50 / パトリアのアーティファクト iProductonModifier=20 / 宝石 iProductonModifier=20 / 金 iProductonModifier=20
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Missile - 鉄の火球
+
+- 内部名: `UNIT_MISSILE`
+- ユニットクラス: 鉄の火球
+- 攻撃力: 5
+- 移動力: 2
+- 世代: 4
+- ダメージ上限: 100
+- 巻き添え被害: 100
+- その他の設定:
+  - `Special`: SPECIALUNIT_SPELL
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bQuickCombat`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bFlatMovementCost`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `bMechanized`: 1
+  - `bSuicide`: 1
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 6
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 15
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bExplodeInCombat`: 1
+
+### Homunculus - ホムンクルス
+
+- 内部名: `UNIT_HOMUNCULUS`
+- ユニットクラス: ホムンクルス
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 2
+- 世代: 3
+- 初期昇進: 精霊 / 護衛 / ゲリラⅠ / 森番Ⅰ
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 戦闘結果に関わらず死亡する
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `bSuicide`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 毒 iCombat=5
+
+### Uncle Sid's Holy Grenade - シドおじさんの聖なる手榴弾
+
+- 内部名: `UNIT_HOLY_GRENADE`
+- ユニットクラス: シドおじさんの聖なる手榴弾
+- コスト[ハンマー]: 1200
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: エーテル移動
+- 必要な資源: 鉄
+- 間接攻撃の射程: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bQuickCombat`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bFlatMovementCost`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `bMechanized`: 1
+  - `bSuicide`: 1
+  - `iHurryCostModifier`: 4000
+  - `iNukeRange`: 1
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `bNoWarWeariness`: 1
+
+### Element destroyer - エレメント・デストロイヤー
+
+- 内部名: `UNIT_ELEMENT_DESTROYER`
+- ユニットクラス: エレメント・デストロイヤー
+- コスト[ハンマー]: 6000
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 追加で必要なテクノロジー: エーテル移動
+- 必要な資源: 鉄
+- その他の設定:
+  - `Domain`: DOMAIN_IMMOBILE
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bNukeImmune`: 1
+  - `bMechanized`: 1
+  - `bSuicide`: 1
+  - `iHurryCostModifier`: 4000
+  - `iNukeRange`: 8
+  - `BonusProductionModifiers`: 次元のマナ iProductonModifier=50
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `bNoWarWeariness`: 1
+
+### Sentinel - キルモフの番兵
+
+- 内部名: `UNIT_SENTINEL`
+- ユニットクラス: キルモフの番兵
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 初期昇進: 精霊
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 退却率: 25
+- 巻き添え被害: 40
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `BonusAffinities`: 宝石 iAffinity=50 / 金 iAffinity=50 / 真珠 iAffinity=50 / 琥珀 iAffinity=50 / 翡翠 iAffinity=50
+
+### Cursed Token of Ragnarok - ラグナロクの呪われし証
+
+- 内部名: `UNIT_CURSED_TOKEN_OF_RAGNAROK`
+- ユニットクラス: UNITCLASS_CURSED_TOKEN_OF_RAGNAROK
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: UNITCLASS_CURSED_TOKEN_OF_RAGNAROK
+  - `Domain`: DOMAIN_IMMOBILE
+  - `bQuickCombat`: 1
+  - `bInvisible`: 1
+  - `bMechanized`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bStillObject`: 1
+  - `iModifyGlobalCounter`: 1
+
+## 信奉ユニット
+
+### Devout - 篤信家
+
+- 内部名: `UNIT_DEVOUT`
+- 固有: エロヒム（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 宗教法
+- 初期昇進: 精神集中Ⅰ / 生命Ⅰ / 魂Ⅱ / 衛生兵Ⅰ / 護衛
+- 昇格先: TXT_KEY_UNIT_HIGH_PRIEST_OF_KILMORPH / 緑葉の司祭長 / 至天の光輝者 / TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_ORDER / 影法師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Acolyte - 秩序の侍者
+
+- 内部名: `UNIT_DISCIPLE_THE_ORDER`
+- ユニットクラス: TXT_KEY_UNIT_DISCIPLE
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 天界からの指令
+- 必要な建造物: 秩序の神殿
+- 必要な宗教: 秩序の修道会
+- 初期昇進: 衛生兵Ⅰ
+- 昇格先: 秩序の聴罪司祭 / 十字軍
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionSpreads`: 秩序の修道会 iReligionSpread=40
+  - `ReligionType`: 秩序の修道会
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iGreatWorkCulture`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+
+### Ecclesiastic - 至天の聖職者
+
+- 内部名: `UNIT_DISCIPLE_EMPYREAN`
+- ユニットクラス: TXT_KEY_UNIT_DISCIPLE
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 名誉
+- 必要な建造物: 至天の神殿
+- 必要な宗教: 至光なる天空
+- 初期昇進: 衛生兵Ⅰ
+- 昇格先: 至天の代行者
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionSpreads`: 至光なる天空 iReligionSpread=40
+  - `ReligionType`: 至光なる天空
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iGreatWorkCulture`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+
+### Thane of Kilmorph - キルモフの従士
+
+- 内部名: `UNIT_DISCIPLE_RUNES_OF_KILMORPH`
+- ユニットクラス: TXT_KEY_UNIT_DISCIPLE
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 母なる大地への道
+- 必要な建造物: キルモフの神殿
+- 必要な宗教: キルモフのルーン
+- 初期昇進: 衛生兵Ⅰ
+- 昇格先: キルモフの宝石番 / パラマンダー
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionSpreads`: キルモフのルーン iReligionSpread=40
+  - `ReligionType`: キルモフのルーン
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iGreatWorkCulture`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+
+### Disciple of Leaves - 緑葉の信奉者
+
+- 内部名: `UNIT_DISCIPLE_FELLOWSHIP_OF_LEAVES`
+- ユニットクラス: TXT_KEY_UNIT_DISCIPLE
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 深き森への道
+- 必要な建造物: 緑葉の神殿
+- 必要な宗教: 緑葉の同胞
+- 初期昇進: 衛生兵Ⅰ
+- 昇格先: 緑葉の司祭 / レンジャー / サテュロス
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionSpreads`: 緑葉の同胞 iReligionSpread=40
+  - `ReligionType`: 緑葉の同胞
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iGreatWorkCulture`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+
+### Zealot - 深海の盲信者
+
+- 内部名: `UNIT_DISCIPLE_OCTOPUS_OVERLORDS`
+- ユニットクラス: TXT_KEY_UNIT_DISCIPLE
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 深海からの神託
+- 必要な建造物: 深海の神殿
+- 必要な宗教: 深海の旧支配者
+- 初期昇進: 衛生兵Ⅰ
+- 昇格先: 狂人 / 深海の狂信者 / 黄泉の番人
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionSpreads`: 深海の旧支配者 iReligionSpread=40
+  - `ReligionType`: 深海の旧支配者
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iGreatWorkCulture`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+
+### Savant - ヴェールの狂学者
+
+- 内部名: `UNIT_DISCIPLE_THE_ASHEN_VEIL`
+- ユニットクラス: TXT_KEY_UNIT_DISCIPLE
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 魂の堕落
+- 必要な建造物: ヴェールの神殿
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 衛生兵Ⅰ
+- 昇格先: ヴェールの儀式官 / 魔術師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionSpreads`: 蒼褪めたヴェール iReligionSpread=40
+  - `ReligionType`: 蒼褪めたヴェール
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iBaseDiscover`: 40
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+
+### Confessor - 秩序の聴罪司祭
+
+- 内部名: `UNIT_PRIEST_OF_THE_ORDER`
+- ユニットクラス: 秩序の聴罪司祭
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: 秩序の神殿
+- 必要な宗教: 秩序の修道会
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ / 聖霊の導き
+- 昇格先: TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_ORDER / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 秩序の修道会
+  - `StateReligion`: 秩序の修道会
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### Vicar - 至天の代行者
+
+- 内部名: `UNIT_PRIEST_OF_THE_EMPYREAN`
+- ユニットクラス: 至天の代行者
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: 至天の神殿
+- 必要な宗教: 至光なる天空
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ
+- 昇格先: 至天の光輝者 / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 至光なる天空
+  - `StateReligion`: 至光なる天空
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### Stonewarden - キルモフの宝石番
+
+- 内部名: `UNIT_PRIEST_OF_KILMORPH`
+- ユニットクラス: キルモフの宝石番
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: キルモフの神殿
+- 必要な宗教: キルモフのルーン
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ
+- 昇格先: TXT_KEY_UNIT_HIGH_PRIEST_OF_KILMORPH / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: キルモフのルーン
+  - `StateReligion`: キルモフのルーン
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+
+### Priest of Leaves - 緑葉の司祭
+
+- 内部名: `UNIT_PRIEST_OF_LEAVES`
+- ユニットクラス: 緑葉の司祭
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: 緑葉の神殿
+- 必要な宗教: 緑葉の同胞
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ / 森番Ⅰ
+- 昇格先: 緑葉の司祭長 / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 緑葉の同胞
+  - `StateReligion`: 緑葉の同胞
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+
+### Cultist - 深海の狂信者
+
+- 内部名: `UNIT_PRIEST_OF_THE_OVERLORDS`
+- ユニットクラス: 深海の狂信者
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: 深海の神殿
+- 必要な宗教: 深海の旧支配者
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ / 水上歩行
+- 昇格先: TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_OVERLORDS / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `StateReligion`: 深海の旧支配者
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+
+### Ritualist - ヴェールの儀式官
+
+- 内部名: `UNIT_PRIEST_OF_THE_VEIL`
+- ユニットクラス: ヴェールの儀式官
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: ヴェールの神殿
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ / 不浄の聖痕
+- 昇格先: TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_VEIL / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 蒼褪めたヴェール
+  - `StateReligion`: 蒼褪めたヴェール
+  - `ProductionTraits`: 伝道志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Priest of Winter - 冬の司祭
+
+- 内部名: `UNIT_PRIEST_OF_WINTER`
+- ユニットクラス: 冬の司祭
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: 御手の神殿
+- 必要な文明: イリアン
+- 初期昇進: 寒冷種 / 衛生兵Ⅰ / 衛生兵Ⅱ / 氷Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 神術 / 異端審問
+- 昇格先: 冬の司祭長
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: いずれかのプレイヤーが白き御手を完成させていなければならない。
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 冷気 iCombat=2
+  - `DamageTypeResists`: 冷気 iResist=100
+
+### Prior - 秩序の修道院長
+
+- 内部名: `UNIT_HIGH_PRIEST_OF_THE_ORDER`
+- ユニットクラス: TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_ORDER
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な資源: 香木
+- 必要な宗教: 秩序の修道会
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 秩序の修道会
+  - `StateReligion`: 秩序の修道会
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=2
+  - `BonusAffinities`: 法のマナ iAffinity=100
+
+### Luridus - 至天の光輝者
+
+- 内部名: `UNIT_HIGH_PRIEST_OF_THE_EMPYREAN`
+- ユニットクラス: 至天の光輝者
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な資源: 香木
+- 必要な宗教: 至光なる天空
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 至光なる天空
+  - `StateReligion`: 至光なる天空
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=1 / 神聖 iCombat=1
+  - `BonusAffinities`: 太陽のマナ iAffinity=100
+
+### Runekeeper - ルーンキーパー
+
+- 内部名: `UNIT_HIGH_PRIEST_OF_KILMORPH`
+- ユニットクラス: TXT_KEY_UNIT_HIGH_PRIEST_OF_KILMORPH
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な資源: 宝石
+- 必要な宗教: キルモフのルーン
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: キルモフのルーン
+  - `StateReligion`: キルモフのルーン
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=1
+  - `BonusAffinities`: 大地のマナ iAffinity=100
+
+### High Priest of Leaves - 緑葉の司祭長
+
+- 内部名: `UNIT_HIGH_PRIEST_OF_LEAVES`
+- ユニットクラス: 緑葉の司祭長
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な資源: 香木
+- 必要な宗教: 緑葉の同胞
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ / 自然Ⅱ
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 緑葉の同胞
+  - `StateReligion`: 緑葉の同胞
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `BonusAffinities`: 自然のマナ iAffinity=100
+
+### Speaker - 深海の託宣官
+
+- 内部名: `UNIT_HIGH_PRIEST_OF_THE_OVERLORDS`
+- ユニットクラス: TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_OVERLORDS
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な資源: 香木
+- 必要な宗教: 深海の旧支配者
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `StateReligion`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=1
+  - `BonusAffinities`: 水のマナ iAffinity=100
+
+### Profane - ヴェールの破戒僧
+
+- 内部名: `UNIT_HIGH_PRIEST_OF_THE_VEIL`
+- ユニットクラス: TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_VEIL
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な資源: 香木
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: 蒼褪めたヴェール
+  - `StateReligion`: 蒼褪めたヴェール
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=2
+  - `BonusAffinities`: 古書物 iAffinity=100
+
+### High Priest of Winter - 冬の司祭長
+
+- 内部名: `UNIT_HIGH_PRIEST_OF_WINTER`
+- ユニットクラス: 冬の司祭長
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な建造物: 御手の神殿
+- 必要な文明: イリアン
+- 初期昇進: 寒冷種 / 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 氷Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 神術 / 異端審問
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 冷気 iCombat=3
+  - `DamageTypeResists`: 冷気 iResist=100
+
+### Paladin - 聖騎士
+
+- 内部名: `UNIT_PALADIN`
+- ユニットクラス: 聖騎士
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 高潔の証
+- 必要な属性: 善良
+- 初期昇進: 勇気 / 病気無効 / 魔族狩り / 衛生兵Ⅰ
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 善良な指導者のみ訓練可能
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 神聖 iCombat=3
+
+### Druid - ドルイド僧
+
+- 内部名: `UNIT_DRUID`
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 自然との共生
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 衛生兵Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 自然Ⅰ
+- ダメージ上限: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveImpassable`: 1
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `BonusAffinities`: 自然のマナ iAffinity=100
+
+### Dwarven Druid - ドワーフドルイド僧
+
+- 内部名: `UNIT_DWARVEN_DRUID`
+- 固有: カザード・ルシュイアープ（ドルイド僧 の代替）
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 自然との共生
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 衛生兵Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 大地Ⅰ / ドワーフ
+- ダメージ上限: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveImpassable`: 1
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `BonusAffinities`: 大地のマナ iAffinity=100
+
+### Luonnotar - ルオンノタル
+
+- 内部名: `UNIT_LUONNOTAR`
+- 固有: グリゴリ（ドルイド僧 の代替）
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 魔法無効 / 異端審問 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 魂Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 信奉ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Eidolon - 幻霊
+
+- 内部名: `UNIT_EIDOLON`
+- ユニットクラス: 幻霊
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 悪意の企み
+- 必要な属性: 邪悪
+- 初期昇進: 行軍 / 魔族
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 邪悪な指導者のみ訓練可能
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `iModifyGlobalCounter`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 不浄 iCombat=4
+
+### Crusader - 十字軍
+
+- 内部名: `UNIT_CRUSADER`
+- ユニットクラス: 十字軍
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 7
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 必要な建造物: 秩序の神殿
+- 必要な宗教: 秩序の修道会
+- 初期昇進: 勇気 / 衛生兵Ⅰ / 病気無効 / 魔族狩り
+- 昇格先: 聖騎士
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 邪悪なユニットに対して戦闘で勝利すると祝福を得る。
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 秩序の修道会
+  - `StateReligion`: 秩序の修道会
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainMods`: DOMAIN_LAND iDomainMod=20
+  - `iConscription`: 5
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatCrusaderWon
+  - `DamageTypeCombats`: 神聖 iCombat=1
+  - `DamageTypeResists`: 催眠 iResist=100 / 不浄 iResist=100 / 武器 iResist=100
+
+### Paramander - パラマンダー
+
+- 内部名: `UNIT_PARAMANDER`
+- ユニットクラス: パラマンダー
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 130
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 必要な建造物: キルモフの神殿
+- 必要な宗教: キルモフのルーン
+- 初期昇進: 勇気 / ゲリラⅠ / 衛生兵Ⅰ / 魔族狩り
+- 昇格先: 聖騎士
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: キルモフのルーン
+  - `StateReligion`: キルモフのルーン
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `iConscription`: 5
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=100
+  - `BonusAffinities`: 銅 iAffinity=50
+
+### Satyr - サテュロス
+
+- 内部名: `UNIT_SATYR`
+- ユニットクラス: サテュロス
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 10
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 追加で必要なテクノロジー: 秘密の抜け道
+- 必要な宗教: 緑葉の同胞
+- 初期昇進: 森番Ⅰ / サテュロス
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ReligionType`: 緑葉の同胞
+  - `StateReligion`: 緑葉の同胞
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FeatureAttacks`: 森林 iFeatureAttack=50 / 古代樹林 iFeatureAttack=50
+  - `FeatureDefenses`: 森林 iFeatureDefense=50 / 古代樹林 iFeatureDefense=50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Stygian Guard - 黄泉の番人
+
+- 内部名: `UNIT_STYGIAN_GUARD`
+- ユニットクラス: 黄泉の番人
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 130
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 必要な建造物: 深海の神殿
+- 必要な宗教: 深海の旧支配者
+- 初期昇進: 行軍 / 魔族 / 水上歩行
+- 昇格先: 幻霊
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 戦闘で敗北すると、勝利したユニットに低確率で狂乱を与えることがある。
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `StateReligion`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 25
+  - `TerrainAttacks`: 近海 iTerrainAttack=50
+  - `UnitCombatMods`: 信奉ユニット iUnitCombatMod=-50 / 白兵ユニット iUnitCombatMod=50 / 海軍ユニット iUnitCombatMod=-50
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `PythonPostCombatLost`: postCombatDrownLost
+  - `DamageTypeCombats`: 不浄 iCombat=2
+  - `DamageTypeResists`: 冷気 iResist=20 / 武器 iResist=100
+  - `BonusAffinities`: 古書物 iAffinity=25
+
+### Lightbringer - 灯火の信徒
+
+- 内部名: `UNIT_LIGHTBRINGER`
+- ユニットクラス: 灯火の信徒
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 35
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 2
+- 世代: 1
+- 必要な文明: マラキム
+- 初期昇進: 歩哨Ⅰ
+- 昇格先: TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE / TXT_KEY_UNIT_DISCIPLE
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Monk - 格闘僧
+
+- 内部名: `UNIT_MONK`
+- ユニットクラス: 格闘僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 聖職
+- 必要な文明: エロヒム
+- 初期昇進: 衛生兵Ⅰ / 魔族狩り
+- 昇格先: パラマンダー / 十字軍 / キルモフの宝石番 / 緑葉の司祭 / 至天の代行者 / 秩序の聴罪司祭 / 不死者 / 聖騎士
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 5
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Tar Demon - タールデーモン
+
+- 内部名: `UNIT_TAR_DEMON`
+- ユニットクラス: タールデーモン
+- 兵科: 信奉ユニット
+- 攻撃力: 2
+- 防御力: 9
+- 移動力: 1
+- 世代: 3
+- 必要な建造物: 次元界の門
+- 初期昇進: 魔族
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFlatMovementCost`: 1
+  - `ReligionType`: 蒼褪めたヴェール
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `PromotionFromCombat`: 充填
+  - `PythonPostCombatLost`: postCombatSplit
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Host of the Einherjar - エインヘルヤルの軍勢
+
+- 内部名: `UNIT_EINHERJAR`
+- ユニットクラス: エインヘルヤルの軍勢
+- 兵科: 信奉ユニット
+- 攻撃力: 2
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 天使 / 護衛
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### Sphener - スフェンエル
+
+- 内部名: `UNIT_SPHENER`
+- ユニットクラス: スフェンエル
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 高潔の証
+- 必要な宗教: 秩序の修道会
+- 初期昇進: 衛生兵Ⅰ / 英雄 / 生命Ⅰ / 神術 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 魔族狩り / 天使 / 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 秩序の修道会
+  - `StateReligion`: 秩序の修道会
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `iModifyGlobalCounter`: -3
+  - `DamageTypeResists`: 武器 iResist=100
+  - `Image`: Art/Interface/Popups/Sphener.dds
+  - `DamageTypeCombats`: 神聖 iCombat=4
+
+### Chalid Astrakein - ハリッド・アストラケイン
+
+- 内部名: `UNIT_CHALID`
+- ユニットクラス: ハリッド・アストラケイン
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 宗教法
+- 必要な宗教: 至光なる天空
+- 初期昇進: 英雄 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 太陽Ⅰ / 法Ⅰ / 神術 / 歩哨Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 至光なる天空
+  - `StateReligion`: 至光なる天空
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DiploVoteType`: DIPLOVOTE_OVERCOUNCIL
+  - `Image`: Art/Interface/Popups/Chalid Astrakein.dds
+  - `BonusAffinities`: 法のマナ iAffinity=50 / 太陽のマナ iAffinity=100
+
+### Yvain - イヴァン
+
+- 内部名: `UNIT_YVAIN`
+- ユニットクラス: イヴァン
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 自然との共生
+- 必要な宗教: 緑葉の同胞
+- 初期昇進: 生命Ⅰ / 英雄 / 自然Ⅰ / 自然Ⅱ / 自然Ⅲ / 神術 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 植物 / 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveImpassable`: 1
+  - `ReligionType`: 緑葉の同胞
+  - `StateReligion`: 緑葉の同胞
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `FeatureAttacks`: 森林 iFeatureAttack=50 / 古代樹林 iFeatureAttack=100
+  - `FeatureDefenses`: 森林 iFeatureDefense=50 / 古代樹林 iFeatureDefense=100
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `Image`: Art/Interface/Popups/Yvain.dds
+  - `BonusAffinities`: 自然のマナ iAffinity=200
+
+### Mardero - マーデロ
+
+- 内部名: `UNIT_MARDERO`
+- ユニットクラス: マーデロ
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 悪意の企み
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 行軍 / 英雄 / 不可逆Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 魔族 / 烙印
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 蒼褪めたヴェール
+  - `StateReligion`: 蒼褪めたヴェール
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 信奉ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `iModifyGlobalCounter`: 3
+  - `DamageTypeResists`: 武器 iResist=100
+  - `Image`: Art/Interface/Popups/Mardero.dds
+  - `DamageTypeCombats`: 不浄 iCombat=4
+
+### Souhei - 僧兵
+
+- 内部名: `UNIT_SOUHEI`
+- 固有: エチゴ（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 初期昇進: 神術 / 病気無効 / 魔族狩り / 屍人狩り / 超魔術Ⅱ
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iConscription`: 5
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 神聖 iCombat=1
+  - `BonusAffinities`: 生命のマナ iAffinity=50 / 魂のマナ iAffinity=50
+
+### Souheichou - 僧兵長
+
+- 内部名: `UNIT_SOUHEICHOU`
+- 固有: エチゴ（大魔道 の代替）
+- ユニットクラス: 大魔道
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神学
+- 初期昇進: 病気無効 / 魔族狩り / 屍人狩り / 神術 / 生命Ⅱ / 超魔術Ⅱ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 神聖 iCombat=2
+  - `BonusAffinities`: 生命のマナ iAffinity=50 / 魂のマナ iAffinity=50
+
+### Oiran - 花魁
+
+- 内部名: `UNIT_OIRAN`
+- 固有: エチゴ（ドルイド僧 の代替）
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 高潔の証
+- 初期昇進: 病気無効 / 魔法無効 / 精神集中Ⅱ / 精神Ⅲ / 自然Ⅲ / 忠誠
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `Buildings`: ルオンノタルの祭壇 / ルオンノタルの祭壇（塗油） / ルオンノタルの祭壇（祝福） / ルオンノタルの祭壇（奉献）
+  - `iWorkRate`: 50
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `BonusAffinities`: 生命のマナ iAffinity=50 / 魂のマナ iAffinity=50
+
+### Early Seedling - 風祝のアーリー・シードリング
+
+- 内部名: `UNIT_EARLY_SEEDLING`
+- ユニットクラス: 風祝のアーリー・シードリング
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な文明: ニライカナイ
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅰ / 精神集中Ⅱ / 大気Ⅰ / 水Ⅰ / 超魔術Ⅱ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Early_pop.dds
+  - `DamageTypeResists`: 冷気 iResist=50
+
+### Dark Paladin - 常闇の騎士
+
+- 内部名: `UNIT_DARK_PALADIN`
+- 固有: 常闇ノ国（聖騎士 の代替）
+- ユニットクラス: 聖騎士
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 14
+- 防御力: 14
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 悪意の企み
+- 必要な属性: 邪悪
+- 初期昇進: 勇気 / 病気無効 / 災厄 / 衛生兵Ⅰ / 行軍
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 邪悪な指導者のみ訓練可能
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iModifyGlobalCounter`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 死 iCombat=4
+
+### Blime Flazard - ブリム・フレイザード
+
+- 内部名: `UNIT_BLIME`
+- ユニットクラス: ブリム・フレイザード
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: デスピエル
+- 初期昇進: 壊人 / 烙印 / 精神集中Ⅰ / 歩哨Ⅰ / 歩哨Ⅱ / 恐怖
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+  - `DamageTypeCombats`: 火炎 iCombat=2 / 冷気 iCombat=2
+  - `DamageTypeResists`: 火炎 iResist=100 / 冷気 iResist=100 / 武器 iResist=100
+  - `Image`: Art_Kaijin/Interface/Popups/BlimPop.dds
+
+### Blime Flazard - ブリム・フレイザード
+
+- 内部名: `UNIT_BLIME_IMMORTAL`
+- ユニットクラス: ブリム・フレイザード
+- 兵科: 信奉ユニット
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 壊人 / 烙印 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 炎Ⅰ / 氷Ⅰ / 英雄 / 歩哨Ⅰ / 歩哨Ⅱ / 恐怖
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmortal`: 1
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+  - `DamageTypeCombats`: 火炎 iCombat=2 / 冷気 iCombat=2
+  - `DamageTypeResists`: 火炎 iResist=100 / 冷気 iResist=100 / 武器 iResist=100
+  - `Image`: Art_Kaijin/Interface/Popups/BlimPop.dds
+
+### Hunchbacker - 這い出し者
+
+- 内部名: `UNIT_HUNCHBACK`
+- 固有: デスピエル（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 4
+- 防御力: 3
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 昇格先: 勇士 / 長弓兵 / 弩兵 / 弓騎兵 / 十字軍
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `iCityDefense`: 20
+  - `iHillsDefense`: -25
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Dark Soldier - 暗黒兵
+
+- 内部名: `UNIT_DARK_SOLDIER`
+- 固有: デスピエル（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 魔族狩り / 行軍
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 不浄 iCombat=1
+  - `PrereqBuildingClass`: 練兵場
+
+### Dark Templar - 暗黒騎士
+
+- 内部名: `UNIT_DARK_TEMPLAR`
+- 固有: デスピエル（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 追加で必要なテクノロジー: 狂暴
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: 魔族狩り / 屍人狩り / 衛生兵Ⅰ / 衛生兵Ⅱ / 死Ⅲ / 影Ⅲ / 精神集中Ⅲ / 忠誠
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 不浄 iCombat=1
+  - `BonusAffinities`: 影石 iAffinity=100
+
+### Saint Warrior - 聖戦士
+
+- 内部名: `UNIT_LINEAGE_SAINT`
+- ユニットクラス: 聖戦士
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 必要な文明: リネージ
+- 必要な属性: 善良
+- 初期昇進: 衛生兵Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ
+- 昇格先: 聖騎士
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40 / 秘術ユニット iUnitCombatMod=40 / 信奉ユニット iUnitCombatMod=40
+  - `iConscription`: 5
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### Pontifices of Holy North - 聖北の神官
+
+- 内部名: `UNIT_LINEAGE_PONTIFICES`
+- ユニットクラス: 聖北の神官
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: 聖北の大神殿
+- 必要な文明: リネージ
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 精神集中Ⅱ / 生命Ⅰ / 暗黒魔法Ⅰ / 魔族狩り
+- 昇格先: 聖北の神祇官 / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=2
+
+### Pontifex of Holy North - 聖北の神祇官
+
+- 内部名: `UNIT_LINEAGE_PONTIFEX`
+- ユニットクラス: 聖北の神祇官
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な資源: 香木
+- 必要な文明: リネージ
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 精神集中Ⅱ / 精神集中Ⅲ / 法Ⅰ / 生命Ⅰ / 魂Ⅰ / 暗黒魔法Ⅰ / 魔族狩り
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=2
+
+### Wyvern Guardian - 亜翼竜の衛兵
+
+- 内部名: `UNIT_DRAGON_GUARDIAN`
+- ユニットクラス: 亜翼竜の衛兵
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 160
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: オモールの礼拝所
+- 必要な宗教: ドラゴン崇拝
+- 必要な文明: マサトル
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 精神集中Ⅱ / 鉄壁 / 神術 / 監視者の証
+- 昇格先: 聖騎士 / TXT_KEY_UNIT_HIGH_PRIEST_OF_THE_ORDER / 至天の光輝者 / TXT_KEY_UNIT_HIGH_PRIEST_OF_KILMORPH / 緑葉の司祭長 / 奉竜の御子
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: ドラゴン崇拝
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Miquiztli - ミキストリ
+
+- 内部名: `UNIT_MIQUIZTLI`
+- ユニットクラス: ミキストリ
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 11
+- 防御力: 10
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 悪意の企み
+- 追加で必要なテクノロジー: 毒物
+- 必要な宗教: エススの枢密院
+- 必要な文明: クアリ
+- 初期昇進: リザードマン / 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ / 影Ⅰ / 肉体Ⅰ / 不可視 / 狙撃 / 英雄 / アーロンに選ばれし者
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `ReligionType`: エススの枢密院
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 25
+  - `iCityDefense`: -25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmuneToDefensiveStrike`: 1
+  - `iEnslavementChance`: 25
+  - `DamageTypeResists`: 武器 iResist=100
+  - `Image`: Art_Kaijin/Interface/Popups/Miquiztli.dds
+  - `DamageTypeCombats`: 毒 iCombat=3
+
+### Priest of Agruonn - アグルオンの司祭
+
+- 内部名: `UNIT_PRIEST_OF_AGRUONN`
+- ユニットクラス: アグルオンの司祭
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 追加で必要なテクノロジー: 屍霊術
+- 必要な宗教: エススの枢密院
+- 必要な文明: クアリ
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 神術 / 精神集中Ⅱ / 影Ⅰ
+- 昇格先: 影法師 / 不死者 / アグルオンの影司祭 / ミキストリ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iConscription`: 5
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `iEnslavementChance`: 25
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Shadow priest of Agruonn - アグルオンの影司祭
+
+- 内部名: `UNIT_SHADOW_PRIEST_OF_AGRUONN`
+- ユニットクラス: アグルオンの影司祭
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 10
+- 防御力: 9
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 悪意の企み
+- 追加で必要なテクノロジー: 毒物
+- 必要な宗教: エススの枢密院
+- 必要な文明: クアリ
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ / 影Ⅰ / 肉体Ⅰ / 不可視 / 狙撃
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `ReligionType`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 25
+  - `iCityDefense`: -25
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmuneToDefensiveStrike`: 1
+  - `iEnslavementChance`: 25
+  - `DamageTypeResists`: 武器 iResist=100
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Guardian of the Elder - 古き者の守護者
+
+- 内部名: `UNIT_GUARDIAN_OF_THE_ELDER`
+- ユニットクラス: 古き者の守護者
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 160
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 医薬
+- 追加で必要なテクノロジー: 四大元素
+- 必要な文明: アルタイル
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 鉄壁
+- 昇格先: ドルイド僧
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iConscription`: 5
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Storm lurker - 嵐に潜む者
+
+- 内部名: `UNIT_STORM_LURKER`
+- 固有: アルタイル（ドルイド僧 の代替）
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 自然との共生
+- 必要な建造物: 鎮守の杜
+- 必要な属性: 中立
+- 初期昇進: 衛生兵Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 大気Ⅰ / 水Ⅰ
+- ダメージ上限: 100
+- 積載量: 1
+- 説明（ゲーム内ヘルプ）: 中立な指導者のみ訓練可能
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveImpassable`: 1
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `BonusAffinities`: 大気のマナ iAffinity=100 / 水のマナ iAffinity=100
+
+### Techpriest - テックプリースト
+
+- 内部名: `UNIT_TECHPRIEST`
+- 固有: ノービアイ・メカノス（ドルイド僧 の代替）
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 超魔術Ⅱ / 自然Ⅲ / 生命Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 精製装置を建設
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+
+### Apostle of the Cult - 奉竜の使徒
+
+- 内部名: `UNIT_DISCIPLE_OF_THE_DRAGON`
+- ユニットクラス: 奉竜の使徒
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な宗教: ドラゴン崇拝
+- 初期昇進: 衛生兵Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 神術
+- 昇格先: 奉竜の御子
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: クリオテイテ・シェアイム・マサトルのみ訓練可能
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: ドラゴン崇拝
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Messiah of the Cult - 奉竜の御子
+
+- 内部名: `UNIT_SON_OF_THE_DRAGON`
+- ユニットクラス: 奉竜の御子
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な宗教: ドラゴン崇拝
+- 初期昇進: 衛生兵Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 神術
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: ドラゴン崇拝
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=3
+
+### Doomsayer - 終末予言者
+
+- 内部名: `UNIT_DOOMSAYER`
+- ユニットクラス: 終末予言者
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 法律
+- 必要な文明: パトリアの後継者
+- 初期昇進: 屍人 / 衛生兵Ⅰ
+- 昇格先: 鳥占官
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iGreatWorkCulture`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+  - `UnitCreateFromCombat`: 再誕者
+  - `iUnitCreateFromCombatChance`: 15
+
+### Augur - 鳥占官
+
+- 内部名: `UNIT_AUGUR`
+- ユニットクラス: 鳥占官
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 145
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 必要な建造物: ギフトの寺院
+- 必要な文明: パトリアの後継者
+- 初期昇進: 屍人 / 衛生兵Ⅰ / 衛生兵Ⅱ / 精神集中Ⅱ / 神術
+- 昇格先: ドルイド僧 / 聖騎士 / 幻霊 / 不死者 / 神祇官
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Buildings`: ギフトの寺院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `BonusProductionModifiers`: 香木 iProductonModifier=20
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `bFreeXP`: 1
+  - `UnitCreateFromCombat`: 再誕者
+  - `iUnitCreateFromCombatChance`: 20
+
+### Pontifex - 神祇官
+
+- 内部名: `UNIT_PONTIFEX`
+- ユニットクラス: 神祇官
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な建造物: ギフトの寺院
+- 必要な資源: 香木
+- 必要な文明: パトリアの後継者
+- 初期昇進: 屍人 / 衛生兵Ⅰ / 衛生兵Ⅱ / 歩哨Ⅰ / 神術
+- ダメージ上限: 100
+- 必要レベル: 4
+- 説明（ゲーム内ヘルプ）: 都市攻撃に勝利すると都市の人口を1人減らす
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `bFreeXP`: 1
+  - `UnitCreateFromCombat`: 再誕者
+  - `iUnitCreateFromCombatChance`: 25
+  - `PythonPostCombatWon`: postCombatReducePopulation
+  - `DamageTypeCombats`: 死 iCombat=1
+
+### Blighter - 嫌われ者
+
+- 内部名: `UNIT_BLIGHTER`
+- 固有: パトリアの後継者（ドルイド僧 の代替）
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 自然との共生
+- 必要な属性: 中立
+- 初期昇進: 屍人 / 衛生兵Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 死Ⅰ
+- ダメージ上限: 100
+- 積載量: 1
+- 説明（ゲーム内ヘルプ）: 戦闘に勝利すると搭載された伸びた蔦は肥育された蔦の昇進を得る。 / 中立な指導者のみ訓練可能
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveImpassable`: 1
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_CREEPER
+  - `DomainCargo`: DOMAIN_LAND
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `PythonPostCombatWon`: postCombatBlighter
+  - `BonusAffinities`: 死のマナ iAffinity=100
+
+### Revenant - 復讐者
+
+- 内部名: `UNIT_REVENANT`
+- ユニットクラス: 復讐者
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 必要な建造物: ギフトの寺院
+- 必要な文明: パトリアの後継者
+- 初期昇進: 執念 / 屍人
+- 昇格先: ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iConscription`: 5
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `bNeverObsolete`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `UnitCreateFromCombat`: 悪霊
+  - `iUnitCreateFromCombatChance`: 25
+  - `DamageTypeCombats`: 死 iCombat=2
+
+### Snow Sage - 雪の賢者
+
+- 内部名: `UNIT_DRUID_FROSTLING_NIVAL`
+- 固有: ニバル（ドルイド僧 の代替）
+- ユニットクラス: ドルイド僧
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 自然との共生
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 衛生兵Ⅰ / 精神集中Ⅰ / 精神集中Ⅱ / 氷Ⅰ / フロストリング / 氷の道
+- ダメージ上限: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveImpassable`: 1
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeResists`: 武器 iResist=100
+  - `BonusAffinities`: 氷のマナ iAffinity=100
+
+### Olwen the Free priest - 自由司祭オルウェン
+
+- 内部名: `UNIT_OLWEN`
+- ユニットクラス: 自由司祭オルウェン
+- 兵科: 信奉ユニット
+- コスト[ハンマー]: 350
+- 攻撃力: 9
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 高潔の証
+- 初期昇進: 英雄 / 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 生命Ⅰ / 暗黒魔法Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/OlwenPop.dds
+
+## 偵察ユニット
+
+### Scout - 斥候
+
+- 内部名: `UNIT_SCOUT`
+- ユニットクラス: 斥候
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 20
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 2
+- 世代: 1
+- 昇格先: 狩人 / 騎乗兵
+- ダメージ上限: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ProductionTraits`: 警邏志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Goblin - ゴブリン
+
+- 内部名: `UNIT_GOBLIN`
+- 固有: 残り火一族・蛮族の国（斥候 の代替）
+- ユニットクラス: 斥候
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 15
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 世代: 1
+- 初期昇進: ゴブリン
+- 昇格先: 騎乗兵
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 狼を倒すと自動的に狼の騎乗兵へ昇格（要：騎乗）
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ProductionTraits`: 警邏志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatWolfRider
+
+### Frostling - フロストリング
+
+- 内部名: `UNIT_FROSTLING`
+- 固有: フロストリング（斥候 の代替）
+- ユニットクラス: 斥候
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 初期昇進: フロストリング
+- 昇格先: 弓兵 / 騎乗兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- 説明（ゲーム内ヘルプ）: 狼を倒すと自動的に狼の騎乗兵へ昇格（要：騎乗）
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ProductionTraits`: 警邏志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatWolfRider
+
+### Hunter - 狩人
+
+- 内部名: `UNIT_HUNTER`
+- ユニットクラス: 狩人
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 昇格先: レンジャー / 暗殺者
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Divided Soul - 魂の緒
+
+- 内部名: `UNIT_DIVIDED_SOUL`
+- 固有: シダー（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 昇格先: レンジャー / 暗殺者
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Lizardman - リザードマン
+
+- 内部名: `UNIT_LIZARDMAN`
+- 固有: 残り火一族・蛮族の国（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 初期昇進: リザードマン
+- 昇格先: レンジャー / 暗殺者
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Hellhound - 地獄の番犬
+
+- 内部名: `UNIT_HELLHOUND`
+- 固有: 地獄の軍勢・常闇ノ国・魔族（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 4
+- 防御力: 3
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 昇格先: レンジャー / 暗殺者
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Ranger - レンジャー
+
+- 内部名: `UNIT_RANGER`
+- ユニットクラス: レンジャー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 昇格先: 魔獣使い / ドルイド僧
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 狩猟小屋
+
+### Harlequin - 道化師
+
+- 内部名: `UNIT_HARLEQUIN`
+- 固有: バルセラフ（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 必要な建造物: 巡業サーカス
+- 昇格先: 魔獣使い / ドルイド僧
+- ダメージ上限: 100
+- 退却率: 20
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Beastmaster - 魔獣使い
+
+- 内部名: `UNIT_BEASTMASTER`
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 12
+- 防御力: 11
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 動物調教 / 魔獣調教
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Herald - 御使い
+
+- 内部名: `UNIT_HERALD`
+- 固有: マーキュリアン（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- 攻撃力: 12
+- 防御力: 11
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 初期昇進: 天使
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 3
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Myconid - マイコニド
+
+- 内部名: `UNIT_MYCONID`
+- 固有: カザード・ノービアイ（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 12
+- 防御力: 11
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 動物調教 / 魔獣調教
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+  - `BonusAffinities`: キノコ iAffinity=100
+
+### Spiderkin - 蜘蛛人間
+
+- 内部名: `UNIT_SPIDERKIN`
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- 攻撃力: 12
+- 防御力: 10
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 初期昇進: 動物調教 / 魔獣調教
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 2
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Assassin - 暗殺者
+
+- 内部名: `UNIT_ASSASSIN`
+- ユニットクラス: 暗殺者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: 狙撃
+- 昇格先: 影法師 / 狙撃手
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `PrereqBuildingClass`: 狩猟小屋
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Ghost - 亡霊
+
+- 内部名: `UNIT_GHOST`
+- 固有: シダー（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: 狙撃 / 隠れる技能
+- 昇格先: 影法師 / 狙撃手
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `PrereqBuildingClass`: 狩猟小屋
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Chanter - 詠唱者
+
+- 内部名: `UNIT_CHANTER`
+- 固有: アムリテ・メギスス（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: 狙撃 / 次元Ⅰ
+- 昇格先: 影法師 / 狙撃手
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `PrereqBuildingClass`: 狩猟小屋
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Taskmaster - 奴隷監督
+
+- 内部名: `UNIT_TASKMASTER`
+- 固有: バルセラフ（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 7
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: 狙撃
+- 昇格先: 影法師 / 狙撃手
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `iEnslavementChance`: 50
+  - `PrereqBuildingClass`: 狩猟小屋
+
+### Shadow - 影法師
+
+- 内部名: `UNIT_SHADOW`
+- ユニットクラス: 影法師
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 10
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 毒物
+- 必要な宗教: エススの枢密院
+- 初期昇進: 狙撃 / 不可視
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ReligionType`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `iCityDefense`: -25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Angel of Death - 死の天使
+
+- 内部名: `UNIT_ANGEL_OF_DEATH`
+- 固有: マーキュリアン（影法師 の代替）
+- ユニットクラス: 影法師
+- 兵科: 偵察ユニット
+- 攻撃力: 10
+- 防御力: 6
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 初期昇進: 狙撃 / 天使 / 忌まわしき抱擁 / 不可視
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- 必要レベル: 4
+- 説明（ゲーム内ヘルプ）: 都市攻撃に勝利すると都市の人口を1人減らす
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatReducePopulation
+  - `DamageTypeCombats`: 神聖 iCombat=3
+
+### Dwarven Shadow - ドワーフ影法師
+
+- 内部名: `UNIT_DWARVEN_SHADOW`
+- 固有: カザード・ノービアイ・ルシュイアープ（影法師 の代替）
+- ユニットクラス: 影法師
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 10
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 毒物
+- 必要な宗教: エススの枢密院
+- 初期昇進: 狙撃 / ドワーフ / 不可視
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ReligionType`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityAttack`: -25
+  - `iCityDefense`: -25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Courtesan - 娼婦
+
+- 内部名: `UNIT_COURTESAN`
+- 固有: バルセラフ（影法師 の代替）
+- ユニットクラス: 影法師
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 10
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 毒物
+- 必要な宗教: エススの枢密院
+- 初期昇進: 狙撃 / 不可視 / 病気
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ReligionType`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -10
+  - `iCityDefense`: -10
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `iEnslavementChance`: 25
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Fawn - フォーン
+
+- 内部名: `UNIT_FAWN`
+- ユニットクラス: フォーン
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 6
+- 防御力: 5
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 深き森への道
+- 必要な宗教: 緑葉の同胞
+- 初期昇進: 森番Ⅰ / サテュロス
+- 昇格先: サテュロス
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ReligionType`: 緑葉の同胞
+  - `StateReligion`: 緑葉の同胞
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FeatureAttacks`: 森林 iFeatureAttack=50 / 古代樹林 iFeatureAttack=50
+  - `FeatureDefenses`: 森林 iFeatureDefense=50 / 古代樹林 iFeatureDefense=50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Revelers - 狂宴者
+
+- 内部名: `UNIT_REVELERS`
+- ユニットクラス: 狂宴者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 135
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: Never
+- 必要な建造物: 次元界の門
+- 初期昇進: 特別奇襲 / 行軍
+- 昇格先: 幻霊
+- ダメージ上限: 100
+- 退却率: 35
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Rathus Denmora - ラタス・デンモラ
+
+- 内部名: `UNIT_RATHUS`
+- ユニットクラス: ラタス・デンモラ
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 必要な文明: シダー
+- 初期昇進: 英雄 / PROMOTION_NETHER_BLADE / 狙撃 / 不可視 / 屍人狩り
+- ダメージ上限: 100
+- 先制攻撃: 2
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `Image`: Art/Interface/Popups/Rathus Denmora.dds
+
+### Alazkan the Assassin - 殺し屋アラズカン
+
+- 内部名: `UNIT_ALAZKAN`
+- ユニットクラス: 殺し屋アラズカン
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 必要な文明: スヴァルトアールヴ
+- 初期昇進: 狙撃 / 国籍秘匿 / 英雄 / エルフ / PROMOTION_BLACK_MIRROR
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: -50
+  - `iCityDefense`: -50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `Image`: Art/Interface/Popups/Alazkan.dds
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Ninja - 忍者
+
+- 内部名: `UNIT_NINJA`
+- 固有: エチゴ（影法師 の代替）
+- ユニットクラス: 影法師
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 10
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 税制
+- 初期昇進: 狙撃 / 炎Ⅰ / 隠れる技能
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `iCityDefense`: -25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `BonusAffinities`: 炎のマナ iAffinity=50 / 精神のマナ iAffinity=50
+
+### Braggart Berm-Maple - 天狗のバーム・メイプル
+
+- 内部名: `UNIT_BRAGGART`
+- ユニットクラス: 天狗のバーム・メイプル
+- 兵科: 偵察ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 2
+- 世代: 1
+- 必要な文明: ニライカナイ
+- 初期昇進: 歩哨Ⅰ / 歩哨Ⅱ / 動物調教 / 魂Ⅲ
+- ダメージ上限: 100
+- 退却率: 25
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `Builds`: 狩猟場の建設
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=100 / 魔獣ユニット iUnitCombatMod=100
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/popups/momiji_pop.dds
+
+### Ninja Slayer - ニンジャスレイヤー
+
+- 内部名: `UNIT_NINJASLAYER`
+- ユニットクラス: ニンジャスレイヤー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 480
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 毒物
+- 必要な文明: グリゴリ
+- 初期昇進: 英雄 / 歩哨Ⅰ / 歩哨Ⅱ / 看破の目 / 行軍 / 狙撃 / 不可視
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitClassAttackMods`: 暗殺者 iUnitClassMod=50 / 影法師 iUnitClassMod=50
+  - `UnitClassDefenseMods`: 暗殺者 iUnitClassMod=50 / 影法師 iUnitClassMod=50
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/NinjaSlayer_pop.dds
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `DamageTypeResists`: 冷気 iResist=100 / 死 iResist=100 / 火炎 iResist=100 / 神聖 iResist=100 / 電撃 iResist=100 / 毒 iResist=100 / 不浄 iResist=100
+
+### Hesitatia the perfect and smart - 完全で瀟洒なヘジテーシャ
+
+- 内部名: `UNIT_PARFECT_AND_SMART`
+- ユニットクラス: 完全で瀟洒なヘジテーシャ
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 数学
+- 必要な文明: カラビム
+- 初期昇進: 忠誠 / 影Ⅱ
+- ダメージ上限: 100
+- 先制攻撃: 2
+- 積載量: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Builds`: 道路の建設 / 舗装道を敷設
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `Image`: Art_Kaijin/Interface/popups/Sakuya_Popup.dds
+
+### Thief - 盗賊
+
+- 内部名: `UNIT_LINEAGE_THIEF`
+- 固有: リネージ（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 12
+- 防御力: 11
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 毒物
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 30
+  - `iHillsDefense`: 30
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Blood hunter - 血の狩人
+
+- 内部名: `UNIT_BLOOD_HUNTER`
+- 固有: クアリ（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 初期昇進: リザードマン
+- 昇格先: レンジャー / 暗殺者
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `FeatureAttacks`: 密林 iFeatureAttack=25 / 深い密林 iFeatureAttack=25 / 沼 iFeatureAttack=25
+  - `UnitCombatMods`: 信奉ユニット iUnitCombatMod=50 / 動物ユニット iUnitCombatMod=25
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iEnslavementChance`: 25
+
+### Slaughterer - 虐殺者
+
+- 内部名: `UNIT_SLAUGHTERER`
+- 固有: クアリ（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 初期昇進: リザードマン / 歩哨Ⅰ
+- 昇格先: 魔獣使い / ドルイド僧
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 40
+  - `FeatureAttacks`: 密林 iFeatureAttack=25 / 深い密林 iFeatureAttack=25 / 沼 iFeatureAttack=25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 信奉ユニット iUnitCombatMod=50 / 動物ユニット iUnitCombatMod=25
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iEnslavementChance`: 25
+  - `PrereqBuildingClass`: 狩猟小屋
+
+### Abuser - 奴隷使い
+
+- 内部名: `UNIT_ABUSER`
+- 固有: クアリ（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 14
+- 防御力: 10
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 悪意の企み
+- 必要な建造物: 奴隷の穴居
+- 初期昇進: リザードマン / 歩哨Ⅰ / 災厄 / 狙撃
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 積載量: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `FeatureAttacks`: 密林 iFeatureAttack=25 / 深い密林 iFeatureAttack=25 / 沼 iFeatureAttack=25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 信奉ユニット iUnitCombatMod=25
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iEnslavementChance`: 40
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Advance guard of Agruonn - アグルオンの尖兵
+
+- 内部名: `UNIT_ADVANCE_GUARD_OF_AGRUONN`
+- 固有: クアリ（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 6
+- 防御力: 3
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: リザードマン / 狙撃
+- 昇格先: 影法師 / 狙撃手 / ミキストリ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `FeatureAttacks`: 密林 iFeatureAttack=25 / 深い密林 iFeatureAttack=25 / 沼 iFeatureAttack=25
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `iEnslavementChance`: 25
+  - `PrereqBuildingClass`: 狩猟小屋
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Dragonmaster - 竜使い
+
+- 内部名: `UNIT_DRAGONMASTER`
+- 固有: アルタイル（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 12
+- 防御力: 11
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 動物調教 / 魔獣調教
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Witch Hunter - 魔女狩り
+
+- 内部名: `UNIT_WITCHHUNTER`
+- 固有: メカノス（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: 狙撃 / 魔法抵抗
+- 昇格先: 影法師 / 狙撃手
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `UnitCombatMods`: 秘術ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `PrereqBuildingClass`: 狩猟小屋
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Infiltrator - 密偵
+
+- 内部名: `UNIT_INFILTRATOR`
+- 固有: シダー（斥候 の代替）
+- ユニットクラス: 斥候
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 20
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 2
+- 世代: 1
+- 昇格先: 狩人 / 騎乗兵
+- ダメージ上限: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `ProductionTraits`: 警邏志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Scourge Purifier - 禍祓い
+
+- 内部名: `UNIT_SCOURGE_PURIFIER`
+- 固有: シダー（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 昇格先: 魔獣使い / ドルイド僧
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 狩猟小屋
+
+### Evocater - 依巫
+
+- 内部名: `UNIT_EVOCATER`
+- 固有: シダー（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 12
+- 防御力: 11
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 動物調教 / 魔獣調教
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Dark Stoker - ダークストーカー
+
+- 内部名: `UNIT_DARK_STOKER`
+- 固有: スヴァルトアールヴ・バルドルアールヴ（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 初期昇進: 影Ⅰ / 隠れる技能
+- 昇格先: 魔獣使い / ドルイド僧
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 狩猟小屋
+
+### Horned Dread Manifestation - 恐怖の顕現
+
+- 内部名: `UNIT_HORNED_DREAD`
+- ユニットクラス: 恐怖の顕現
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 必要な文明: パトリアの後継者
+- 初期昇進: 恐怖 / 屍人 / 電撃戦 / 散兵 / 恐怖の顕現 / 精神Ⅲ
+- ダメージ上限: 100
+- 先制攻撃: 3
+- 巻き添え被害: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: -20
+  - `iHillsAttack`: 40
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 死 iCombat=1 / 毒 iCombat=2
+
+### Cetratus - 軽盾兵
+
+- 内部名: `UNIT_CETRATUS`
+- 固有: パトリアの後継者（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 初期昇進: 屍人 / 散兵
+- 昇格先: レンジャー / 暗殺者 / 緑葉の司祭
+- ダメージ上限: 100
+- 先制攻撃: 2
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Ghostwalker - 彷徨い人
+
+- 内部名: `UNIT_GHOSTWALKER`
+- 固有: パトリアの後継者（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 7
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 初期昇進: 屍人 / 散兵
+- 昇格先: 恐怖の顕現 / ドルイド僧
+- ダメージ上限: 100
+- 先制攻撃: 3
+- 巻き添え被害: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `iHillsAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 狩猟小屋
+  - `DamageTypeCombats`: 死 iCombat=1
+
+### Martyrs of Patria - パトリアの殉教者
+
+- 内部名: `UNIT_MARTYR`
+- 固有: パトリアの後継者（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 35
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 演劇
+- 必要な建造物: 契約の大広間
+- 初期昇進: 屍人 / 狙撃
+- 昇格先: 影法師 / 狙撃手
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 2
+- 説明（ゲーム内ヘルプ）: 戦闘ユニットを倒すと33％の確率で相打ちになる
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `PythonPostCombatWon`: postCombatMartyrSuicide
+  - `PrereqBuildingClass`: 狩猟小屋
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Pelemoc Goldtongue - 金舌のプレモク
+
+- 内部名: `UNIT_PELEMOC`
+- ユニットクラス: プレモク
+- 兵科: 偵察ユニット
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 通貨
+- 必要な文明: パトリアの後継者
+- 初期昇進: 屍人
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bOnlyDefensive`: 1
+  - `bNoCapture`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bInvisible`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Pelemoc.dds
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Themoch the Silent Watcher - 監視者セモク
+
+- 内部名: `UNIT_THEMOCH`
+- ユニットクラス: セモク
+- 兵科: 偵察ユニット
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 追跡術
+- 必要な文明: パトリアの後継者
+- 初期昇進: 屍人 / 不可視 / 歩哨Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bOnlyDefensive`: 1
+  - `bNoCapture`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Themoch.dds
+
+### Melante the Artful Governor - 狡猾なるメランテ
+
+- 内部名: `UNIT_MELANTE`
+- ユニットクラス: メランテ
+- 兵科: 偵察ユニット
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 法律
+- 必要な文明: パトリアの後継者
+- 初期昇進: 屍人
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bOnlyDefensive`: 1
+  - `bNoCapture`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 100
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Melante.dds
+  - `DamageTypeCombats`: 死 iCombat=1
+
+### Korinna the Black Lady - 黒衣の貴婦人コリンナ
+
+- 内部名: `UNIT_KORRINA_BLACK`
+- ユニットクラス: 黒衣の貴婦人コリンナ
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 追跡術
+- 必要な文明: パトリアの後継者
+- 初期昇進: 忠誠 / 精神集中Ⅰ / 精神集中Ⅱ / 屍人 / 隠れる技能 / 屍霊術
+- ダメージ上限: 100
+- 先制攻撃: 2
+- 武器の段階: 3
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bFreeXP`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/KorrinaBlack.dds
+
+### Walking Dead - 生ける死体
+
+- 内部名: `UNIT_WALKING_DEAD`
+- 固有: アリストラク（斥候 の代替）
+- ユニットクラス: 斥候
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 10
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 世代: 1
+- 初期昇進: 屍人 / 人食い / 永久の隷属
+- 昇格先: 狩人
+- ダメージ上限: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `ProductionTraits`: 警邏志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Zombies - 屍奴
+
+- 内部名: `UNIT_ZOMBIES`
+- 固有: アリストラク（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 35
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 初期昇進: 屍人 / 人食い / 木偶 / 永久の隷属
+- 昇格先: レンジャー
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Ghoul - 食屍鬼
+
+- 内部名: `UNIT_GHOUL`
+- 固有: アリストラク（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 偵察ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 初期昇進: 屍人 / 人食い / 木偶 / 永久の隷属
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+## 労働ユニット
+
+### Worker - 労働者
+
+- 内部名: `UNIT_WORKER`
+- ユニットクラス: 労働者
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 40
+- 移動力: 2
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 労働者
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `bOnlyDefensive`: 1
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 農場の建設 / 鉱山の建設 / 工房の建設 / 炭焼き小屋を建設 / 製材所の建設 / 風車の建設 / 大農園の建設 / 養蚕場を建設 / 採石場の建設 / 牧草地の建設 / 狩猟場の建設 / ワイン醸造所の建設 / 小屋の建設 / 村を建設 / 緑葉の庵を構える / 緑葉の里を構える / 砦の建設 / 密林の開拓 / 森林の伐採 / 沼の干拓 / 悪霊の地を浄める / ユルトを建設 / 水車の建設
+  - `ProductionTraits`: 勤労志向 iProductionTrait=100
+  - `iWorkRate`: 100
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Mud Golem - 泥のゴーレム
+
+- 内部名: `UNIT_MUD_GOLEM`
+- 固有: ノービアイ・ルシュイアープ（労働者 の代替）
+- ユニットクラス: 労働者
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 60
+- 移動力: 3
+- 世代: 1
+- 初期昇進: ゴーレム
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 農場の建設 / 鉱山の建設 / 工房の建設 / 炭焼き小屋を建設 / 製材所の建設 / 風車の建設 / 大農園の建設 / 養蚕場を建設 / 採石場の建設 / 牧草地の建設 / 狩猟場の建設 / ワイン醸造所の建設 / 小屋の建設 / 村を建設 / 緑葉の庵を構える / 緑葉の里を構える / 砦の建設 / 密林の開拓 / 森林の伐採 / 沼の干拓 / 悪霊の地を浄める / ユルトを建設 / 水車の建設
+  - `ProductionTraits`: 勤労志向 iProductionTrait=100
+  - `iWorkRate`: 150
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Slave - 奴隷
+
+- 内部名: `UNIT_SLAVE`
+- ユニットクラス: 奴隷
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 60
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 昇格先: 狂人
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 奴隷
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 農場の建設 / 鉱山の建設 / 工房の建設 / 炭焼き小屋を建設 / 製材所の建設 / 風車の建設 / 大農園の建設 / 養蚕場を建設 / 採石場の建設 / 牧草地の建設 / 狩猟場の建設 / ワイン醸造所の建設 / 小屋の建設 / 村を建設 / 緑葉の庵を構える / 緑葉の里を構える / 砦の建設 / 密林の開拓 / 森林の伐採 / 沼の干拓 / 悪霊の地を浄める / ユルトを建設 / 水車の建設
+  - `iWorkRate`: 50
+  - `iBaseHurry`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Work Boat - 作業船
+
+- 内部名: `UNIT_WORKBOAT`
+- ユニットクラス: TXT_KEY_UNIT_WORKBOAT
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 30
+- 移動力: 2
+- 世代: 1
+- 必要テクノロジー: 漁業
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bPrereqBonuses`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `Builds`: 漁船の建造 / 捕鯨船の建造 / 海賊の隠れ家を構える / 海藻を除去
+  - `iWorkRate`: 100
+  - `TerrainImpassables`: 外洋
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Lizard Shaper - リザードマン整形者
+
+- 内部名: `UNIT_LIZARD_SHAPER`
+- 固有: クアリ・マサトル（労働者 の代替）
+- ユニットクラス: 労働者
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 40
+- 移動力: 2
+- 世代: 1
+- 初期昇進: リザードマン / 精神集中Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 労働者
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `bOnlyDefensive`: 1
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 農場の建設 / 鉱山の建設 / 工房の建設 / 炭焼き小屋を建設 / 製材所の建設 / 風車の建設 / 大農園の建設 / 養蚕場を建設 / 採石場の建設 / 牧草地の建設 / 狩猟場の建設 / ワイン醸造所の建設 / 小屋の建設 / 村を建設 / 緑葉の庵を構える / 緑葉の里を構える / 砦の建設 / 密林の開拓 / 森林の伐採 / 沼の干拓 / 悪霊の地を浄める / ユルトを建設 / 水車の建設
+  - `ProductionTraits`: 勤労志向 iProductionTrait=100
+  - `iWorkRate`: 100
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Contributor - 功労者
+
+- 内部名: `UNIT_CONTRIBUTOR`
+- 固有: アルタイル（労働者 の代替）
+- ユニットクラス: 労働者
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 40
+- 移動力: 2
+- 世代: 1
+- 初期昇進: 竜人
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 労働者
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `bOnlyDefensive`: 1
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 農場の建設 / 鉱山の建設 / 工房の建設 / 炭焼き小屋を建設 / 製材所の建設 / 風車の建設 / 大農園の建設 / 養蚕場を建設 / 採石場の建設 / 牧草地の建設 / 狩猟場の建設 / ワイン醸造所の建設 / 小屋の建設 / 村を建設 / 緑葉の庵を構える / 緑葉の里を構える / 砦の建設 / 密林の開拓 / 森林の伐採 / 沼の干拓 / 悪霊の地を浄める / ユルトを建設 / 水車の建設
+  - `ProductionTraits`: 勤労志向 iProductionTrait=100
+  - `iWorkRate`: 100
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Shadow Hand - 影の手
+
+- 内部名: `UNIT_SHADOW_HAND`
+- 固有: シダー（労働者 の代替）
+- ユニットクラス: 労働者
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 40
+- 移動力: 2
+- 世代: 1
+- 初期昇進: 不可視
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: 労働者
+  - `Domain`: DOMAIN_LAND
+  - `bFood`: 1
+  - `bOnlyDefensive`: 1
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 農場の建設 / 鉱山の建設 / 工房の建設 / 炭焼き小屋を建設 / 製材所の建設 / 風車の建設 / 大農園の建設 / 養蚕場を建設 / 採石場の建設 / 牧草地の建設 / 狩猟場の建設 / ワイン醸造所の建設 / 小屋の建設 / 村を建設 / 緑葉の庵を構える / 緑葉の里を構える / 砦の建設 / 密林の開拓 / 森林の伐採 / 沼の干拓 / 悪霊の地を浄める / ユルトを建設 / 水車の建設
+  - `ProductionTraits`: 勤労志向 iProductionTrait=100
+  - `iWorkRate`: 100
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Snow Worker - 雪男
+
+- 内部名: `UNIT_SNOW_WORKER`
+- 固有: ニバル（労働者 の代替）
+- ユニットクラス: 労働者
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 30
+- 移動力: 2
+- 世代: 1
+- 初期昇進: ゴーレム / 寒冷種
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 雪だるまを整備可能
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 農場の建設 / 鉱山の建設 / 工房の建設 / 炭焼き小屋を建設 / 製材所の建設 / 風車の建設 / 大農園の建設 / 養蚕場を建設 / 採石場の建設 / 牧草地の建設 / 狩猟場の建設 / ワイン醸造所の建設 / 小屋の建設 / 村を建設 / 緑葉の庵を構える / 緑葉の里を構える / 砦の建設 / 密林の開拓 / 森林の伐採 / 沼の干拓 / 悪霊の地を浄める / ユルトを建設 / 水車の建設 / 雪だるまを作る
+  - `ProductionTraits`: 勤労志向 iProductionTrait=100
+  - `iWorkRate`: 100
+  - `TerrainWorks`: 氷原 iTerrainWork=25
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Basque - バス船
+
+- 内部名: `UNIT_BASQUE`
+- 固有: ドヴィエロ（作業船 の代替）
+- ユニットクラス: TXT_KEY_UNIT_WORKBOAT
+- 兵科: 労働ユニット
+- コスト[ハンマー]: 45
+- 防御力: 8
+- 移動力: 2
+- 世代: 1
+- 必要テクノロジー: 漁業
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 漁船の建造や捕鯨船の建造で失われない / (移動することは出来なくなる)
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bPrereqBonuses`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `Builds`: 漁船の建造 / 捕鯨船の建造 / 海賊の隠れ家を構える / 海藻を除去
+  - `iWorkRate`: 100
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: -1000
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+## 動物ユニット
+
+### Wolf - 狼
+
+- 内部名: `UNIT_WOLF`
+- ユニットクラス: 狼
+- 兵科: 動物ユニット
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 2
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 狼の檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `TerrainNatives`: 凍土 / 氷原
+  - `FeatureNatives`: 森林
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bNoMaintenanceCost`: 1
+  - `bCarnivorous`: 1
+  - `UnitConvertFromCombat`: 狼の群れ
+  - `iUnitConvertFromCombatChance`: 25
+
+### Wolf Pack - 狼の群れ
+
+- 内部名: `UNIT_WOLF_PACK`
+- ユニットクラス: 狼の群れ
+- 兵科: 動物ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 2
+- 世代: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 狼の檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bNoMaintenanceCost`: 1
+  - `bCarnivorous`: 1
+  - `UnitCreateFromCombat`: 狼
+  - `iUnitCreateFromCombatChance`: 10
+
+### Lion - ライオン
+
+- 内部名: `UNIT_LION`
+- ユニットクラス: ライオン
+- 兵科: 動物ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: ライオンの檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `TerrainNatives`: 草原 / 平原 / 砂漠
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bCarnivorous`: 1
+  - `UnitConvertFromCombat`: ライオンの群れ
+  - `iUnitConvertFromCombatChance`: 25
+
+### Lion Pride - ライオンの群れ
+
+- 内部名: `UNIT_LION_PRIDE`
+- ユニットクラス: ライオンの群れ
+- 兵科: 動物ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: ライオンの檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Gorilla - ゴリラ
+
+- 内部名: `UNIT_GORILLA`
+- ユニットクラス: ゴリラ
+- 兵科: 動物ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: ゴリラの檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FeatureNatives`: 密林
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Bear - 熊
+
+- 内部名: `UNIT_BEAR`
+- ユニットクラス: 熊
+- 兵科: 動物ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 熊の見世物
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FeatureNatives`: 森林 / 古代樹林
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Polar Bear - 北極熊
+
+- 内部名: `UNIT_POLAR_BEAR`
+- ユニットクラス: 熊
+- 兵科: 動物ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 1
+- 初期昇進: 寒冷種
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 熊の見世物
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `TerrainNatives`: 氷原
+  - `FeatureNatives`: 森林 / 古代樹林
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Tiger - 虎
+
+- 内部名: `UNIT_TIGER`
+- ユニットクラス: 虎
+- 兵科: 動物ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 虎の檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FeatureNatives`: 密林
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Elephant - 象
+
+- 内部名: `UNIT_ELEPHANT`
+- ユニットクラス: 象
+- 兵科: 動物ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 1
+- 昇格先: 戦象
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bOnlyDefensive`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `TerrainNatives`: 草原 / 平原
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Baby Spider - 蜘蛛の幼生
+
+- 内部名: `UNIT_BABY_SPIDER`
+- ユニットクラス: 蜘蛛の幼生
+- 兵科: 動物ユニット
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `UnitConvertFromCombat`: 巨大蜘蛛
+  - `iUnitConvertFromCombatChance`: 30
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Giant Spider - 巨大蜘蛛
+
+- 内部名: `UNIT_GIANT_SPIDER`
+- ユニットクラス: 巨大蜘蛛
+- 兵科: 動物ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- ダメージ上限: 100
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Buildings`: 蜘蛛の養殖場
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FeatureNatives`: 密林 / 森林 / 古代樹林
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `UnitCreateFromCombat`: 蜘蛛の幼生
+  - `iUnitCreateFromCombatChance`: 30
+  - `bCarnivorous`: 1
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Scorpion - 蠍
+
+- 内部名: `UNIT_SCORPION`
+- ユニットクラス: 蠍
+- 兵科: 動物ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- ダメージ上限: 100
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `TerrainNatives`: 砂漠
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Griffon - グリフォン
+
+- 内部名: `UNIT_GRIFFON`
+- ユニットクラス: グリフォン
+- 兵科: 動物ユニット
+- 攻撃力: 4
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 飛行
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `TerrainNatives`: 草原 / 平原 / 近海
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Giant Tortoise - 巨大亀
+
+- 内部名: `UNIT_GIANT_TORTOISE`
+- ユニットクラス: 巨大亀
+- 兵科: 動物ユニット
+- 攻撃力: 6
+- 防御力: 9
+- 移動力: 1
+- 世代: 2
+- ダメージ上限: 100
+- 退却率: -10
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bRenderBelowWater`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `TerrainNatives`: 外洋
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `iWithdrawlProbDefensive`: -10
+
+### Wolf Scout - 楽園の森林狼
+
+- 内部名: `UNIT_WOLF_SCOUT`
+- 固有: ニライカナイ（斥候 の代替）
+- ユニットクラス: 斥候
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 20
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 2
+- 世代: 1
+- 昇格先: 狩人
+- ダメージ上限: 100
+- 退却率: 10
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `ProductionTraits`: 警邏志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: 羊 iAffinity=25
+
+### Freki - フレキ
+
+- 内部名: `UNIT_FREKI`
+- 固有: ニライカナイ（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 昇格先: 暗殺者
+- ダメージ上限: 100
+- 退却率: 10
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -40
+  - `iCityDefense`: -20
+  - `iHillsAttack`: 50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 鹿 iProductonModifier=10 / 毛皮 iProductonModifier=10 / 象牙 iProductonModifier=10
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: 羊 iAffinity=25
+
+### Managarmr - マーナガルム
+
+- 内部名: `UNIT_MANAGARMR`
+- 固有: ニライカナイ（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 7
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: 狙撃
+- 昇格先: 影法師
+- ダメージ上限: 100
+- 退却率: 10
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `BonusAffinities`: 羊 iAffinity=25
+
+### Bear Warrior - 楽園の熊兵
+
+- 内部名: `UNIT_BEAR_WARRIOR`
+- 固有: ニライカナイ（戦士 の代替）
+- ユニットクラス: 戦士
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 1
+- 昇格先: 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: 魚 iAffinity=25
+
+### Arkas - アルカス
+
+- 内部名: `UNIT_ARKAS`
+- 固有: ニライカナイ（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 昇格先: 勇士
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 10
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: 魚 iAffinity=25
+
+### Kallisto - カリスト
+
+- 内部名: `UNIT_KALLISTO`
+- 固有: ニライカナイ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 野生の触れ合い
+- 昇格先: 狂戦士
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: 魚 iAffinity=25
+
+### Vanara - ヴァナラ
+
+- 内部名: `UNIT_VANARA`
+- 固有: ニライカナイ（弓兵 の代替）
+- ユニットクラス: 弓兵
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 弓術
+- 昇格先: 長弓兵
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `iBombardRate`: 10
+  - `iConscription`: 3
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: バナナ iAffinity=25
+
+### Hanuman - ハヌマーン
+
+- 内部名: `UNIT_HANUMAN`
+- 固有: ニライカナイ（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 野生の触れ合い
+- 昇格先: 弩兵
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `iBombardRate`: 20
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: バナナ iAffinity=25
+
+### Griffon Squadron - グリフォン飛行隊
+
+- 内部名: `UNIT_GRIFFON_SQUADRON`
+- 固有: ニライカナイ（騎乗兵 の代替）
+- ユニットクラス: 騎乗兵
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 初期昇進: 飛行
+- 昇格先: 弓騎兵 / 戦車兵
+- ダメージ上限: 100
+- 退却率: 90
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50 / 弓術ユニット iUnitCombatMod=-50
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+  - `BonusAffinities`: 馬 iAffinity=25
+
+### Opinincus - オピニンクス
+
+- 内部名: `UNIT_OPININCUS`
+- 固有: ニライカナイ（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 初期昇進: 飛行
+- 昇格先: 不死者 / 騎士
+- ダメージ上限: 100
+- 退却率: 90
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50 / 弓術ユニット iUnitCombatMod=-50
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+  - `BonusAffinities`: 馬 iAffinity=25
+
+### Reaching Creeper - 伸びた蔦
+
+- 内部名: `UNIT_CREEPER`
+- ユニットクラス: 伸びた蔦
+- 兵科: 動物ユニット
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 1
+- 世代: 1
+- 初期昇進: 歩哨Ⅰ / 歩哨Ⅱ
+- ダメージ上限: 100
+- 退却率: 15
+- その他の設定:
+  - `Special`: SPECIALUNIT_CREEPER
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bAnimal`: 1
+  - `bQuickCombat`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `PromotionFromCombat`: 肥育された蔦
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Savertiger - サーベルタイガー
+
+- 内部名: `UNIT_SABERTIGER`
+- ユニットクラス: サーベルタイガー
+- 兵科: 動物ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 1
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `TerrainNatives`: 草原 / 平原
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bNoDefaultRace`: 1
+
+### Wolf - 狼
+
+- 内部名: `UNIT_WOLF_NIRAIKANAI`
+- ユニットクラス: 狼
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 2
+- 世代: 1
+- 必要テクノロジー: Never
+- 昇格先: 狩人
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 狼の檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bCarnivorous`: 1
+  - `UnitConvertFromCombat`: 狼の群れ
+  - `iUnitConvertFromCombatChance`: 25
+
+### Wolf Pack - 狼の群れ
+
+- 内部名: `UNIT_WOLF_PACK_NIRAIKANAI`
+- ユニットクラス: 狼の群れ
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 40
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: Never
+- 昇格先: 狩人
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 狼の檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bCarnivorous`: 1
+  - `UnitCreateFromCombat`: 狼
+  - `iUnitCreateFromCombatChance`: 10
+
+### Gorilla - ゴリラ
+
+- 内部名: `UNIT_GORILLA_NIRAIKANAI`
+- ユニットクラス: ゴリラ
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 昇格先: 弓兵
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: ゴリラの檻
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Bear - 熊
+
+- 内部名: `UNIT_BEAR_NIRAIKANAI`
+- ユニットクラス: 熊
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 昇格先: 斧兵
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 熊の見世物
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Polar Bear - 北極熊
+
+- 内部名: `UNIT_POLAR_BEAR_NIRAIKANAI`
+- ユニットクラス: 熊
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 初期昇進: 寒冷種
+- 昇格先: 斧兵
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `Buildings`: 熊の見世物
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Griffon - グリフォン
+
+- 内部名: `UNIT_GRIFFON_NIRAIKANAI`
+- ユニットクラス: グリフォン
+- 兵科: 動物ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 初期昇進: 飛行
+- 昇格先: 騎乗兵
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+## 弓術ユニット
+
+### Archer - 弓兵
+
+- 内部名: `UNIT_ARCHER`
+- ユニットクラス: 弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 3
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 弓術
+- 昇格先: 長弓兵 / 弓騎兵
+- ダメージ上限: 100
+- 間接攻撃力: 1
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 3
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Javelin Thrower - 投槍兵
+
+- 内部名: `UNIT_JAVELIN_THROWER`
+- 固有: アルタイル・イリアン・クアリ・ドヴィエロ・マサトル（弓兵 の代替）
+- ユニットクラス: 弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 45
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 弓術
+- 昇格先: 長弓兵 / 弓騎兵
+- ダメージ上限: 100
+- 間接攻撃力: 1
+- 間接攻撃の射程: 1
+- 退却率: 5
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 3
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+
+### Longbowman - 長弓兵
+
+- 内部名: `UNIT_LONGBOWMAN`
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 5
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 昇格先: 弩兵 / 狙撃手 / 火縄銃兵
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 40
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Firebow - 火弓隊
+
+- 内部名: `UNIT_FIREBOW`
+- 固有: アムリテ（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 初期昇進: 炎Ⅰ / 精神集中Ⅱ
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 10
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Crossbowman - 弩兵
+
+- 内部名: `UNIT_CROSSBOWMAN`
+- ユニットクラス: 弩兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 12
+- 防御力: 16
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 70
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Flurry - 疾風隊
+
+- 内部名: `UNIT_FLURRY`
+- 固有: バルドルアールヴ・リョースアールヴ（弩兵 の代替）
+- ユニットクラス: 弩兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 機械
+- 初期昇進: 電撃戦
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 70
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Marksman - 狙撃手
+
+- 内部名: `UNIT_MARKSMAN`
+- ユニットクラス: 狙撃手
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 精密射撃
+- 初期昇進: 狙撃
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Arquebus - 火縄銃兵
+
+- 内部名: `UNIT_ARQUEBUS`
+- ユニットクラス: 火縄銃兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な資源: 火薬
+- ダメージ上限: 100
+- 間接攻撃力: 5
+- 間接攻撃の射程: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 2
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 9
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+
+### Nightwatch - 夜警隊
+
+- 内部名: `UNIT_NIGHTWATCH`
+- ユニットクラス: 夜警隊
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 複合弓
+- 必要な宗教: エススの枢密院
+- 初期昇進: 国籍秘匿 / 狙撃
+- 昇格先: 暗殺者 / 影の騎士
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 巻き添え被害: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `ReligionType`: エススの枢密院
+  - `StateReligion`: エススの枢密院
+  - `iAirCombatLimit`: 65
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 40
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 5
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `iEnemyWithdrawalModify`: -40
+
+### Teutorix - テウトリクス
+
+- 内部名: `UNIT_TEUTORIX`
+- ユニットクラス: テウトリクス
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な文明: マラキム
+- 初期昇進: 英雄 / 砂漠の民 / 鷹の目 / 歩哨Ⅰ / 太陽Ⅱ
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 巻き添え被害: 90
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iAirCombatLimit`: 60
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 2
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=25
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `iDefensiveStrikeDamage`: 10
+  - `bDefensiveStrikes`: 1
+  - `DiploVoteType`: DIPLOVOTE_OVERCOUNCIL
+  - `Image`: Art/Interface/Popups/Teutorix.dds
+  - `iEnemyWithdrawalModify`: -15
+
+### Gilden Silveric - ギルデン・シルヴェリック
+
+- 内部名: `UNIT_GILDEN`
+- ユニットクラス: ギルデン・シルヴェリック
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 弓術
+- 必要な文明: リョースアールヴ
+- 初期昇進: エルフ / 英雄 / 器用
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 60
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `Image`: Art/Interface/Popups/Gilden Silveric.dds
+  - `iEnemyWithdrawalModify`: -25
+
+### Arthendain - アルゼンデイン
+
+- 内部名: `UNIT_ARTHENDAIN`
+- ユニットクラス: アルゼンデイン
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 医薬
+- 必要な宗教: キルモフのルーン
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 英雄 / 病気無効 / 神術 / 生命Ⅱ / 生命Ⅲ / ドワーフ
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: キルモフのルーン
+  - `StateReligion`: キルモフのルーン
+  - `iAirCombatLimit`: 60
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iHillsAttack`: 20
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bAbandon`: 1
+  - `bDefensiveStrikes`: 1
+  - `Image`: Art/Interface/Popups/Arthendain.dds
+  - `iEnemyWithdrawalModify`: -25
+
+### Arrows of the Queen - 女王の矢
+
+- 内部名: `UNIT_ARROWS_OF_THE_QUEEN`
+- 固有: リョースアールヴ（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 初期昇進: 精密射撃 / 器用
+- 昇格先: 弩兵 / 狙撃手 / 火縄銃兵
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 40
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -35
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Magic Archer - 術弓兵
+
+- 内部名: `UNIT_MAGIC_ARCHER`
+- 固有: イース（弓兵 の代替）
+- ユニットクラス: 弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 65
+- 攻撃力: 3
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 弓術
+- 初期昇進: 精神集中Ⅰ / 高速詠唱
+- 昇格先: 長弓兵
+- ダメージ上限: 100
+- 間接攻撃力: 1
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 3
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Magic Bow - 魔弓隊
+
+- 内部名: `UNIT_MAGIC_BOW`
+- 固有: イース（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 3
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 追加で必要なテクノロジー: エーテルの知識
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 高速詠唱
+- 昇格先: 弩兵 / 狙撃手
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=2
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Rotten Shooter - 腐れ矢の射手
+
+- 内部名: `UNIT_ROTTEN_SHOOTER`
+- 固有: デスピエル（弩兵 の代替）
+- ユニットクラス: 弩兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 13
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 70
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bFreeXP`: 1
+  - `iEnslavementChance`: 25
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeCombats`: 毒 iCombat=1 / 不浄 iCombat=1
+  - `BonusAffinities`: 影石 iAffinity=100
+  - `iEnemyWithdrawalModify`: -15
+
+### Sorcerous Shooter - 蟇目矢の射手
+
+- 内部名: `UNIT_SORCEROUS_SHOOTER`
+- 固有: デスピエル（狙撃手 の代替）
+- ユニットクラス: 狙撃手
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 精密射撃
+- 初期昇進: 狙撃
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bFreeXP`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `DamageTypeCombats`: 不浄 iCombat=2
+  - `BonusAffinities`: 蛙 iAffinity=100
+
+### Heavy Crossbowman - 重弩兵
+
+- 内部名: `UNIT_LINEAGE_HEAVY_CROSSBOWMAN`
+- 固有: リネージ（火縄銃兵 の代替）
+- ユニットクラス: 火縄銃兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: 重量級
+- ダメージ上限: 100
+- 間接攻撃力: 5
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 50
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 3
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=40 / 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 9
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Gatlingbowman - 奇環弩兵
+
+- 内部名: `UNIT_LINEAGE_GATLINGBOWMAN`
+- 固有: リネージ（弩兵 の代替）
+- ユニットクラス: 弩兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 14
+- 防御力: 16
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 機械
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: 電撃戦 / 重量級
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 3
+- 巻き添え被害: 70
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=40 / 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Apeiron - アペイロン
+
+- 内部名: `UNIT_LINEAGE_APEIRON`
+- 固有: リネージ（狙撃手 の代替）
+- ユニットクラス: 狙撃手
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 精密射撃
+- 必要な資源: 薄闇樹
+- 初期昇進: 狙撃 / 隠れる技能
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 95
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `iEnslavementChance`: 50
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -50
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Blowpipe - 吹管兵
+
+- 内部名: `UNIT_LIZARD_BLOWPIPE`
+- 固有: クアリ・マサトル（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 初期昇進: 森番Ⅰ
+- 昇格先: 弩兵 / 狙撃手
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 退却率: 25
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 2
+- 巻き添え被害: 40
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 40
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `FeatureAttacks`: 密林 iFeatureAttack=10 / 深い密林 iFeatureAttack=10
+  - `FeatureDefenses`: 密林 iFeatureDefense=10 / 深い密林 iFeatureDefense=10
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeCombats`: 毒 iCombat=1
+  - `iEnemyWithdrawalModify`: -25
+
+### Trap master - 罠師
+
+- 内部名: `UNIT_TRAP_MASTER`
+- 固有: マサトル（弩兵 の代替）
+- ユニットクラス: 弩兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 退却率: 20
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 2
+- 巻き添え被害: 70
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `FeatureAttacks`: 密林 iFeatureAttack=10 / 深い密林 iFeatureAttack=10
+  - `FeatureDefenses`: 密林 iFeatureDefense=10 / 深い密林 iFeatureDefense=10
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeCombats`: 毒 iCombat=1
+  - `iEnemyWithdrawalModify`: -15
+
+### Ambush - 奇襲兵
+
+- 内部名: `UNIT_AMBUSH`
+- 固有: マサトル（狙撃手 の代替）
+- ユニットクラス: 狙撃手
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 12
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 精密射撃
+- 初期昇進: 狙撃 / 隠れる技能 / 森番Ⅱ
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 間接攻撃の射程: 1
+- 退却率: 25
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 巻き添え被害: 40
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `FeatureAttacks`: 密林 iFeatureAttack=10 / 深い密林 iFeatureAttack=10
+  - `FeatureDefenses`: 密林 iFeatureDefense=10 / 深い密林 iFeatureDefense=10
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Stinger - 毒針使い
+
+- 内部名: `UNIT_STINGER`
+- 固有: アルタイル（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 退却率: 15
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 2
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 40
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=25 / 凍土 iTerrainDefense=25 / 氷原 iTerrainDefense=25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `iEnemyWithdrawalModify`: -25
+
+### Handgunner - 拳銃兵
+
+- 内部名: `UNIT_HANDGUNNER`
+- 固有: メカノス（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 必要な資源: 火薬
+- 昇格先: 弩兵 / 狙撃手 / 火縄銃兵
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 40
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Musketman - マスケット兵
+
+- 内部名: `UNIT_MUSKETMAN`
+- 固有: メカノス（火縄銃兵 の代替）
+- ユニットクラス: 火縄銃兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な資源: 火薬
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iAirCombatLimit`: 60
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 2
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=25 / 白兵ユニット iUnitCombatMod=25 / 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 9
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+
+### Feris - フェリス
+
+- 内部名: `UNIT_FERIS`
+- ユニットクラス: フェリス
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 260
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 精密射撃
+- 必要な資源: 火薬
+- 必要な文明: メカノス
+- 初期昇進: 狙撃 / 英雄 / 特別奇襲
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 先制攻撃: 1
+- 巻き添え被害: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iAirCombatLimit`: 100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 5
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `Image`: ,Art_Kaijin/Interface/Popups/Feris.dds
+  - `iEnemyWithdrawalModify`: -15
+
+### Velite - 軽装歩兵
+
+- 内部名: `UNIT_VELITE`
+- 固有: パトリアの後継者（弓兵 の代替）
+- ユニットクラス: 弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 弓術
+- 初期昇進: 屍人 / 散兵
+- 昇格先: 長弓兵 / 弩兵 / 弓騎兵
+- ダメージ上限: 100
+- 間接攻撃力: 1
+- 間接攻撃の射程: 1
+- 退却率: 10
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 3
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Lomias the messenger - 使者ロミアス
+
+- 内部名: `UNIT_LOMIAS`
+- ユニットクラス: 使者ロミアス
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 必要な文明: バルドルアールヴ
+- 初期昇進: エルフ / 瘴烟 / 英雄
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 退却率: 80
+- 先制攻撃: 1
+- 巻き添え被害: 20
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 20
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 80
+  - `Image`: Art_Kaijin/Interface/Popups/Baldralfar_Lomias_pop.dds
+  - `iEnemyWithdrawalModify`: -200
+
+### Ferrum - フェルム
+
+- 内部名: `UNIT_FERRUM`
+- 固有: バルドルアールヴ（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 初期昇進: 瘴烟 / 狙撃
+- 昇格先: 弩兵 / 狙撃手 / 火縄銃兵
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 40
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -10
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Cloned - クローン
+
+- 内部名: `UNIT_CLONED`
+- 固有: ノービアイ（火縄銃兵 の代替）
+- ユニットクラス: 火縄銃兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 135
+- 攻撃力: 10
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な建造物: 複製の竈
+- 必要な資源: 火薬
+- 初期昇進: 木偶
+- ダメージ上限: 100
+- 間接攻撃力: 5
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 2
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 9
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNoWarWeariness`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+
+### Barrow Archer - 土塚の弓兵
+
+- 内部名: `UNIT_BARROW_ARCHER`
+- 固有: アリストラク（弓兵 の代替）
+- ユニットクラス: 弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 35
+- 攻撃力: 3
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 弓術
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- 昇格先: 長弓兵 / 弓騎兵
+- ダメージ上限: 100
+- 間接攻撃力: 1
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 3
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Pale Warden - 青褪めた獄吏
+
+- 内部名: `UNIT_PALE_WARDEN`
+- 固有: アリストラク（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 70
+- 攻撃力: 5
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- 昇格先: 弩兵
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 40
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Deathknell Cairnwatch - 弔鐘の墓警
+
+- 内部名: `UNIT_CAIRNWATCH`
+- 固有: アリストラク（弩兵 の代替）
+- ユニットクラス: 弩兵
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 170
+- 攻撃力: 12
+- 防御力: 16
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 70
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 弓術射撃場
+
+### Blood Seeker - 求血者
+
+- 内部名: `UNIT_BLOOD_SEEKER`
+- 固有: アリストラク（狙撃手 の代替）
+- ユニットクラス: 狙撃手
+- 兵科: 弓術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 精密射撃
+- 初期昇進: 狙撃 / 吸血鬼 / 肉体Ⅲ / 屍霊術
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -25
+  - `PrereqBuildingClass`: 弓術射撃場
+
+## 攻城兵器
+
+### Catapult - カタパルト
+
+- 内部名: `UNIT_CATAPULT`
+- ユニットクラス: カタパルト
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 数学
+- 昇格先: 大砲
+- ダメージ上限: 75
+- 間接攻撃力: 3
+- 退却率: 60
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 6
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 15
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_MACHINE
+
+### Trebuchet - トレビュシェット
+
+- 内部名: `UNIT_TREBUCHET`
+- 固有: カザード・ノービアイ・メカノス（カタパルト の代替）
+- ユニットクラス: カタパルト
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 数学
+- 昇格先: 大砲
+- ダメージ上限: 85
+- 間接攻撃力: 4
+- 退却率: 80
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 45
+  - `iCollateralDamageMaxUnits`: 6
+  - `iCityAttack`: 50
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 20
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_MACHINE
+
+### Cannon - 大砲
+
+- 内部名: `UNIT_CANNON`
+- ユニットクラス: 大砲
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 120
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な資源: 火薬
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 7
+  - `iCityAttack`: 40
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 20
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Dwarven Cannon - ドワーフの大砲
+
+- 内部名: `UNIT_DWARVEN_CANNON`
+- 固有: カザード・ノービアイ（大砲 の代替）
+- ユニットクラス: 大砲
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 120
+- 攻撃力: 10
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な資源: 火薬
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 間接攻撃の射程: 1
+- 退却率: 80
+- 巻き添え被害: 150
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 7
+  - `iCityAttack`: 40
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 30
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Battering Ram - 破城槌
+
+- 内部名: `UNIT_BATTERING_RAM`
+- ユニットクラス: 破城槌
+- 兵科: 攻城兵器
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 1
+- 世代: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bMechanized`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 10
+  - `FormationType`: FORMATION_TYPE_MACHINE
+
+### Hellfire Elemental - 業火の精霊
+
+- 内部名: `UNIT_HELLFIRE_ELEMENTAL`
+- 固有: 地獄の軍勢（カタパルト の代替）
+- ユニットクラス: カタパルト
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 35
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 数学
+- 初期昇進: 飛行 / 精霊
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 70
+  - `iCollateralDamageMaxUnits`: 6
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 15
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExplodeInCombat`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=3
+  - `DamageTypeResists`: 火炎 iResist=100
+
+### Ambulance - 救護船
+
+- 内部名: `UNIT_AMBULANCE`
+- ユニットクラス: 救護船
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 240
+- 攻撃力: 3
+- 防御力: 5
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 医薬
+- 必要な建造物: 診療所
+- 必要な文明: カザード
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bMechanized`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 80
+
+### Heavy Ballista - 重バリスタ
+
+- 内部名: `UNIT_LINEAGE_HEAVY_BALLISTA`
+- 固有: リネージ（カタパルト の代替）
+- ユニットクラス: カタパルト
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 数学
+- 昇格先: 大砲
+- ダメージ上限: 75
+- 間接攻撃力: 5
+- 間接攻撃の射程: 3
+- 退却率: 60
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 65
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 55
+  - `iCollateralDamageMaxUnits`: 2
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `BonusProductionModifiers`: 鉄 iProductonModifier=25 / 薄闇樹 iProductonModifier=25
+  - `iBombardRate`: 15
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `bExtraMovementCostInBadlands`: 1
+
+### Dora - ドーラ
+
+- 内部名: `UNIT_LINEAGE_DORA`
+- 固有: リネージ（大砲 の代替）
+- ユニットクラス: 大砲
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- ダメージ上限: 100
+- 間接攻撃力: 9
+- 間接攻撃の射程: 4
+- 退却率: 60
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 75
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 65
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: 40
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `BonusProductionModifiers`: 鉄 iProductonModifier=25 / 薄闇樹 iProductonModifier=25
+  - `iBombardRate`: 25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `bExtraMovementCostInBadlands`: 1
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Howitzer - 榴弾砲
+
+- 内部名: `UNIT_HOWITZER`
+- 固有: メカノス（大砲 の代替）
+- ユニットクラス: 大砲
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 200
+- 攻撃力: 10
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な資源: 火薬
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 間接攻撃の射程: 2
+- 退却率: 60
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 30
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Hydra Cannon - ヒドラ砲
+
+- 内部名: `UNIT_HYDRA_CANNON`
+- ユニットクラス: ヒドラ砲
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 180
+- 攻撃力: 12
+- 防御力: 5
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な資源: 火薬
+- 必要な文明: メカノス
+- 初期昇進: 機械 / 重量級 / 電撃戦
+- ダメージ上限: 100
+- 間接攻撃力: 9
+- 間接攻撃の射程: 2
+- 退却率: 60
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 30
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: 40
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 30
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Goliath - ゴリアテ
+
+- 内部名: `UNIT_GOLIATH`
+- ユニットクラス: ゴリアテ
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 360
+- 攻撃力: 20
+- 防御力: 18
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: ミスリル器
+- 追加で必要なテクノロジー: 機械
+- 必要な文明: メカノス
+- 初期昇進: 魔法無効 / 機械魂宿し / 英雄
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 先制攻撃: 1
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bFlatMovementCost`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 5
+  - `iBombardRate`: 10
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: ,Art_Kaijin/Interface/Popups/Goliath.dds
+
+### Steam Tank - 蒸気戦車
+
+- 内部名: `UNIT_STEAMTANK`
+- ユニットクラス: 蒸気戦車
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 追加で必要なテクノロジー: 鉄器
+- 必要な資源: 火薬
+- 必要な文明: メカノス
+- 初期昇進: 特別奇襲
+- ダメージ上限: 100
+- 間接攻撃力: 9
+- 間接攻撃の射程: 1
+- 退却率: 50
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 1
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 35
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Neun Kugel - ノイン・クーゲル
+
+- 内部名: `UNIT_NEUN_KUGEL`
+- ユニットクラス: ノイン・クーゲル
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 300
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 機械
+- 追加で必要なテクノロジー: 魔術
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 必要な文明: ノービアイ
+- 初期昇進: 英雄 / 機械 / ゴーレム / 長身 / 天使の匣 / ウィンチェスター
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 退却率: 100
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 25
+  - `iCollateralDamageMaxUnits`: 6
+  - `iBombardRate`: 20
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 鍛冶屋
+  - `Image`: Art_Kaijin/Interface/Popups/NeunKugel_pop.dds
+
+### Tank Golem - 戦車のゴーレム
+
+- 内部名: `UNIT_TANK_GOLEM`
+- 固有: ノービアイ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 180
+- 攻撃力: 10
+- 防御力: 8
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 必要な資源: 呪付のマナ
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: ゴーレム / 木偶
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 巻き添え被害: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 10
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 65
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 鍛冶屋
+
+### Fantasy Armor - 幻想機甲部隊
+
+- 内部名: `UNIT_FANTASY_ARMOR`
+- 固有: ノービアイ（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 300
+- 攻撃力: 18
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- 必要な資源: 呪付のマナ
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: ゴーレム / 木偶
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 巻き添え被害: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 15
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 50
+  - `DomainMods`: DOMAIN_LAND iDomainMod=25
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 鍛冶屋
+
+### Wandern Pantzer - 歩行戦車
+
+- 内部名: `UNIT_WANDERN_PANTZER`
+- 固有: ノービアイ（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 270
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリル器
+- 追加で必要なテクノロジー: 機械
+- 必要な資源: 呪付のマナ
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: ゴーレム / 木偶
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 巻き添え被害: 40
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 10
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 25
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 鍛冶屋
+
+### Spider Golem - 大蜘蛛のゴーレム
+
+- 内部名: `UNIT_SPIDER_GOLEM`
+- 固有: ノービアイ（弩兵 の代替）
+- ユニットクラス: 弩兵
+- 兵科: 攻城兵器
+- コスト[ハンマー]: 240
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- 必要な資源: 呪付のマナ
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: ゴーレム / 木偶
+- ダメージ上限: 100
+- 間接攻撃力: 5
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityDefense`: 80
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 鍛冶屋
+
+## 海軍ユニット
+
+### Galley - ガレー船
+
+- 内部名: `UNIT_GALLEY`
+- ユニットクラス: ガレー船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 40
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 1
+- 必要テクノロジー: 帆走
+- 昇格先: ガレアス船 / キャラベル船 / ガレオン船
+- ダメージ上限: 100
+- 退却率: 20
+- 積載量: 2
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Trireme - ガレアス船
+
+- 内部名: `UNIT_TRIREME`
+- ユニットクラス: ガレアス船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 航海術
+- 必要な資源: 銅
+- 昇格先: フリゲート
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 巻き添え被害: 50
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `TerrainImpassables`: 外洋
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 1
+  - `iBombardRate`: 10
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Caravel - キャラベル船
+
+- 内部名: `UNIT_CARAVEL`
+- ユニットクラス: キャラベル船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 4
+- 世代: 2
+- 必要テクノロジー: 光学
+- 初期昇進: 歩哨Ⅰ
+- 昇格先: フリゲート / 戦列の女王
+- ダメージ上限: 100
+- 退却率: 20
+- 積載量: 3
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bRivalTerritory`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Privateer - 私掠船
+
+- 内部名: `UNIT_PRIVATEER`
+- ユニットクラス: 私掠船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 光学
+- 必要な資源（いずれか）: 鉄 / ミスリル / 銅
+- 昇格先: マン・オー・ウォー / メスケト
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 退却率: 20
+- 巻き添え被害: 75
+- 積載量: 2
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `bHiddenNationality`: 1
+  - `bAlwaysHostile`: 1
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 10
+  - `iCollateralDamageMaxUnits`: 1
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `iGoldFromCombat`: 5
+
+### Pirate - 海賊船
+
+- 内部名: `UNIT_PIRATE`
+- 固有: ラヌーン（私掠船 の代替）
+- ユニットクラス: 私掠船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 光学
+- 必要な資源（いずれか）: 鉄 / ミスリル / 銅
+- 昇格先: マン・オー・ウォー / メスケト
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 退却率: 20
+- 巻き添え被害: 75
+- 積載量: 2
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `bHiddenNationality`: 1
+  - `bAlwaysHostile`: 1
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 15
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 15
+  - `iCollateralDamageMaxUnits`: 1
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `iGoldFromCombat`: 10
+
+### Galleon - ガレオン船
+
+- 内部名: `UNIT_GALLEON`
+- ユニットクラス: ガレオン船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 海図
+- 昇格先: 戦列の女王 / メアンジェト
+- ダメージ上限: 100
+- 退却率: 10
+- 積載量: 6
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Frigate - フリゲート
+
+- 内部名: `UNIT_FRIGATE`
+- ユニットクラス: フリゲート
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 6
+- 世代: 3
+- 必要テクノロジー: 海図
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 昇格先: マン・オー・ウォー
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 退却率: 25
+- 巻き添え被害: 75
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 2
+  - `iBombardRate`: 20
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Queen of the Line - 戦列の女王
+
+- 内部名: `UNIT_QUEEN_OF_THE_LINE`
+- ユニットクラス: 戦列の女王
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 4
+- 世代: 4
+- 必要テクノロジー: 天文学
+- 追加で必要なテクノロジー: 工学
+- 必要な建造物: 造船所
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- ダメージ上限: 100
+- 退却率: 30
+- 積載量: 8
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Airship - 飛空艇
+
+- 内部名: `UNIT_AIRSHIP`
+- 固有: クリオテイテ（戦列の女王 の代替）
+- ユニットクラス: 戦列の女王
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 4
+- 世代: 4
+- 必要テクノロジー: 天文学
+- 追加で必要なテクノロジー: 工学
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: 飛行
+- ダメージ上限: 100
+- 退却率: 30
+- 積載量: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Arcane Barge - 魔導艦
+
+- 内部名: `UNIT_ARCANE_BARGE`
+- ユニットクラス: 魔導艦
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 追加で必要なテクノロジー: 海図
+- 初期昇進: 大気Ⅱ / 炎Ⅰ / 教練Ⅰ / 呪文伸長Ⅰ / 双つ術
+- ダメージ上限: 100
+- 退却率: 15
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `BonusAffinities`: 大気のマナ iAffinity=200 / 水のマナ iAffinity=200 / 炎のマナ iAffinity=200
+
+### Man O'War - マン・オー・ウォー
+
+- 内部名: `UNIT_MAN_O_WAR`
+- ユニットクラス: マン・オー・ウォー
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 5
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 追加で必要なテクノロジー: 天文学
+- 必要な資源: 火薬
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 2
+- 退却率: 10
+- 巻き添え被害: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 60
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 6
+  - `iBombardRate`: 30
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### The Black Wind - ブラックウインド号
+
+- 内部名: `UNIT_BLACK_WIND`
+- ユニットクラス: ブラックウインド号
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 6
+- 世代: 3
+- 必要テクノロジー: 光学
+- 必要な文明: ラヌーン
+- 初期昇進: 英雄
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 1
+- 退却率: 35
+- 巻き添え被害: 100
+- 積載量: 2
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `bHiddenNationality`: 1
+  - `bAlwaysHostile`: 1
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 25
+  - `iCollateralDamageMaxUnits`: 2
+  - `iBombardRate`: 20
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iGoldFromCombat`: 10
+  - `Image`: Art/Interface/Popups/The Black Wind.dds
+
+### Sailor's Dirge - 幽霊船
+
+- 内部名: `UNIT_SAILORS_DIRGE`
+- ユニットクラス: 幽霊船
+- 兵科: 海軍ユニット
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 3
+- 世代: 3
+- 必要な文明: 屍人
+- 初期昇進: 屍人 / 英雄
+- ダメージ上限: 100
+- 間接攻撃力: 5
+- 間接攻撃の射程: 1
+- 退却率: 20
+- 巻き添え被害: 75
+- 積載量: 8
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 10
+  - `iCollateralDamageMaxUnits`: 1
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Sailor's Dirge.dds
+  - `DamageTypeCombats`: 死 iCombat=1
+
+### Wakou - 倭寇
+
+- 内部名: `UNIT_WAKOU`
+- 固有: エチゴ（私掠船 の代替）
+- ユニットクラス: 私掠船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 光学
+- 必要な資源（いずれか）: 鉄 / ミスリル / 銅
+- 昇格先: マン・オー・ウォー / メスケト
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 退却率: 20
+- 巻き添え被害: 75
+- 積載量: 2
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `bHiddenNationality`: 1
+  - `bAlwaysHostile`: 1
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 10
+  - `iCollateralDamageMaxUnits`: 1
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `iGoldFromCombat`: 10
+  - `BonusAffinities`: 炎のマナ iAffinity=50 / 精神のマナ iAffinity=50
+
+### Blimp - 飛行船
+
+- 内部名: `UNIT_BLIMP`
+- 固有: メカノス（キャラベル船 の代替）
+- ユニットクラス: キャラベル船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 200
+- 攻撃力: 5
+- 防御力: 6
+- 移動力: 4
+- 世代: 2
+- 必要テクノロジー: 光学
+- 初期昇進: 歩哨Ⅰ / 飛行
+- 昇格先: 戦列の女王
+- ダメージ上限: 100
+- 退却率: 25
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bMechanized`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Ironclad - 装甲艦
+
+- 内部名: `UNIT_IRONCLAD`
+- 固有: メカノス（マン・オー・ウォー の代替）
+- ユニットクラス: マン・オー・ウォー
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 200
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 追加で必要なテクノロジー: 天文学
+- 必要な資源: 火薬
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 間接攻撃の射程: 2
+- 退却率: 10
+- 巻き添え被害: 100
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 65
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 6
+  - `iBombardRate`: 35
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Submarine - 潜水艦
+
+- 内部名: `UNIT_SUBMARINE`
+- 固有: メカノス（魔導艦 の代替）
+- ユニットクラス: 魔導艦
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 10
+- 防御力: 8
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 蒸気機関
+- 追加で必要なテクノロジー: 魔術 / 海図
+- 必要な資源: 精製されたマナ
+- 初期昇進: 機械
+- ダメージ上限: 100
+- 退却率: 50
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `Invisible`: INVISIBLE_UNDERWATER
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bNoCapture`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 魔獣ユニット iUnitCombatMod=-50 / 無能ユニット iUnitCombatMod=-50
+  - `DomainMods`: DOMAIN_SEA iDomainMod=50
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `iWithdrawlProbDefensive`: 25
+
+### Zeppelin - ツェッペリン
+
+- 内部名: `UNIT_ZEPPELIN`
+- 固有: メカノス（戦列の女王 の代替）
+- ユニットクラス: 戦列の女王
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 480
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 5
+- 世代: 4
+- 必要テクノロジー: 天文学
+- 追加で必要なテクノロジー: 工学
+- 必要な資源（いずれか）: 鉄 / ミスリル / 銅
+- 初期昇進: 機械 / 飛行
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 退却率: 30
+- 巻き添え被害: 100
+- 積載量: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 2
+  - `iBombardRate`: 10
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 15
+
+### Quinquireme - 五段櫂船
+
+- 内部名: `UNIT_QUINQUIREME`
+- 固有: パトリアの後継者（ガレアス船 の代替）
+- ユニットクラス: ガレアス船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 航海術
+- 必要な資源: 銅
+- 初期昇進: 接舷攻撃
+- 昇格先: フリゲート
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 巻き添え被害: 50
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `TerrainImpassables`: 外洋
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 1
+  - `iBombardRate`: 10
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Cog - コグ船
+
+- 内部名: `UNIT_COG`
+- ユニットクラス: コグ船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 40
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 5
+- 世代: 2
+- 必要テクノロジー: 光学
+- 初期昇進: 側面攻撃Ⅰ
+- 昇格先: フリゲート / 戦列の女王
+- ダメージ上限: 100
+- 退却率: 40
+- 積載量: 1
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bRivalTerritory`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 40
+
+### Carrack - キャラック船
+
+- 内部名: `UNIT_CARRACK`
+- ユニットクラス: キャラック船
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 光学
+- 昇格先: フリゲート / 戦列の女王
+- ダメージ上限: 100
+- 積載量: 8
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Goldenfels - ゴルデンフェルス
+
+- 内部名: `UNIT_GOLDENFELS`
+- ユニットクラス: ゴルデンフェルス
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 4
+- 世代: 4
+- 必要テクノロジー: 天文学
+- 追加で必要なテクノロジー: 工学
+- 必要な建造物: 造船所
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: 不可視
+- ダメージ上限: 100
+- 退却率: 45
+- 積載量: 10
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bRivalTerritory`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Mamdjet - メアンジェト
+
+- 内部名: `UNIT_MAMDJET`
+- ユニットクラス: メアンジェト
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 5
+- 移動力: 5
+- 世代: 3
+- 必要テクノロジー: 神学
+- 追加で必要なテクノロジー: 天文学
+- 必要な宗教: 至光なる天空
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 精神集中Ⅱ / 精神集中Ⅲ / 歩哨Ⅰ
+- ダメージ上限: 100
+- 退却率: 25
+- 積載量: 5
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `ReligionType`: 至光なる天空
+  - `StateReligion`: 至光なる天空
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `BonusAffinities`: 炎のマナ iAffinity=200 / 法のマナ iAffinity=200 / 太陽のマナ iAffinity=200
+
+### Mesket - メスケト
+
+- 内部名: `UNIT_MESKET`
+- ユニットクラス: メスケト
+- 兵科: 海軍ユニット
+- コスト[ハンマー]: 200
+- 攻撃力: 14
+- 防御力: 14
+- 移動力: 6
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 追加で必要なテクノロジー: 天文学
+- 必要な資源（いずれか）: 鉄 / ミスリル / 銅
+- 必要な宗教: エススの枢密院
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 2
+- 退却率: 30
+- 巻き添え被害: 100
+- 積載量: 3
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bMechanized`: 1
+  - `bRenderBelowWater`: 1
+  - `bHiddenNationality`: 1
+  - `bAlwaysHostile`: 1
+  - `ReligionType`: エススの枢密院
+  - `StateReligion`: エススの枢密院
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 60
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 6
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iGoldFromCombat`: 10
+
+## 無能ユニット
+
+### Wood Golem - 木のゴーレム
+
+- 内部名: `UNIT_WOOD_GOLEM`
+- 固有: ルシュイアープ（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 石工
+- 必要な建造物: 彫刻家のアトリエ
+- 初期昇進: 可燃性 / ゴーレム
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 30
+  - `iCityDefense`: 20
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeResists`: 武器 iResist=-50
+
+### Iron Golem - 鉄のゴーレム
+
+- 内部名: `UNIT_IRON_GOLEM`
+- 固有: ルシュイアープ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 鉄器
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 初期昇進: ゴーレム
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 鍛冶屋
+
+### Clockwork Golem - 機械仕掛けのゴーレム
+
+- 内部名: `UNIT_CLOCKWORK_GOLEM`
+- 固有: ルシュイアープ（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 270
+- 攻撃力: 17
+- 防御力: 12
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリル器
+- 追加で必要なテクノロジー: 狂信
+- 初期昇進: ゴーレム
+- ダメージ上限: 100
+- 巻き添え被害: 80
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Bone Golem - 骨のゴーレム
+
+- 内部名: `UNIT_BONE_GOLEM`
+- 固有: ルシュイアープ（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 19
+- 防御力: 19
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 必要な資源: 象牙
+- 初期昇進: ゴーレム / 人食い / 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=40
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 練兵場
+
+### Nullstone Golem - 虚無石のゴーレム
+
+- 内部名: `UNIT_NULLSTONE_GOLEM`
+- 固有: ルシュイアープ（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 20
+- 防御力: 20
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- 初期昇進: 魔法無効 / ゴーレム
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 80
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `BonusProductionModifiers`: 大理石 iProductonModifier=25
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Gargoyle - ガーゴイル
+
+- 内部名: `UNIT_GARGOYLE`
+- 固有: ルシュイアープ（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 工学
+- 必要な建造物: 彫刻家のアトリエ
+- 初期昇進: ゴーレム / 鉄壁
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 巻き添え被害: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityDefense`: 50
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `BonusProductionModifiers`: 大理石 iProductonModifier=25
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Flesh Golem - 肉のゴーレム
+
+- 内部名: `UNIT_FLESH_GOLEM`
+- ユニットクラス: 肉のゴーレム
+- 兵科: 無能ユニット
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 初期昇進: ゴーレム / 人食い
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+
+### Treant - トレント
+
+- 内部名: `UNIT_TREANT`
+- ユニットクラス: トレント
+- 兵科: 無能ユニット
+- 攻撃力: 12
+- 防御力: 10
+- 移動力: 1
+- 世代: 4
+- 初期昇進: 植物 / 自然Ⅱ / 森番Ⅰ / 森番Ⅱ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatLost`: postCombatTreant
+
+### The Mithril Golem - ミスリルゴーレム
+
+- 内部名: `UNIT_MITHRIL_GOLEM`
+- ユニットクラス: ミスリルゴーレム
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 1200
+- 攻撃力: 32
+- 防御力: 32
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリル器
+- 必要な資源: ミスリル
+- 必要な宗教: キルモフのルーン
+- 初期昇進: 神術 / 長身 / ゴーレム / 精神集中Ⅲ
+- ダメージ上限: 100
+- 巻き添え被害: 80
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `HolyCity`: キルモフのルーン
+  - `ReligionType`: キルモフのルーン
+  - `StateReligion`: キルモフのルーン
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 80
+  - `iCollateralDamageMaxUnits`: 20
+  - `iCityAttack`: 60
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `Image`: Art/Interface/Popups/The Mithril Golem.dds
+
+### Frost Giant - 氷の巨人
+
+- 内部名: `UNIT_FROST_GIANT`
+- 固有: ニバル（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 8
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 建設
+- 追加で必要なテクノロジー: 演劇
+- 必要な建造物: 氷雪のアトリエ
+- 必要な資源（いずれか）: 氷のマナ
+- 初期昇進: ゴーレム / 寒冷種 / 冷気抵抗
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=-25 / 氷原 iTerrainAttack=10
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 冷気 iCombat=2
+
+### Snow Monstrosity - 雪の怪物
+
+- 内部名: `UNIT_SNOW_MONSTROSITY`
+- 固有: ニバル（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 225
+- 攻撃力: 15
+- 防御力: 9
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 機械
+- 追加で必要なテクノロジー: 動物の極意
+- 必要な建造物: 氷雪のアトリエ
+- 必要な資源: 氷のマナ
+- 初期昇進: ゴーレム / 寒冷種 / 冷気抵抗
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 65
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=-25 / 氷原 iTerrainAttack=25
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=-25 / 氷原 iTerrainDefense=25
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 冷気 iCombat=3
+
+### Ice Statue - 勇者の氷像
+
+- 内部名: `UNIT_ICE_STATUE`
+- 固有: ニバル（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 135
+- 攻撃力: 11
+- 防御力: 4
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 工学
+- 追加で必要なテクノロジー: 狂信
+- 必要な建造物: 氷雪のアトリエ
+- 必要な資源: 氷のマナ
+- 初期昇進: ゴーレム / 寒冷種 / 冷気抵抗
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 30
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 冷気 iCombat=3
+
+### Azathoth - アザトース
+
+- 内部名: `UNIT_AZATHOTH`
+- ユニットクラス: アザトース
+- 兵科: 無能ユニット
+- 攻撃力: 26
+- 防御力: 26
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 魔族 / 魔法無効 / 長身 / 原初のドラゴン
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: ユニットを倒すと20%の確率でシュブ=ニグラスを生む
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Azathoth_pop.dds
+  - `PythonPostCombatLost`: postCombatAzathoth
+  - `PythonPostCombatWon`: postCombatAbsorb
+  - `DamageTypeCombats`: 不浄 iCombat=6
+  - `DamageTypeResists`: 火炎 iResist=-150 / 不浄 iResist=100
+
+### Mynoghra - マイノグーラ
+
+- 内部名: `UNIT_MYNOGHRA`
+- ユニットクラス: マイノグーラ
+- 兵科: 無能ユニット
+- 攻撃力: 14
+- 防御力: 14
+- 移動力: 1
+- 世代: 4
+- 必要な文明: ゾス
+- 初期昇進: 魔族 / 長身 / 水上歩行 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 精神Ⅰ / 精神Ⅱ / 次元Ⅰ / 次元Ⅱ / 看破の目 / 人食い
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bRenderBelowWater`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iBombardRate`: 30
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Xoth_Mynoghra_pop.dds
+  - `UnitCreateFromCombat`: ティンダロスの猟犬
+  - `iUnitCreateFromCombatChance`: 30
+  - `PythonPostCombatWon`: postCombatAbsorb
+
+### Shub-Niggurath - シュブ=ニグラス
+
+- 内部名: `UNIT_NIGGURATH`
+- ユニットクラス: シュブ=ニグラス
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 24
+- 防御力: 24
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 必要な文明: ゾス
+- 初期昇進: 魔族 / 神術 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 影Ⅰ / 影Ⅱ / 影Ⅲ / 長身 / 看破の目 / 飛行 / 人食い
+- ダメージ上限: 100
+- 間接攻撃力: 9
+- 間接攻撃の射程: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bRenderBelowWater`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 14
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `UnitCreateFromCombat`: ティンダロスの猟犬
+  - `iUnitCreateFromCombatChance`: 20
+  - `PythonPostCombatWon`: postCombatAbsorb
+
+### Nyarlathotep - ニャルラトテップ
+
+- 内部名: `UNIT_NYARLATHOTEP`
+- ユニットクラス: ニャルラトテップ
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: ゾス
+- 初期昇進: 魔族 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 混沌Ⅱ / 混沌Ⅲ / 精神Ⅱ / 精神Ⅲ / 人食い
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bRenderBelowWater`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iBombardRate`: 30
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `PythonPostCombatWon`: postCombatAbsorb
+  - `DamageTypeResists`: 火炎 iResist=-50
+
+### Yog-Sothoth - ヨグ=ソトース
+
+- 内部名: `UNIT_SOTHOTH`
+- ユニットクラス: ヨグ=ソトース
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 24
+- 防御力: 24
+- 移動力: 4
+- 世代: 4
+- 必要テクノロジー: エーテル移動
+- 必要な文明: ゾス
+- 初期昇進: 魔族 / 神術 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 次元Ⅱ / 次元Ⅲ / 人食い
+- ダメージ上限: 100
+- 間接攻撃力: 10
+- 間接攻撃の射程: 3
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bRenderBelowWater`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iBombardRate`: 50
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `PythonPostCombatWon`: postCombatAbsorb
+
+### Great Race of Yith - イスの大いなる種族
+
+- 内部名: `UNIT_GREATRACE`
+- ユニットクラス: イスの大いなる種族
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 40
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 4
+- 世代: 2
+- 必要テクノロジー: 帆走
+- 必要な文明: ゾス
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 飛行 / イスの大いなる種族
+- ダメージ上限: 100
+- 退却率: 35
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bRenderBelowWater`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+
+### Shoggoth - ショゴス
+
+- 内部名: `UNIT_SHOGGOTH`
+- 固有: ゾス（長弓兵 の代替）
+- ユニットクラス: 長弓兵
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 複合弓
+- 初期昇進: 魔族 / 精神集中Ⅰ / 精神集中Ⅱ / 水上歩行 / 鉄壁
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iConscription`: 6
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bNeverObsolete`: 1
+  - `bCarnivorous`: 1
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeResists`: 火炎 iResist=-50
+
+### Elder Thing - 古のもの
+
+- 内部名: `UNIT_ELDERTHING`
+- 固有: ゾス（マン・オー・ウォー の代替）
+- ユニットクラス: マン・オー・ウォー
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 23
+- 防御力: 23
+- 移動力: 5
+- 世代: 4
+- 必要テクノロジー: 神学
+- 追加で必要なテクノロジー: 天文学
+- 初期昇進: 魔族 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 人食い / 国籍秘匿
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 2
+- 退却率: 10
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bRenderBelowWater`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iMinAreaSize`: 20
+  - `iAirCombatLimit`: 60
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 35
+  - `iCollateralDamageMaxUnits`: 6
+  - `iBombardRate`: 30
+  - `DomainCargo`: DOMAIN_LAND
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bCarnivorous`: 1
+  - `UnitCreateFromCombat`: ショゴス
+  - `iUnitCreateFromCombatChance`: 20
+  - `DamageTypeResists`: 火炎 iResist=-50
+
+### Dryas - ドリュアス
+
+- 内部名: `UNIT_DRYAS`
+- ユニットクラス: ドリュアス
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 必要な文明: バルドルアールヴ
+- 初期昇進: 瘴烟 / 病気無効
+- 昇格先: 戦士 / 斥候 / 術使い / トリフィド
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iBaseHurry`: 25
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+
+### Triffid - トリフィド
+
+- 内部名: `UNIT_TRIFFID`
+- ユニットクラス: トリフィド
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 聖職
+- 追加で必要なテクノロジー: 動物の馴致
+- 必要な資源: 自然のマナ
+- 必要な文明: バルドルアールヴ
+- 初期昇進: 瘴烟 / 植物 / 病気無効 / 可燃性 / 人食い
+- ダメージ上限: 100
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `DomainMods`: DOMAIN_LAND iDomainMod=25
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bCarnivorous`: 1
+  - `PythonPostCombatWon`: postCombatTriffid
+  - `DamageTypeCombats`: 毒 iCombat=5
+
+### Living armor - 生きている鎧
+
+- 内部名: `UNIT_LIVING_ARMOR`
+- 固有: メギスス（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 無能ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 初期昇進: 精霊
+- ダメージ上限: 100
+- 巻き添え被害: 100
+- 説明（ゲーム内ヘルプ）: 戦闘結果に関わらず死亡する
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoCapture`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bSuicide`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 30
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=1 / 毒 iCombat=1
+
+## 白兵ユニット
+
+### Warrior - 戦士
+
+- 内部名: `UNIT_WARRIOR`
+- ユニットクラス: 戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 昇格先: 弓兵 / 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Beastman - 野蛮人
+
+- 内部名: `UNIT_BEASTMAN`
+- 固有: ドヴィエロ（戦士 の代替）
+- ユニットクラス: 戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 昇格先: 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Bloodpet - 血のしもべ
+
+- 内部名: `UNIT_BLOODPET`
+- 固有: カラビム（戦士 の代替）
+- ユニットクラス: 戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 昇格先: 弓兵 / 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Axeman - 斧兵
+
+- 内部名: `UNIT_AXEMAN`
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 昇格先: 勇士 / 戦車兵 / グリゴリ衛生兵
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Sons of Asena - アセナの末裔
+
+- 内部名: `UNIT_SONS_OF_ASENA`
+- 固有: ドヴィエロ（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 昇格先: 勇士 / 戦車兵
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 65
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Moroi - モロイ
+
+- 内部名: `UNIT_MOROI`
+- 固有: カラビム（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 昇格先: 勇士 / 戦車兵
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Pyre Zombie - 火葬のゾンビ
+
+- 内部名: `UNIT_PYRE_ZOMBIE`
+- 固有: シェアイム（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 初期昇進: 屍人 / 火炎抵抗
+- 昇格先: 勇士
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExplodeInCombat`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Champion - 勇士
+
+- 内部名: `UNIT_CHAMPION`
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Boarding Party - 斬り込み隊
+
+- 内部名: `UNIT_BOARDING_PARTY`
+- 固有: ラヌーン（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 水陸両用 / 接舷攻撃
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 海軍ユニット iUnitCombatMod=50
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 港
+
+### Dragon Slayer - ドラゴンスレイヤー
+
+- 内部名: `UNIT_DRAGON_SLAYER`
+- 固有: グリゴリ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: ドラゴン狩り / 勇気
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / ドルイド僧
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Battlemaster - 闘将
+
+- 内部名: `UNIT_BATTLEMASTER`
+- 固有: ドヴィエロ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 65
+  - `iCityDefense`: 20
+  - `TerrainAttacks`: 凍土 iTerrainAttack=50
+  - `TerrainDefenses`: 凍土 iTerrainDefense=50
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Mimic - ものまね師
+
+- 内部名: `UNIT_MIMIC`
+- 固有: バルセラフ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 練兵場
+  - `PythonPostCombatWon`: postCombatMimic
+
+### Ogre - オーガ
+
+- 内部名: `UNIT_OGRE`
+- 固有: 残り火一族・蛮族の国（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: オーガ
+- 昇格先: 不死者 / 狂戦士 / ファランクス
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Vampire - ヴァンパイア
+
+- 内部名: `UNIT_VAMPIRE`
+- 固有: カラビム（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 封建制
+- 必要な建造物: 領主邸
+- 初期昇進: 吸血鬼 / 精神集中Ⅰ / 精神集中Ⅱ / 死Ⅰ / 肉体Ⅰ
+- 昇格先: 不死者 / 狂戦士 / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Berserker - 狂戦士
+
+- 内部名: `UNIT_BERSERKER`
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Seraph - 熾天使
+
+- 内部名: `UNIT_SERAPH`
+- 固有: マーキュリアン（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- 攻撃力: 9
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 初期昇進: 天使 / 炎Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 神術
+- ダメージ上限: 100
+- 巻き添え被害: 20
+- 武器の段階: 3
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 神聖 iCombat=2
+
+### Circle of Urd - ウルズの円陣
+
+- 内部名: `UNIT_CIRCLE_OF_URD`
+- 固有: ドヴィエロ（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Brujah - ブルーハ
+
+- 内部名: `UNIT_BRUJAH`
+- 固有: カラビム（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 初期昇進: 吸血鬼 / 精神集中Ⅰ / 精神集中Ⅱ / 肉体Ⅰ / 死Ⅰ
+- ダメージ上限: 100
+- 巻き添え被害: 20
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Balor - バロール
+
+- 内部名: `UNIT_BALOR`
+- 固有: 地獄の軍勢・常闇ノ国・魔族（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 8
+- 防御力: 4
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 初期昇進: 火炎抵抗 / 魔族 / 烙印
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+  - `DamageTypeCombats`: 不浄 iCombat=2
+  - `BonusAffinities`: 不可逆のマナ iAffinity=100
+
+### Immortal - 不死者
+
+- 内部名: `UNIT_IMMORTAL`
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 初期昇進: 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 練兵場
+
+### Valkyrie - 戦乙女
+
+- 内部名: `UNIT_VALKYRIE`
+- 固有: マーキュリアン（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 10
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 初期昇進: 天使 / 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `DamageTypeCombats`: 神聖 iCombat=3
+
+### Skuld - スクルド
+
+- 内部名: `UNIT_SKULD`
+- 固有: ドヴィエロ（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 初期昇進: 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+
+### Ogre Warchief - オーガの親分
+
+- 内部名: `UNIT_OGRE_WARCHIEF`
+- 固有: 残り火一族・蛮族の国（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 17
+- 防御力: 17
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 初期昇進: オーガ / 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 練兵場
+
+### Vampire Lord - ヴァンパイアロード
+
+- 内部名: `UNIT_VAMPIRE_LORD`
+- 固有: カラビム（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 必要な建造物: 領主邸
+- 初期昇進: 吸血鬼 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 死Ⅰ / 肉体Ⅰ / 精神Ⅰ / 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 必要レベル: 8
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+
+### Phalanx - ファランクス
+
+- 内部名: `UNIT_PHALANX`
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Repentant Angel - 後悔の天使
+
+- 内部名: `UNIT_REPENTANT_ANGEL`
+- 固有: マーキュリアン（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 10
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 高潔の証
+- 初期昇進: 天使
+- ダメージ上限: 100
+- 武器の段階: 3
+- 必要レベル: 3
+- 説明（ゲーム内ヘルプ）: 生物ユニット倒すと-1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatReduceCombat1
+  - `DamageTypeCombats`: 神聖 iCombat=4
+
+### Verdandi - ヴェルザンディ
+
+- 内部名: `UNIT_VERDANDI`
+- 固有: ドヴィエロ（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=20 / 騎乗ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Stoneskin Ogre - 石肌のオーガ
+
+- 内部名: `UNIT_STONESKIN_OGRE`
+- 固有: 残り火一族・蛮族の国（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 17
+- 防御力: 17
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- 初期昇進: 石の皮膚 / オーガ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 65
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Mercenary - 傭兵
+
+- 内部名: `UNIT_MERCENARY`
+- ユニットクラス: 傭兵
+- 兵科: 白兵ユニット
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- ダメージ上限: 100
+- 退却率: 10
+- 先制攻撃のチャンス: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bNoDefaultRace`: 1
+  - `iGoldFromCombat`: -2
+
+### Radiant Guard - 輝ける衛士
+
+- 内部名: `UNIT_RADIANT_GUARD`
+- ユニットクラス: 輝ける衛士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 鉄器
+- 必要な宗教: 至光なる天空
+- 初期昇進: 護衛 / 太陽Ⅰ / 太陽Ⅱ
+- 昇格先: 勇士 / ラタ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 至光なる天空
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 40
+  - `iConscription`: 5
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Soldier of Kilmorph - キルモフの兵士
+
+- 内部名: `UNIT_DWARVEN_SOLDIER_RUNES`
+- ユニットクラス: ドワーフ兵士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 75
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 母なる大地への道
+- 必要な宗教: キルモフのルーン
+- 初期昇進: ドワーフ
+- 昇格先: 勇士 / パラマンダー
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: キルモフのルーン
+  - `StateReligion`: キルモフのルーン
+  - `iBaseHurry`: 50
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 50
+  - `iHillsDefense`: 50
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 2
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Drown - 深きものども
+
+- 内部名: `UNIT_DROWN`
+- ユニットクラス: 深きものども
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 深海からの神託
+- 必要な宗教: 深海の旧支配者
+- 初期昇進: 屍人 / 水上歩行
+- 昇格先: 黄泉の番人
+- ダメージ上限: 100
+- 武器の段階: 2
+- 説明（ゲーム内ヘルプ）: 戦闘で敗北すると、勝利したユニットに低確率で狂乱を与えることがある。
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `StateReligion`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `TerrainAttacks`: 近海 iTerrainAttack=50
+  - `UnitCombatMods`: 信奉ユニット iUnitCombatMod=-50 / 海軍ユニット iUnitCombatMod=-50
+  - `DomainMods`: DOMAIN_LAND iDomainMod=20
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatLost`: postCombatDrownLost
+  - `DamageTypeCombats`: 不浄 iCombat=1
+  - `DamageTypeResists`: 冷気 iResist=20 / 火炎 iResist=-50
+  - `BonusAffinities`: 古書物 iAffinity=25
+
+### Lunatic - 狂人
+
+- 内部名: `UNIT_LUNATIC`
+- ユニットクラス: 狂人
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 75
+- 攻撃力: 7
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 精神圧搾
+- 必要な建造物: 精神病院
+- 初期昇進: 発狂
+- 昇格先: 狂戦士
+- ダメージ上限: 100
+- 巻き添え被害: 20
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 10
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Diseased Corpses - 腐った死体
+
+- 内部名: `UNIT_DISEASED_CORPSE`
+- ユニットクラス: 腐った死体
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 魂の堕落
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 病気 / 屍人
+- 昇格先: 幻霊
+- ダメージ上限: 100
+- 武器の段階: 2
+- 説明（ゲーム内ヘルプ）: 敵地で戦闘に勝利すると、都市であれば荒廃を発生させ、都市でなければ悪霊の地を生み出すことがある。
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `StateReligion`: 蒼褪めたヴェール
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatDiseasedCorpseWon
+  - `DamageTypeCombats`: 死 iCombat=2
+
+### Demagog - 煽動家
+
+- 内部名: `UNIT_DEMAGOG`
+- ユニットクラス: 煽動家
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 鉄器
+- 必要な文明: バンノール
+- 初期昇進: 聖霊の導き
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 弓術ユニット iUnitCombatMod=25
+  - `iConscription`: 11
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `PrereqBuildingClass`: 練兵場
+  - `PrereqCivic`: 聖戦
+
+### Flagbearer - 旗手
+
+- 内部名: `UNIT_FLAGBEARER`
+- ユニットクラス: 旗手
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 狂信
+- 必要な文明: バンノール
+- 初期昇進: 士気
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iConscription`: 5
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqCivic`: 聖戦
+
+### Angel - 天使
+
+- 内部名: `UNIT_ANGEL`
+- ユニットクラス: 天使
+- 兵科: 白兵ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要な文明: マーキュリアン
+- 初期昇進: 天使
+- 昇格先: 不死者 / 狂戦士 / 魔獣使い / 騎士 / ファランクス / 影法師
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### Grigori Medic - グリゴリ衛生兵
+
+- 内部名: `UNIT_GRIGORI_MEDIC`
+- ユニットクラス: グリゴリ衛生兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 医薬
+- 必要な建造物: 診療所
+- 必要な文明: グリゴリ
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ
+- 昇格先: ドルイド僧
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Freak - 畸形人間
+
+- 内部名: `UNIT_FREAK`
+- ユニットクラス: 畸形人間
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 40
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: 祝祭
+- 必要な文明: バルセラフ
+- 初期昇進: 異形
+- 昇格先: 斧兵 / 狩人 / 弓兵
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Buildings`: 見世物小屋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iConscription`: 2
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Chaos Marauder - 混沌の掠奪者
+
+- 内部名: `UNIT_CHAOS_MARAUDER`
+- ユニットクラス: 混沌の掠奪者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: Never
+- 必要な建造物: 次元界の門
+- 初期昇進: 魔族
+- 昇格先: ヴェールの儀式官
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Minotaur - ミノタウロス
+
+- 内部名: `UNIT_MINOTAUR`
+- ユニットクラス: ミノタウロス
+- 兵科: 白兵ユニット
+- 攻撃力: 8
+- 防御力: 11
+- 移動力: 1
+- 世代: 4
+- 必要な建造物: 次元界の門
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+
+### Succubus - 淫魔
+
+- 内部名: `UNIT_SUCCUBUS`
+- ユニットクラス: 淫魔
+- 兵科: 白兵ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 3
+- 必要な建造物: 次元界の門
+- 初期昇進: 魔族 / 災厄 / 精神Ⅱ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `UnitCombatTargets`: 秘術ユニット / 信奉ユニット
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 不浄 iCombat=2
+
+### Azer - アザー
+
+- 内部名: `UNIT_AZER`
+- ユニットクラス: アザー
+- 兵科: 白兵ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 飛行 / 精霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExplodeInCombat`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=3
+  - `DamageTypeResists`: 火炎 iResist=100
+
+### Ice Elemental - 氷の精霊
+
+- 内部名: `UNIT_ICE_ELEMENTAL`
+- ユニットクラス: 氷の精霊
+- 兵科: 白兵ユニット
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 精霊 / 可燃性
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `TerrainImpassables`: 砂漠 / 灼熱の砂地
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `TerrainAttacks`: 氷原 iTerrainAttack=20 / 凍土 iTerrainAttack=10
+  - `TerrainDefenses`: 氷原 iTerrainDefense=20 / 凍土 iTerrainDefense=10
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 冷気 iCombat=2
+  - `DamageTypeResists`: 冷気 iResist=100
+  - `BonusAffinities`: 氷のマナ iAffinity=200
+
+### Mistform - 霧の生命体
+
+- 内部名: `UNIT_MISTFORM`
+- ユニットクラス: 霧の生命体
+- 兵科: 白兵ユニット
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 精霊 / 不可視 / 国籍秘匿
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `bNoWarWeariness`: 1
+  - `BonusAffinities`: 影のマナ iAffinity=100
+
+### Skeleton - 骸骨
+
+- 内部名: `UNIT_SKELETON`
+- ユニットクラス: 骸骨
+- 兵科: 白兵ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 屍人
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 死 iCombat=1
+
+### Spectre - 悪霊
+
+- 内部名: `UNIT_SPECTRE`
+- ユニットクラス: 悪霊
+- 兵科: 白兵ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 2
+- 世代: 3
+- 初期昇進: 恐怖 / 屍人
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 死 iCombat=2
+  - `BonusAffinities`: 死のマナ iAffinity=100
+
+### Donal Lugh - ドナル・ルー
+
+- 内部名: `UNIT_DONAL`
+- ユニットクラス: ドナル・ルー
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 必要な文明: バンノール
+- 初期昇進: 英雄 / 募兵官 / 魂Ⅱ / 護衛 / PROMOTION_EMPTY_BIER / 行軍
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 魔族か屍人を倒すと募兵官を得る
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Donal Lugh.dds
+  - `PythonPostCombatWon`: postCombatDonal
+
+### Basium - バシウム
+
+- 内部名: `UNIT_BASIUM`
+- ユニットクラス: バシウム
+- 兵科: 白兵ユニット
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 鉄器
+- 必要な文明: マーキュリアン
+- 初期昇進: 不死身 / 英雄 / 忠誠 / 長身 / 天使
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 死亡すると指導者の志向を全て失う
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iModifyGlobalCounter`: 5
+  - `Image`: Art/Interface/Popups/Basium.dds
+  - `PythonPostCombatLost`: postCombatBasium
+  - `DamageTypeCombats`: 神聖 iCombat=4
+
+### Barnaxus - バルナクサス
+
+- 内部名: `UNIT_BARNAXUS`
+- ユニットクラス: バルナクサス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 石工
+- 必要な文明: ルシュイアープ
+- 初期昇進: ゴーレム
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 戦闘Ⅰ～Ⅴの昇進を持つ間、配下のゴーレムに強化Ⅰ～Ⅴの効果が与えられる / 死亡するとその場にバルナクサスのかけらを落とす
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Barnaxus.dds
+
+### Maros - マロス
+
+- 内部名: `UNIT_MAROS`
+- ユニットクラス: マロス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 14
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 鉄器
+- 必要な文明: カザード
+- 初期昇進: 英雄 / ドワーフ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityDefense`: 50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Maros.dds
+
+### Guybrush Threepwood - ガイブラシ・スリープウッド
+
+- 内部名: `UNIT_GUYBRUSH`
+- ユニットクラス: ガイブラシ・スリープウッド
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 鉄器
+- 必要な文明: ラヌーン
+- 初期昇進: 水陸両用 / 接舷攻撃 / 英雄
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 海軍ユニット iUnitCombatMod=100
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Guybrush Threepwood.dds
+
+### Lucian - ルシアン
+
+- 内部名: `UNIT_LUCIAN`
+- ユニットクラス: ルシアン
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要な文明: ドヴィエロ
+- 初期昇進: 寒冷種 / 冒険者
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 25
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=50
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=50
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Lucian.dds
+
+### Rantine - ランタイン
+
+- 内部名: `UNIT_RANTINE`
+- ユニットクラス: ランタイン
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 必要な文明: 残り火一族
+- 初期昇進: 青銅の武器 / オーク / 英雄
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Rantine.dds
+
+### Losha Valas - ロシャ・ヴァラス
+
+- 内部名: `UNIT_LOSHA`
+- ユニットクラス: ロシャ・ヴァラス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 狂信
+- 必要な文明: カラビム
+- 初期昇進: 英雄 / 吸血鬼 / 精神集中Ⅰ / 精神集中Ⅱ / 死Ⅰ / 肉体Ⅰ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `PromotionFromCombat`: 不死身
+  - `Image`: Art/Interface/Popups/Losha Valas.dds
+
+### Hyborem - ハイボレム
+
+- 内部名: `UNIT_HYBOREM`
+- ユニットクラス: ハイボレム
+- 兵科: 白兵ユニット
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要な文明: 地獄の軍勢
+- 初期昇進: 英雄 / 忠誠 / 魔族 / 長身 / PROMOTION_GELA / 不死身
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 死亡すると指導者の志向を全て失う
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iModifyGlobalCounter`: 5
+  - `Image`: Art/Interface/Popups/Hyborem.dds
+  - `PythonPostCombatLost`: postCombatHyborem
+  - `DamageTypeCombats`: 不浄 iCombat=2
+
+### Wilboman - ウィルボーマン
+
+- 内部名: `UNIT_WILBOMAN`
+- ユニットクラス: ウィルボーマン
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 鉄器
+- 必要な文明: イリアン
+- 初期昇進: 英雄 / 長身 / 寒冷種 / 可燃性
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=-25 / 凍土 iTerrainAttack=25 / 氷原 iTerrainAttack=25
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=-25 / 凍土 iTerrainDefense=25 / 氷原 iTerrainDefense=25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Wilboman.dds
+  - `DamageTypeResists`: 冷気 iResist=100
+
+### Auric Ulvin - オーリック・ウルヴィン
+
+- 内部名: `UNIT_AURIC`
+- ユニットクラス: オーリック・ウルヴィン
+- 兵科: 白兵ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Auric.dds
+
+### Bambur - ボンブール
+
+- 内部名: `UNIT_BAMBUR`
+- ユニットクラス: ボンブール
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 千仞の尾根
+- 必要な宗教: キルモフのルーン
+- 初期昇進: 英雄 / 精神集中Ⅰ / 呪付Ⅰ / 呪付Ⅱ / ドワーフ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: キルモフのルーン
+  - `StateReligion`: キルモフのルーン
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iHillsAttack`: 20
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `Image`: Art/Interface/Popups/Bambur.dds
+
+### Saverous - セーヴァラス
+
+- 内部名: `UNIT_SAVEROUS`
+- ユニットクラス: セーヴァラス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 精神圧搾
+- 必要な宗教: 深海の旧支配者
+- 初期昇進: 英雄 / 魔族 / 人食い
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `StateReligion`: 深海の旧支配者
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `Image`: Art/Interface/Popups/Saverous.dds
+  - `DamageTypeCombats`: 不浄 iCombat=2
+
+### Meshabber of Dis - 魔都のメシャベル
+
+- 内部名: `UNIT_MESHABBER`
+- ユニットクラス: 魔都のメシャベル
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 1200
+- 攻撃力: 25
+- 防御力: 25
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 地獄の契約
+- 追加で必要なテクノロジー: 悪意の企み
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 魔族 / 長身 / 神術 / 炎Ⅲ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `HolyCity`: 蒼褪めたヴェール
+  - `StateReligion`: 蒼褪めたヴェール
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `iModifyGlobalCounter`: 10
+  - `Image`: Art/Interface/Popups/Meshabber of Dis.dds
+  - `DamageTypeCombats`: 火炎 iCombat=6 / 不浄 iCombat=6
+
+### Mary Morbus - 病魔メアリー
+
+- 内部名: `UNIT_MARY`
+- ユニットクラス: 病魔メアリー
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 錬金術
+- 初期昇進: 保菌者
+- ダメージ上限: 100
+- 退却率: 80
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 錬金術ラボ
+  - `Image`: Art/Interface/Popups/Mary.dds
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Brigit - ブリジット
+
+- 内部名: `UNIT_BRIGIT`
+- ユニットクラス: ブリジット
+- 兵科: 白兵ユニット
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 4
+- 初期昇進: 天使 / 英雄 / 機動力Ⅰ / 機動力Ⅱ / 魔族狩り / 屍人狩り / 行軍
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `Image`: Art/Interface/Popups/Brigit.dds
+  - `DamageTypeCombats`: 神聖 iCombat=3
+  - `BonusAffinities`: 炎のマナ iAffinity=100
+
+### Brigit - ブリジット
+
+- 内部名: `UNIT_BRIGIT_HELD`
+- ユニットクラス: ブリジット
+- 兵科: 白兵ユニット
+- 世代: 4
+- 初期昇進: 天使
+- ダメージ上限: 100
+- その他の設定:
+  - `Capture`: ブリジット
+  - `Domain`: DOMAIN_IMMOBILE
+  - `bMilitaryHappiness`: 1
+  - `bPillage`: 1
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Brigit.dds
+  - `PythonPostCombatLost`: postCombatBrigitHeld
+
+### Orthus - 蛮族王オルタス
+
+- 内部名: `UNIT_ORTHUS`
+- ユニットクラス: 蛮族王オルタス
+- 兵科: 白兵ユニット
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 2
+- 必要な文明: 蛮族の国
+- 初期昇進: 英雄 / オーク / PROMOTION_ORTHUSS_AXE / 忠誠
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityDefense`: 25
+  - `iCultureGarrison`: 64
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Orthus.dds
+  - `PythonPostCombatWon`: postCombatOrthusReturnWon
+  - `PythonPostCombatLost`: postCombatOrthus
+
+### Muirin - ムイリン
+
+- 内部名: `UNIT_MUIRIN`
+- ユニットクラス: ムイリン
+- 兵科: 白兵ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 可燃性 / 屍人 / 水上歩行
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Muirin.dds
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Avatar of Wrath - 復讐の化身
+
+- 内部名: `UNIT_WRATH`
+- ユニットクラス: 復讐の化身
+- 兵科: 白兵ユニット
+- 攻撃力: 40
+- 防御力: 40
+- 移動力: 2
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 魔族 / 魔法無効 / 暗黒魔法Ⅲ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iModifyGlobalCounter`: 3
+  - `Image`: Art/Interface/Popups/Avatar of Wrath.dds
+  - `PythonPostCombatWon`: postCombatAvatarOfWrathWon
+
+### Ira - イラ
+
+- 内部名: `UNIT_IRA`
+- ユニットクラス: イラ
+- 兵科: 白兵ユニット
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 2
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 魔族 / 人食い
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatIra
+  - `DamageTypeCombats`: 不浄 iCombat=4
+
+### Ashigaru - 足軽
+
+- 内部名: `UNIT_ASHIGARU`
+- 固有: エチゴ（戦士 の代替）
+- ユニットクラス: 戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 昇格先: 弓兵 / 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Builds`: 農場の建設
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Kenkaku - 剣客
+
+- 内部名: `UNIT_KENKAKU`
+- 固有: エチゴ（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 昇格先: 勇士
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+  - `BonusAffinities`: 法のマナ iAffinity=50 / 太陽のマナ iAffinity=50
+
+### Samurai - 侍
+
+- 内部名: `UNIT_SAMURAI`
+- 固有: エチゴ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 封建制
+- 初期昇進: 忠誠
+- 昇格先: 不死者 / 騎士 / ファランクス
+- ダメージ上限: 100
+- 先制攻撃: 2
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `BonusAffinities`: 法のマナ iAffinity=50 / 太陽のマナ iAffinity=50
+
+### Yasya - 夜叉
+
+- 内部名: `UNIT_YASYA`
+- 固有: エチゴ（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 17
+- 防御力: 12
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 初期昇進: 勇気 / 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 55
+  - `iCityDefense`: 25
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `BonusAffinities`: 法のマナ iAffinity=50 / 太陽のマナ iAffinity=50
+
+### Toyama Medic - 富山の薬売り
+
+- 内部名: `UNIT_TOYAMA`
+- ユニットクラス: 富山の薬売り
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 医薬
+- 必要な建造物: 診療所
+- 必要な文明: エチゴ
+- 初期昇進: 衛生兵Ⅰ / 衛生兵Ⅱ
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iBaseTrade`: 90
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iFreePromotionPick`: 1
+  - `BonusAffinities`: 法のマナ iAffinity=50 / 太陽のマナ iAffinity=50
+
+### Naoe - 直江山城守
+
+- 内部名: `UNIT_NAOE`
+- ユニットクラス: 直江山城守
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 6
+- 防御力: 8
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 通貨
+- 必要な文明: エチゴ
+- 初期昇進: 忠誠 / 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 肉体Ⅰ / 呪付Ⅰ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `Image`: Art_Echigo/Interface/Popups/NAOE_echigo_Popups.dds
+
+### Zombie - ゾンビ
+
+- 内部名: `UNIT_ZOMBIE_CITIZEN`
+- ユニットクラス: ゾンビ
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: Never
+- 必要な文明: ドロアウム
+- 初期昇進: 屍人 / 烙印
+- 昇格先: 幻霊
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bCarnivorous`: 1
+  - `UnitConvertFromCombat`: ゾンビ兵士
+  - `iUnitConvertFromCombatChance`: 30
+  - `UnitCreateFromCombat`: ゾンビ
+  - `iUnitCreateFromCombatChance`: 10
+  - `DamageTypeCombats`: 死 iCombat=2
+
+### Zombie Soldier - ゾンビ兵士
+
+- 内部名: `UNIT_ZOMBIE_SOLDIER`
+- ユニットクラス: ゾンビ兵士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要な文明: ドロアウム
+- 初期昇進: 屍人 / 烙印
+- 昇格先: 幻霊
+- ダメージ上限: 100
+- 武器の段階: 2
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bCarnivorous`: 1
+  - `PrereqCivic`: 不朽の宮廷
+  - `UnitConvertFromCombat`: ゾンビ首長
+  - `iUnitConvertFromCombatChance`: 15
+  - `UnitCreateFromCombat`: ゾンビ
+  - `iUnitCreateFromCombatChance`: 15
+  - `DamageTypeCombats`: 死 iCombat=3
+
+### Zombie Lord - ゾンビ首長
+
+- 内部名: `UNIT_ZOMBIE_LORD`
+- ユニットクラス: ゾンビ首長
+- 兵科: 白兵ユニット
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要な文明: ドロアウム
+- 初期昇進: 屍人 / 烙印
+- ダメージ上限: 100
+- 退却率: 85
+- 武器の段階: 3
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bCarnivorous`: 1
+  - `PrereqCivic`: 不朽の宮廷
+  - `UnitCreateFromCombat`: ゾンビ
+  - `iUnitCreateFromCombatChance`: 20
+  - `DamageTypeCombats`: 死 iCombat=3
+
+### Soma Maenya - ソーマ・メーニャ
+
+- 内部名: `UNIT_MAENYA`
+- ユニットクラス: ソーマ・メーニャ
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 400
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 鉄器
+- 必要な文明: ドロアウム
+- 初期昇進: 竜喰らい / 英雄 / 火炎抵抗 / 長身
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 英雄ユニットを倒すことで英雄の頭蓋骨を入手 / ドラゴンを倒すことで竜鱗を入手
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 6
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=25 / 偵察ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Droaum/Interface/Popups/MAENYA_DROAUM_Popups.dds
+  - `PythonPostCombatWon`: postCombatMaenyaDroaum
+
+### Apostle - 救世主の使い
+
+- 内部名: `UNIT_APOSTLE`
+- 固有: ドロアウム（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 生物を倒すとアルマゲドンカウンタが上昇(確率20%) / 無生物を倒すと全回復(確率10%)
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `PrereqBuildingClass`: 練兵場
+  - `PythonPostCombatWon`: postCombatApostleDroaum
+
+### Cyclops - サイクロプス
+
+- 内部名: `UNIT_CYCLOPS`
+- 固有: ドロアウム（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 初期昇進: 暗黒魔法Ⅰ / 暗黒魔法Ⅱ
+- ダメージ上限: 100
+- 巻き添え被害: 20
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 生物を倒すとアルマゲドンカウンタが上昇(確率20%) / 無生物を倒すと全回復(確率10%)
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `PrereqBuildingClass`: 練兵場
+  - `PythonPostCombatWon`: postCombatApostleDroaum
+
+### Kurou - クロウ
+
+- 内部名: `UNIT_KUROU`
+- ユニットクラス: クロウ
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 聖職
+- 必要な文明: 常闇ノ国
+- 初期昇進: 不死身 / 英雄 / 魔族 / 烙印 / 魔族狩り / PROMOTION_DARK_BLADE
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `iModifyGlobalCounter`: 3
+  - `PromotionFromCombat`: 錐行の陣
+  - `BonusAffinities`: 死のマナ iAffinity=100
+  - `Image`: Art_Kaijin/Interface/popups/KUROU_pop.dds
+
+### Dark Axeman - 暗き剣士
+
+- 内部名: `UNIT_DARK_AXEMAN`
+- 固有: 常闇ノ国（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 昇格先: 勇士
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `iCityDefense`: 20
+  - `TerrainAttacks`: 死滅の大地 iTerrainAttack=20 / 破滅の原野 iTerrainAttack=20 / 灼熱の砂地 iTerrainAttack=20
+  - `TerrainDefenses`: 死滅の大地 iTerrainDefense=20 / 破滅の原野 iTerrainDefense=20 / 灼熱の砂地 iTerrainDefense=20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 死 iCombat=1 / 毒 iCombat=1
+  - `PrereqBuildingClass`: 練兵場
+
+### Dark Brave - 幽々たる猛きもの
+
+- 内部名: `UNIT_DARK_CHAMPION`
+- 固有: 常闇ノ国（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `TerrainAttacks`: 死滅の大地 iTerrainAttack=20 / 破滅の原野 iTerrainAttack=20 / 灼熱の砂地 iTerrainAttack=20
+  - `TerrainDefenses`: 死滅の大地 iTerrainDefense=20 / 破滅の原野 iTerrainDefense=20 / 灼熱の砂地 iTerrainDefense=20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=10
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 毒 iCombat=1
+  - `BonusAffinities`: 死のマナ iAffinity=100
+  - `PrereqBuildingClass`: 練兵場
+
+### Minotaur Siege Soldiers - ミノタウロス攻城兵
+
+- 内部名: `UNIT_MINOTAUR_SIEGE_SOLDIERS`
+- 固有: クリオテイテ（カタパルト の代替）
+- ユニットクラス: カタパルト
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 数学
+- ダメージ上限: 75
+- 退却率: 60
+- 巻き添え被害: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 70
+  - `iCollateralDamageMaxUnits`: 6
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 15
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `bNoDefaultRace`: 1
+
+### Undead Fury - 憤怒の亡者
+
+- 内部名: `UNIT_UNDEAD_FURY`
+- 固有: シェアイム（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 屍人 / 火炎抵抗
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExplodeInCombat`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=3
+
+### Torturer - 拷問士
+
+- 内部名: `UNIT_TORTURER`
+- 固有: 地獄の軍勢（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 魔族 / 災厄
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `bCarnivorous`: 1
+  - `PrereqBuildingClass`: 練兵場
+  - `UnitCreateFromCombat`: マネス
+  - `iUnitCreateFromCombatChance`: 10
+
+### Magic Infantry - 術歩兵
+
+- 内部名: `UNIT_MAGIC_INFANTRY`
+- 固有: イース（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 75
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 初期昇進: 精神集中Ⅰ / 高速詠唱
+- 昇格先: 勇士
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Magic Armor - 重魔装兵
+
+- 内部名: `UNIT_MAGIC_ARMOR`
+- 固有: イース（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 追加で必要なテクノロジー: エーテルの知識
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 高速詠唱
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=2
+  - `PrereqBuildingClass`: 練兵場
+
+### Ash - アッシュ
+
+- 内部名: `UNIT_ASH`
+- ユニットクラス: アッシュ
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 540
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂信
+- 必要な文明: イース
+- 初期昇進: 英雄 / 疫病神
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iModifyGlobalCounter`: 3
+  - `Image`: Art_Kaijin/Interface/Popups/YS_Ash_pop.dds
+
+### Yunica the Temple Knight - 神殿騎士ユニカ
+
+- 内部名: `UNIT_YUNICA`
+- ユニットクラス: 神殿騎士ユニカ
+- 兵科: 白兵ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要な文明: イース
+- 初期昇進: 勇気 / 護衛
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/REAH/yunica_pop.dds
+  - `DamageTypeCombats`: 火炎 iCombat=1
+  - `DamageTypeResists`: 火炎 iResist=100
+
+### Adol Read-Haired - 赤毛のアドル
+
+- 内部名: `UNIT_ADOL1`
+- ユニットクラス: 赤毛のアドル
+- 兵科: 白兵ユニット
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 1
+- 世代: 2
+- 必要な文明: イース
+- 初期昇進: 英雄 / 軽量級 / 冒険者
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 神聖 iCombat=1
+  - `Image`: Art_Kaijin/REAH/adol_pop.dds
+
+### Swordsman Adol Read-Haired - 赤毛の剣士アドル
+
+- 内部名: `UNIT_ADOL2`
+- ユニットクラス: 赤毛のアドル
+- 兵科: 白兵ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 3
+- 必要な文明: イース
+- 初期昇進: 英雄 / 軽量級 / 冒険者 / 精神集中Ⅰ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 神聖 iCombat=1
+  - `Image`: Art_Kaijin/REAH/adol_pop.dds
+
+### Adventurer Adol Read-Haired - 赤毛の冒険者アドル
+
+- 内部名: `UNIT_ADOL3`
+- ユニットクラス: 赤毛のアドル
+- 兵科: 白兵ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 4
+- 必要な文明: イース
+- 初期昇進: 英雄 / 軽量級 / 冒険者 / 精神集中Ⅰ / 精神集中Ⅱ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 神聖 iCombat=1
+  - `Image`: Art_Kaijin/REAH/adol_pop.dds
+
+### Pulufraus Lurlotz - プルフラウス・ルァロッツ
+
+- 内部名: `UNIT_PULUFRAUS`
+- ユニットクラス: プルフラウス・ルァロッツ
+- 兵科: 白兵ユニット
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: デスピエル
+- 初期昇進: 人食い / 忌まわしき抱擁 / 英雄 / 壊人 / 幻術士 / 精神集中Ⅱ / 混沌Ⅰ / 影Ⅰ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる / 引き入れに失敗したユニットの幻影を生み出す
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bCarnivorous`: 1
+  - `PromotionFromCombat`: 再生
+  - `DamageTypeCombats`: 不浄 iCombat=2
+  - `Image`: Art_Kaijin/Interface/Popups/PulufurausPop.dds
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+
+### Pulufraus Lurlotz - プルフラウス・ルァロッツ
+
+- 内部名: `UNIT_PULUFRAUS_IMMORTAL`
+- ユニットクラス: プルフラウス・ルァロッツ
+- 兵科: 白兵ユニット
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 3
+- 世代: 4
+- 初期昇進: 人食い / 忌まわしき抱擁 / 英雄 / 壊人 / 幻術士 / 精神集中Ⅱ / 混沌Ⅰ / 影Ⅰ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる / 引き入れに失敗したユニットの幻影を生み出す
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmortal`: 1
+  - `bCarnivorous`: 1
+  - `PromotionFromCombat`: 再生
+  - `DamageTypeCombats`: 不浄 iCombat=2
+  - `Image`: Art_Kaijin/Interface/Popups/PulufurausPop.dds
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+
+### Gozewaros - ゴーゼワロス
+
+- 内部名: `UNIT_GOZEWAROS`
+- ユニットクラス: ゴーゼワロス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 6
+- 防御力: 8
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 狂信
+- 必要な文明: リネージ
+- 初期昇進: 英雄 / 指揮官 / 異邦人
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityDefense`: 20
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/GozePop.dds
+
+### Derrik Armut - デリック・アルムート
+
+- 内部名: `UNIT_DERRIK`
+- ユニットクラス: デリック・アルムート
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 6
+- 防御力: 9
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 鉄器
+- 必要な文明: リネージ
+- 初期昇進: 英雄 / 鉄壁 / 重量級 / 護衛 / 異邦人
+- ダメージ上限: 95
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ProductionTraits`: 無神論志向 iProductionTrait=100
+  - `TerrainImpassables`: 氷原 / 砂漠 / 灼熱の砂地 / 湿地 / 地獄の浅瀬
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/DerrikPop.dds
+
+### Legion - レギオン
+
+- 内部名: `UNIT_LINEAGE_LEGION`
+- 固有: リネージ（戦士 の代替）
+- ユニットクラス: 戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 昇格先: 弓兵 / 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 兵站基地の建設
+  - `iWorkRate`: 75
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityDefense`: 25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+
+### Decurion - デクリオン
+
+- 内部名: `UNIT_LINEAGE_DECURION`
+- 固有: リネージ（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 必要な資源（いずれか）: 銅 / 鉄 / ミスリル
+- 昇格先: 勇士
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 兵站基地の建設
+  - `iWorkRate`: 75
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: 30
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Centurion - センチュリオン
+
+- 内部名: `UNIT_LINEAGE_CENTURION`
+- 固有: リネージ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- 昇格先: 狂戦士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `Builds`: 道路の建設 / 舗装道を敷設 / 兵站基地の建設
+  - `iWorkRate`: 75
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `iConscription`: 7
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Halmberte - ハルムベルテ
+
+- 内部名: `UNIT_LINEAGE_HALMBERTE`
+- 固有: リネージ（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- 必要な資源（いずれか）: 鉄 / ミスリル
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=50 / 信奉ユニット iUnitCombatMod=50 / 騎乗ユニット iUnitCombatMod=50 / 白兵ユニット iUnitCombatMod=50 / 攻城兵器 iUnitCombatMod=50
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Armored - 装甲兵
+
+- 内部名: `UNIT_LINEAGE_ARMORED`
+- 固有: リネージ（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリル器
+- 初期昇進: 鉄壁 / 重量級
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `TerrainImpassables`: 氷原 / 砂漠 / 灼熱の砂地 / 湿地 / 地獄の浅瀬
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Clockwork Soldier - 機械化兵
+
+- 内部名: `UNIT_CLOCKWORK_SOLDIER`
+- 固有: メカノス（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 機械
+- 昇格先: 狂戦士 / ファランクス
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+
+### Flamethrower - 火炎放射兵
+
+- 内部名: `UNIT_FLAMETHROWER`
+- 固有: メカノス（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 450
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- 初期昇進: 機械
+- ダメージ上限: 100
+- 巻き添え被害: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 25
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: 60
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 火炎 iCombat=5
+  - `PrereqBuildingClass`: 練兵場
+
+### Grenadier - 擲弾兵
+
+- 内部名: `UNIT_GRENADIER`
+- 固有: メカノス（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 225
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリル器
+- 追加で必要なテクノロジー: 秘術の伝承知識
+- 初期昇進: 機械
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 巻き添え被害: 20
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 8
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Adeptus - 精製術師
+
+- 内部名: `UNIT_ADEPTUS`
+- 固有: ノービアイ・メカノス（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 蒸気機関
+- 初期昇進: 精神集中Ⅰ / 衛生兵Ⅰ / 衛生兵Ⅱ / 超魔術Ⅱ
+- 昇格先: ドルイド僧 / 魔術師
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 精製装置を建設
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+
+### Boris - ボリス
+
+- 内部名: `UNIT_BORIS`
+- ユニットクラス: ボリス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 蒸気機関
+- 必要な文明: メカノス
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFlatMovementCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `Image`: ,Art_Kaijin/Interface/Popups/Boris.dds
+
+### Bone Horde - 骨の大群
+
+- 内部名: `UNIT_BONE_HORDE`
+- 固有: パトリアの後継者（火縄銃兵 の代替）
+- ユニットクラス: 火縄銃兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 爆薬
+- 必要な資源: 火薬
+- 初期昇進: 屍人
+- ダメージ上限: 100
+- 巻き添え被害: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 9
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExplodeInCombat`: 1
+  - `bNoWarWeariness`: 1
+  - `bDefensiveStrikes`: 1
+  - `DamageTypeCombats`: 死 iCombat=2 / 火炎 iCombat=2
+  - `iEnemyWithdrawalModify`: -15
+
+### Centeni - 百卒長
+
+- 内部名: `UNIT_CENTENI`
+- 固有: パトリアの後継者（戦士 の代替）
+- ユニットクラス: 戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 昇格先: 弓兵 / 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Principes - 第二列歩兵
+
+- 内部名: `UNIT_PRINCIPES`
+- 固有: パトリアの後継者（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 必要な資源（いずれか）: 銅 / 鉄 / ミスリル
+- 初期昇進: 屍人 / 重量級
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `BonusProductionModifiers`: 染料 iProductonModifier=15 / 宝石 iProductonModifier=15
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Korinna the Red Lady - 真紅の貴婦人コリンナ
+
+- 内部名: `UNIT_KORRINA_RED`
+- ユニットクラス: 真紅の貴婦人コリンナ
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 青銅器
+- 必要な文明: パトリアの後継者
+- 初期昇進: 忠誠 / 精神集中Ⅰ / 精神集中Ⅱ / 母国
+- ダメージ上限: 100
+- 武器の段階: 3
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bFreeXP`: 1
+  - `bImmortal`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/KorrinaRed.dds
+
+### The Risen Emperor - 上帝
+
+- 内部名: `UNIT_RISEN_EMPEROR`
+- ユニットクラス: 上帝
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 900
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: パトリアの後継者
+- 初期昇進: 屍人 / 英雄 / 呪付の刃 / 執念 / 屍霊術 / 肉体Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `iFreePromotionPick`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/RisenEmperor.dds
+  - `UnitCreateFromCombat`: 復讐者
+  - `iUnitCreateFromCombatChance`: 50
+
+### Praetorian - 近衛兵
+
+- 内部名: `UNIT_PRAETORIAN`
+- 固有: パトリアの後継者（近衛騎兵 の代替）
+- ユニットクラス: 近衛騎兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 5
+- 防御力: 8
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 封建制
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 護衛 / 魂Ⅱ / 屍人 / 災厄 / 重量級
+- 昇格先: 騎士 / 不死者 / 聖騎士
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitClassDefenseMods`: 戦象 iUnitClassMod=100
+  - `BonusProductionModifiers`: 象牙 iProductonModifier=15 / 絹 iProductonModifier=15
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bAbandon`: 1
+  - `bNeverObsolete`: 1
+  - `PrereqCivic`: 現人神制
+
+### Michael - ミカエル
+
+- 内部名: `UNIT_MICHAEL`
+- ユニットクラス: ミカエル
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 狂信
+- 必要な文明: ラーナ
+- 初期昇進: 英雄 / 倶利伽羅剣 / 天使 / 石の皮膚 / 魔法抵抗 / 生命Ⅱ
+- ダメージ上限: 100
+- 間接攻撃力: 6
+- 間接攻撃の射程: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 70
+  - `iCollateralDamageMaxUnits`: 6
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `Image`: Art_Kaijin/Interface/popups/Tenshi_Pop.dds
+
+### Speaman - 槍兵
+
+- 内部名: `UNIT_SPEARMAN_RARNA`
+- 固有: ラーナ（狩人 の代替）
+- ユニットクラス: 狩人
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 追跡術
+- 昇格先: レンジャー / 勇士 / 十字軍
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50
+  - `BonusProductionModifiers`: 銅 iProductonModifier=10 / 鉄 iProductonModifier=10
+  - `iConscription`: 2
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Pikeman - 長槍兵
+
+- 内部名: `UNIT_PIKEMAN_RARNA`
+- 固有: ラーナ（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 鉄器
+- 追加で必要なテクノロジー: 数学
+- 昇格先: ファランクス
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50 / 騎乗ユニット iUnitCombatMod=50
+  - `iConscription`: 5
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Halberd - 鉾槍兵
+
+- 内部名: `UNIT_HALBERD_RARNA`
+- 固有: ラーナ（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50 / 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Soul Hunter - 魂狩り
+
+- 内部名: `UNIT_SOUL_HUNTER`
+- 固有: ラーナ（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 必要な建造物: 深淵
+- 初期昇進: 魂の飢餓 / 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `bCarnivorous`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PrereqBuildingClass`: 練兵場
+  - `PromotionFromCombat`: 魂の飢餓
+
+### Steindorf - シュタインドルフ
+
+- 内部名: `UNIT_STEINDORF`
+- ユニットクラス: シュタインドルフ
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 必要な文明: ティーグル
+- 初期昇進: 英雄 / 傭兵隊長 / 士気 / 武勇 / 衛生兵Ⅰ
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 通貨を獲得することでイベントが発生して死亡
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/Popups/Steindorf_Pop.dds
+
+### Hound - ハウンド
+
+- 内部名: `UNIT_HOUND`
+- ユニットクラス: ハウンド
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 通貨
+- 必要な文明: ティーグル
+- 初期昇進: 傭兵隊長 / 護衛 / 行軍
+- ダメージ上限: 100
+- 退却率: 25
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityDefense`: 25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iGoldFromCombat`: 10
+  - `Image`: Art_Kaijin/Interface/popups/hound_pop.dds
+
+### Coyote - コヨーテ
+
+- 内部名: `UNIT_COYOTE`
+- ユニットクラス: コヨーテ
+- 兵科: 白兵ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要な文明: ティーグル
+- 初期昇進: 護衛 / 忠誠 / 衛生兵Ⅱ
+- ダメージ上限: 100
+- 退却率: 15
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iGoldFromCombat`: 5
+  - `Image`: Art_Kaijin/Interface/popups/Coyote_pop.dds
+
+### Ein - アイン
+
+- 内部名: `UNIT_EIN`
+- ユニットクラス: アイン
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 通貨
+- 追加で必要なテクノロジー: 名誉
+- 必要な文明: ティーグル
+- 初期昇進: 英雄 / 傭兵隊長 / 士気
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 戦闘に勝利すると33%の確率で勲功の昇進を得る
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatEin
+  - `Image`: Art_Kaijin/Interface/Popups/Ein_Pop.dds
+
+### Smiley - スマイリー
+
+- 内部名: `UNIT_SMILEY`
+- ユニットクラス: スマイリー
+- 兵科: 白兵ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 4
+- 必要な文明: ティーグル
+- 初期昇進: 英雄 / 傭兵隊長 / 士気 / 恐怖 / 魔法抵抗 / 野心
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 25
+  - `iCityDefense`: 25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/Popups/Smiley_Pop.dds
+
+### Tiger Mercenaries - ティーグル傭兵団
+
+- 内部名: `UNIT_MERCENARY_TIGER`
+- 固有: ティーグル（傭兵 の代替）
+- ユニットクラス: 傭兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: Never
+- 初期昇進: 忠誠
+- 昇格先: 精鋭隊 / 山狐部隊 / 猟犬部隊
+- ダメージ上限: 100
+- 先制攻撃のチャンス: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 25
+  - `iCityDefense`: 25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bNoDefaultRace`: 1
+  - `iGoldFromCombat`: -2
+
+### Elites - 精鋭隊
+
+- 内部名: `UNIT_TIGER_MERCENARY_ELITE`
+- ユニットクラス: 精鋭隊
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 鉄器
+- 必要な文明: ティーグル
+- 初期昇進: 忠誠
+- ダメージ上限: 100
+- 武器の段階: 3
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 25
+  - `iCityDefense`: 25
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `iGoldFromCombat`: -2
+
+### Hound Mercenaries - 猟犬部隊
+
+- 内部名: `UNIT_MERCENARIES_HOUND`
+- ユニットクラス: 猟犬部隊
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 衛生設備
+- 必要な文明: ティーグル
+- 初期昇進: 護衛
+- ダメージ上限: 100
+- 退却率: 25
+- 先制攻撃: 1
+- 武器の段階: 3
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `iGoldFromCombat`: -2
+
+### Funeral Mercenaries - 葬送傭兵団
+
+- 内部名: `UNIT_FUNERAL_MERCENARY`
+- ユニットクラス: 葬送傭兵団
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: Never
+- 必要な文明: ティーグル
+- 初期昇進: 忠誠 / 魔法抵抗
+- 昇格先: 精鋭隊
+- ダメージ上限: 100
+- 退却率: 10
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+
+### Undead Mercenaries - 傭兵の亡骸
+
+- 内部名: `UNIT_UNDEAD_MERCENARY`
+- ユニットクラス: 傭兵の亡骸
+- 兵科: 白兵ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要な文明: ティーグル
+- 初期昇進: 屍人 / 忠誠 / 魔法抵抗
+- ダメージ上限: 100
+- 巻き添え被害: 25
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 死 iCombat=1
+
+### Falamar - ファラマー
+
+- 内部名: `UNIT_FALAMAR`
+- ユニットクラス: ファラマー
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 光学
+- 初期昇進: 水陸両用 / 病気無効 / 英雄
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 港
+  - `Image`: Art/Interface/Popups/Falamar.dds
+
+### Nuntius - 王の使者
+
+- 内部名: `UNIT_NUNTIUS`
+- 固有: バルドルアールヴ（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 瘴烟 / 護衛 / 散兵 / 追跡
+- 昇格先: 不死者 / 狂戦士 / 騎士 / ファランクス / 聖騎士 / 幻霊
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNeverObsolete`: 1
+  - `PrereqBuildingClass`: 練兵場
+
+### Nikephoros - ニケフォロス
+
+- 内部名: `UNIT_NIKEPHOROS`
+- ユニットクラス: ニケフォロス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 軍事戦略
+- 必要な文明: アリストラク
+- 初期昇進: 英雄 / 吸血鬼 / 異端審問 / 肉体Ⅲ / 屍霊術
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 戦闘に勝利することで殺意の熱狂を得る
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/Popups/Nikephoros_pop.dds
+  - `PrereqBuildingClass`: 練兵場
+  - `PythonPostCombatWon`: postCombatBattleFrenzy
+
+### Nofuos the Imperishable - 不滅のノフュアス
+
+- 内部名: `UNIT_NOFUOS`
+- ユニットクラス: 不滅のノフュアス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 演劇
+- 必要な文明: アリストラク
+- 初期昇進: 英雄 / 屍人 / 永久の隷属
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Nofuos_pop.dds
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### Barrow Warrior - 土塚の戦士
+
+- 内部名: `UNIT_BARROW_WARRIOR`
+- 固有: アリストラク（戦士 の代替）
+- ユニットクラス: 戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 15
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- 昇格先: 弓兵 / 斧兵
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityDefense`: 25
+  - `iConscription`: 1
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Pale Protector - 青褪めた衛士
+
+- 内部名: `UNIT_PALE_PROTECTOR`
+- 固有: アリストラク（斧兵 の代替）
+- ユニットクラス: 斧兵
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 40
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- 昇格先: 勇士
+- ダメージ上限: 100
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 50
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 戦士 iUnitClassMod=25
+  - `UnitClassDefenseMods`: 戦士 iUnitClassMod=25
+  - `iConscription`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Deathknell Cryptguard - 弔鐘の地下守
+
+- 内部名: `UNIT_CRYPTGUARD`
+- 固有: アリストラク（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+
+### Brujak - ブルーハ
+
+- 内部名: `UNIT_BRUJAH_ARISTRAKH`
+- 固有: アリストラク（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 初期昇進: 吸血鬼 / 肉体Ⅲ / 屍霊術
+- ダメージ上限: 100
+- 巻き添え被害: 20
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 戦闘に勝利することで殺意の熱狂を得る
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+  - `PythonPostCombatWon`: postCombatBattleFrenzy
+
+### Vampire Lord - ヴァンパイアロード
+
+- 内部名: `UNIT_VAMPIRE_LORD_ARISTRAKH`
+- 固有: アリストラク（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 初期昇進: 吸血鬼 / 肉体Ⅲ / 屍霊術 / 行軍
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 戦闘に勝利することで殺意の熱狂を得る
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `PythonPostCombatWon`: postCombatBattleFrenzy
+
+### Vampire Count - ヴァンパイアカウント
+
+- 内部名: `UNIT_VAMPIRE_COUNT`
+- 固有: アリストラク（ファランクス の代替）
+- ユニットクラス: ファランクス
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: ミスリルの武具
+- 初期昇進: 吸血鬼 / 肉体Ⅲ / 屍霊術
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 戦闘に勝利することで殺意の熱狂を得る
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 25
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 練兵場
+  - `PythonPostCombatWon`: postCombatBattleFrenzy
+
+### Android - 人造人間
+
+- 内部名: `UNIT_ANDROID`
+- 固有: メギスス（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 9
+- 防御力: 4
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 初期昇進: 電撃戦 / 発狂 / 恐怖
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bCarnivorous`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=3 / 毒 iCombat=1
+
+### Hoplite - 重装歩兵
+
+- 内部名: `UNIT_TRANSITION_HOPLITE`
+- ユニットクラス: 重装歩兵
+- 兵科: 白兵ユニット
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 1
+- 世代: 3
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitClassAttackMods`: 戦車兵 iUnitClassMod=50
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+
+### Puraetorian - プラエトリアン
+
+- 内部名: `UNIT_TRANSITION_PRAETORIAN`
+- ユニットクラス: プラエトリアン
+- 兵科: 白兵ユニット
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 1
+- 世代: 4
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+
+### Sailor - 船乗り
+
+- 内部名: `UNIT_TRANSITION_SAILOR`
+- ユニットクラス: 船乗り
+- 兵科: 白兵ユニット
+- 攻撃力: 10
+- 防御力: 8
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 水陸両用 / 接舷攻撃
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 10
+  - `UnitCombatMods`: 海軍ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+
+### Landsknecht - ランツクネヒト
+
+- 内部名: `UNIT_TRANSITION_LANDSKNECHT`
+- ユニットクラス: ランツクネヒト
+- 兵科: 白兵ユニット
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 1
+- 世代: 3
+- ダメージ上限: 100
+- 退却率: 10
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50 / 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `bNoDefaultRace`: 1
+
+### Diamond Knight - ダイヤモンドの騎士
+
+- 内部名: `UNIT_DIAMOND_KNIGHT`
+- ユニットクラス: ダイヤモンドの騎士
+- 兵科: 白兵ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 追加で必要なテクノロジー: ミスリルの武具 / 狂暴
+- 必要な建造物: 造物主の秩序
+- 必要な資源: ミスリル
+- 初期昇進: ダイヤモンドの武具 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 大気Ⅲ / 炎Ⅲ / 水Ⅲ / ミスリルの武器 / 電撃戦 / 潜在力 / 高速詠唱 / 魔法無効 / 看破の目
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 2
+- 巻き添え被害: 30
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 8
+  - `UnitCombatCollateralImmunes`: 弓術ユニット iUnitCombatCollateralImmune=1 / 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmuneToDefensiveStrike`: 1
+
+### Diamond Drake - ダイヤモンドの騎士聖竜
+
+- 内部名: `UNIT_DIAMOND_DRAKE`
+- ユニットクラス: ダイヤモンドの騎士聖竜
+- 兵科: 白兵ユニット
+- 攻撃力: 3000
+- 防御力: 3000
+- 移動力: 4
+- 世代: 4
+- 必要な文明: 蛮族の国
+- 初期昇進: ドラゴン / ダイヤモンドの武具 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 衛生兵Ⅰ / 衛生兵Ⅱ / 衛生兵Ⅲ / 神術 / 英雄 / 行軍 / 電撃戦 / 高速詠唱 / 看破の目
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 100
+- 説明（ゲーム内ヘルプ）: 次元攻撃を無効化
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `bNukeImmune`: 1
+  - `UnitCombatTargets`: 弓術ユニット
+  - `iXPValueAttack`: 54
+  - `iXPValueDefense`: 27
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatCollateralImmunes`: 弓術ユニット iUnitCombatCollateralImmune=1 / 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/DiamondDrake_pop.dds
+  - `PythonPostCombatLost`: postCombatDiamonddrake
+  - `DamageTypeCombats`: 神聖 iCombat=255
+  - `DamageTypeResists`: 冷気 iResist=95 / 死 iResist=95 / 火炎 iResist=95 / 神聖 iResist=95 / 電撃 iResist=95 / 物理 iResist=95 / 毒 iResist=90 / 不浄 iResist=95
+
+### Marine - 上陸兵
+
+- 内部名: `UNIT_MARINE`
+- ユニットクラス: 上陸兵
+- 兵科: 白兵ユニット
+- 攻撃力: 6
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 水陸両用 / 接舷攻撃
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 10
+  - `UnitCombatMods`: 海軍ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+## 秘術ユニット
+
+### Adept - 術使い
+
+- 内部名: `UNIT_ADEPT`
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 必要な建造物: 魔術師ギルド
+- 初期昇進: 精神集中Ⅰ
+- 昇格先: 魔術師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Witch Doctor - まじない医
+
+- 内部名: `UNIT_WITCH_DOCTOR`
+- 固有: ドヴィエロ・残り火一族（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 初期昇進: 精神集中Ⅰ
+- 昇格先: 魔術師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Imp - インプ
+
+- 内部名: `UNIT_IMP`
+- 固有: 地獄の軍勢・魔族（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 必要な建造物: 魔術師ギルド
+- 初期昇進: 火炎抵抗 / 精神集中Ⅰ / 魔族
+- 昇格先: 魔術師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Mage - 魔術師
+
+- 内部名: `UNIT_MAGE`
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Wizard - ウィザード
+
+- 内部名: `UNIT_WIZARD`
+- 固有: アムリテ（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 呪文の杖 / 達人
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 2
+
+### Illusionist - 幻術師
+
+- 内部名: `UNIT_ILLUSIONIST`
+- 固有: スヴァルトアールヴ・バルドルアールヴ・リョースアールヴ（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 幻術士
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Disciple of Acheron - アケロンの信奉者
+
+- 内部名: `UNIT_DISCIPLE_OF_ACHERON`
+- 固有: 蛮族の国（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 炎Ⅰ / 神術 / 忠誠
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: ドラゴン崇拝
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNoDefaultRace`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Archmage - 大魔道
+
+- 内部名: `UNIT_ARCHMAGE`
+- ユニットクラス: 大魔道
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 必要な資源: 秘薬
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Eater of Dreams - 夢喰い
+
+- 内部名: `UNIT_EATER_OF_DREAMS`
+- 固有: シェアイム（大魔道 の代替）
+- ユニットクラス: 大魔道
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 必要な資源: 秘薬
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Son of the Inferno - 業火の申し子
+
+- 内部名: `UNIT_SON_OF_THE_INFERNO`
+- 固有: 蛮族の国（大魔道 の代替）
+- ユニットクラス: 大魔道
+- 兵科: 秘術ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 魔術
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 神術 / 忠誠
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: ドラゴン崇拝
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bFreeXP`: 1
+  - `bNoDefaultRace`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=3
+
+### Lich - リッチ
+
+- 内部名: `UNIT_LICH`
+- ユニットクラス: リッチ
+- 兵科: 秘術ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 初期昇進: 屍人 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 屍霊術
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `DamageTypeCombats`: 死 iCombat=2
+
+### Apprentice - 見習い術師
+
+- 内部名: `UNIT_APPRENTICE`
+- ユニットクラス: 見習い術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: 神秘主義
+- 必要な文明: アムリテ
+- 初期昇進: 精神集中Ⅰ
+- 昇格先: 術使い
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 1
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iFreePromotionPick`: 1
+
+### Mobius Witch - メビウスの魔女
+
+- 内部名: `UNIT_MOBIUS_WITCH`
+- ユニットクラス: メビウスの魔女
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: Never
+- 必要な建造物: 次元界の門
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNoDefaultRace`: 1
+
+### Corlindale - コーリンデール
+
+- 内部名: `UNIT_CORLINDALE`
+- ユニットクラス: コーリンデール
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 300
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 狂信
+- 必要な文明: エロヒム
+- 初期昇進: 英雄 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 法Ⅰ / 大地Ⅰ / 魂Ⅰ / 精神Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `Image`: Art/Interface/Popups/Corlindale.dds
+
+### Govannon - ゴヴァノン
+
+- 内部名: `UNIT_GOVANNON`
+- ユニットクラス: ゴヴァノン
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 480
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: アムリテ
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 英雄 / 血統
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 習得している初等呪文をアムリテの生物ユニットに伝授
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `Image`: Art/Interface/Popups/Govannon.dds
+
+### Loki - ロキ
+
+- 内部名: `UNIT_LOKI`
+- ユニットクラス: ロキ
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 2
+- 防御力: 2
+- 移動力: 2
+- 世代: 1
+- 必要な文明: バルセラフ
+- 初期昇進: 精神集中Ⅰ / 精神Ⅰ / 混沌Ⅰ / 呪文伸長Ⅰ / 魔法無効
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 200
+  - `Image`: Art/Interface/Popups/Loki.dds
+
+### Hemah - ヘマーハ
+
+- 内部名: `UNIT_HEMAH`
+- ユニットクラス: ヘマーハ
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 精神圧搾
+- 追加で必要なテクノロジー: 魔術
+- 必要な宗教: 深海の旧支配者
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 英雄
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `ReligionType`: 深海の旧支配者
+  - `StateReligion`: 深海の旧支配者
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `Image`: Art/Interface/Popups/Hemah.dds
+
+### Gibbon Goetia - ギボン・ゴエティア
+
+- 内部名: `UNIT_GIBBON`
+- ユニットクラス: ギボン・ゴエティア
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 詐欺
+- 追加で必要なテクノロジー: 魔術
+- 必要な宗教: エススの枢密院
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 英雄 / 幻術士
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `ReligionType`: エススの枢密院
+  - `StateReligion`: エススの枢密院
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bFreeXP`: 1
+  - `Image`: Art/Interface/Popups/Gibbon.dds
+
+### Gaelan - ガーレン
+
+- 内部名: `UNIT_GAELAN`
+- ユニットクラス: ガーレン
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 必要な建造物: 魔術師ギルド
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 英雄 / 混沌Ⅰ
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 3
+  - `Image`: Art/Interface/Popups/Gaelan.dds
+
+### Mokka - モッカ
+
+- 内部名: `UNIT_MOKKA`
+- ユニットクラス: モッカ
+- 兵科: 秘術ユニット
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要な文明: フロストリング
+- 初期昇進: 精神集中Ⅰ / 氷Ⅰ / 幻術士 / フロストリング
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `Image`: Art/Interface/Popups/Mokka.dds
+  - `DamageTypeCombats`: 冷気 iCombat=1
+
+### Geisya - 巫女
+
+- 内部名: `UNIT_MIKO`
+- 固有: エチゴ（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 追加で必要なテクノロジー: 祝祭
+- 初期昇進: 精神集中Ⅰ / 精神Ⅰ / 精神Ⅱ / 病気無効 / 狙撃
+- 昇格先: ドルイド僧
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+  - `iEnslavementChance`: 25
+  - `iFreePromotionPick`: 1
+  - `BonusAffinities`: 生命のマナ iAffinity=50 / 魂のマナ iAffinity=50
+
+### Pegasus - ペガサス
+
+- 内部名: `UNIT_PEGASUS`
+- 固有: ニライカナイ（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 初期昇進: 精神集中Ⅰ
+- 昇格先: 魔術師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Unicorn - ユニコーン
+
+- 内部名: `UNIT_UNICORN`
+- 固有: ニライカナイ（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 追加で必要なテクノロジー: 叡智への道
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 勇気 / 病気無効 / 魔法抵抗 / 衛生兵Ⅰ
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- 武器の段階: 2
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=2
+
+### Bicorn - バイコーン
+
+- 内部名: `UNIT_BICORN`
+- 固有: ニライカナイ（大魔道 の代替）
+- ユニットクラス: 大魔道
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 480
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 追加で必要なテクノロジー: 詐欺
+- 必要な資源: 秘薬
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 勇気 / 病気無効 / 魔法抵抗 / 衛生兵Ⅰ / 不浄の聖痕
+- ダメージ上限: 100
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=5
+
+### Professor - 教授
+
+- 内部名: `UNIT_PROFESSOR`
+- ユニットクラス: 教授
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: 常闇ノ国
+- 初期昇進: 召喚術師 / 呪刻 / 魔法無効 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 病気無効 / ナイトメア / 黙示録の証
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iModifyGlobalCounter`: 5
+  - `Image`: Art_Kaijin/Interface/popups/Professor_pop.dds
+
+### Headhunter Adept - 首狩りの術師
+
+- 内部名: `UNIT_HEADHUNTER_ADEPT`
+- 固有: 常闇ノ国（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 初期昇進: 精神集中Ⅰ
+- 昇格先: 魔術師
+- ダメージ上限: 100
+- 武器の段階: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Headhunter Mage - 首狩りの魔術師
+
+- 内部名: `UNIT_HEADHUNTER_MAGE`
+- 固有: 常闇ノ国（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- 武器の段階: 2
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Headhunter Archmage - 首狩りの大魔術師
+
+- 内部名: `UNIT_HEADHUNTER_ARCHMAGE`
+- 固有: 常闇ノ国（大魔道 の代替）
+- ユニットクラス: 大魔道
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 必要な資源: 秘薬
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ
+- ダメージ上限: 100
+- 武器の段階: 2
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Yenoiah the Immortal - 不死者イェノイア
+
+- 内部名: `UNIT_YENOIAH`
+- ユニットクラス: 不死者イェノイア
+- 兵科: 秘術ユニット
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 3
+- 世代: 4
+- 必要な文明: デスピエル
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 呪文伸長Ⅰ / 呪文伸長Ⅱ / 壊人 / 潜在力 / 超魔術Ⅰ / 超魔術Ⅱ / 呪付Ⅰ / 呪付Ⅱ / 呪付Ⅲ / 肉体Ⅰ / 肉体Ⅱ / 肉体Ⅲ / 生命Ⅰ / 生命Ⅱ / 生命Ⅲ / 精神Ⅰ / 精神Ⅱ / 精神Ⅲ / 魂Ⅰ / 魂Ⅱ / 魂Ⅲ / 不可逆Ⅰ / 不可逆Ⅱ / 不可逆Ⅲ / 死Ⅰ / 死Ⅱ / 死Ⅲ / 次元Ⅰ / 次元Ⅱ / 次元Ⅲ / 呪刻 / 英雄 / 魔法抵抗 / 秘術師 / 召喚術師 / 屍霊術
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 死亡すると衛星都市で復活 (衛星都市が無い場合は復活不可)
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `BonusAffinities`: 超魔術のマナ iAffinity=100
+  - `Image`: Art_Kaijin/Interface/Popups/Yenoiah_Popups.dds
+
+### Gogureg Grynberg - ゴグレグ・グリュンベルグ
+
+- 内部名: `UNIT_GOGUREG`
+- ユニットクラス: ゴグレグ・グリュンベルグ
+- 兵科: 秘術ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: デスピエル
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 壊人 / 烙印 / 死Ⅰ / 双つ術 / 英雄 / 屍霊術
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bCarnivorous`: 1
+  - `PromotionFromCombat`: 呪文の杖
+  - `BonusAffinities`: 死のマナ iAffinity=100 / 超魔術のマナ iAffinity=100
+  - `Image`: Art_Kaijin/Interface/Popups/GoguregPop.dds
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+
+### Gogureg Grynberg - ゴグレグ・グリュンベルグ
+
+- 内部名: `UNIT_GOGUREG_IMMORTAL`
+- ユニットクラス: ゴグレグ・グリュンベルグ
+- 兵科: 秘術ユニット
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 呪文伸長Ⅰ / 壊人 / 烙印 / 死Ⅰ / 死Ⅱ / 死Ⅲ / 双つ術 / 英雄 / 屍霊術
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmortal`: 1
+  - `bCarnivorous`: 1
+  - `PromotionFromCombat`: 呪文の杖
+  - `BonusAffinities`: 死のマナ iAffinity=100 / 超魔術のマナ iAffinity=100
+  - `Image`: Art_Kaijin/Interface/Popups/GoguregPop.dds
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+
+### Bone Player - 骨遊び
+
+- 内部名: `UNIT_BONE_PLAYER`
+- 固有: デスピエル（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 必要な建造物: 魔術師ギルド
+- 初期昇進: 精神集中Ⅰ / 死Ⅰ
+- 昇格先: 魔術師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Goetic - 黒魔導師
+
+- 内部名: `UNIT_GOETIC`
+- 固有: デスピエル（大魔道 の代替）
+- ユニットクラス: 大魔道
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 必要な資源: 秘薬
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 死Ⅰ
+- ダメージ上限: 100
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Exorcist - 除霊師
+
+- 内部名: `UNIT_LINEAGE_EXORCIST`
+- 固有: リネージ（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 魔術
+- 必要な建造物: 魔術師ギルド
+- 初期昇進: 精神集中Ⅰ / 生命Ⅰ / 生命Ⅱ / 行軍 / 衛生兵Ⅰ
+- 昇格先: 聖戦士 / 聖北の神官
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### Necromancer - 屍霊術師
+
+- 内部名: `UNIT_NECROMANCER`
+- 固有: パトリアの後継者（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 初期昇進: 屍人 / 精神集中Ⅰ / 精神集中Ⅱ / 屍霊術
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Alcinus Thaumaturge - 奇術師アルキヌス
+
+- 内部名: `UNIT_ALCINUS`
+- ユニットクラス: アルキヌス
+- 兵科: 秘術ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: エーテルの知識
+- 必要な文明: パトリアの後継者
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 屍人 / 潜在力 / 秘術師 / 忠誠 / 不安定 / 屍霊術
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmortal`: 1
+  - `iFreePromotionPick`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Alcinus.dds
+
+### Korinna the Protector - 守護者コリンナ
+
+- 内部名: `UNIT_KORRINA`
+- ユニットクラス: 守護者コリンナ
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 3
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: Never
+- 必要な文明: パトリアの後継者
+- 初期昇進: 忠誠 / 精神集中Ⅰ / 拘束
+- 昇格先: 黒衣の貴婦人コリンナ / 真紅の貴婦人コリンナ
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 青銅器か追跡術を開発すると拘束解除
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Korrina.dds
+
+### Barbatos the Lich - 不死の転生者バルバトス
+
+- 内部名: `UNIT_BARBATOS_THE_LICH`
+- ユニットクラス: 不死の転生者バルバトス
+- 兵科: 秘術ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 初期昇進: 屍人 / 双つ術 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 死Ⅰ / 死Ⅱ / 死Ⅲ / 屍霊術
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `Image`: ,Art_Kaijin/Interface/Popups/ReturnSoulPop.dds
+  - `DamageTypeCombats`: 死 iCombat=2
+
+### Barrow Adept - 土塚の術者
+
+- 内部名: `UNIT_BARROW_ADEPT`
+- 固有: アリストラク（術使い の代替）
+- ユニットクラス: 術使い
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: エーテルの知識
+- 必要な建造物: 魔術師ギルド
+- 初期昇進: 精神集中Ⅰ / 屍人 / 永久の隷属
+- 昇格先: 魔術師
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Pale Embalmer - 青褪めた保骸士
+
+- 内部名: `UNIT_PALE_EMBALMER`
+- 固有: アリストラク（魔術師 の代替）
+- ユニットクラス: 魔術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 魔術
+- 必要な建造物: 魔術師ギルド
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 屍人 / 永久の隷属
+- 昇格先: 大魔道
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Deathknell Spellweaver - 弔鐘の呪織
+
+- 内部名: `UNIT_SPELLWEAVER`
+- 固有: アリストラク（大魔道 の代替）
+- ユニットクラス: 大魔道
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 意志の力
+- 必要な建造物: 魔術師ギルド
+- 必要な資源: 秘薬
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 屍人 / 永久の隷属
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+
+### Chirico the incubater - 孵らせる者キリコ
+
+- 内部名: `UNIT_CHIRICO`
+- ユニットクラス: 孵らせる者キリコ
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 480
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: メギスス
+- 初期昇進: 精神集中Ⅱ / 精神集中Ⅲ / 魔法無効
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bOnlyDefensive`: 1
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmortal`: 1
+  - `iWithdrawlProbDefensive`: 50
+  - `Image`: Art_Kaijin/Interface/Popups/Chirico_pop.dds
+
+### Alchemist - 錬金術師
+
+- 内部名: `UNIT_ALCHEMIST`
+- ユニットクラス: 錬金術師
+- 兵科: 秘術ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 錬金術
+- 必要な文明: メギスス
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 呪付Ⅰ / 呪付Ⅱ / 呪付Ⅲ
+- 昇格先: 大魔道 / 聖騎士 / ドルイド僧 / 幻霊
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 1
+  - `PrereqBuildingClass`: 錬金術ラボ
+
+### Figure of the witch - 魔女の素体
+
+- 内部名: `UNIT_FIGURE`
+- ユニットクラス: 魔女の素体
+- 兵科: 秘術ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 1
+- 世代: 4
+- 必要な文明: メギスス
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 英雄 / 血統
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: ターン終了時に経験ポイントが一定以上であれば、召喚期限が解除される
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iFreePromotionPick`: 4
+
+## 騎乗ユニット
+
+### Mounted Mercenary - 傭騎兵
+
+- 内部名: `UNIT_MERCENARY_MOUNTED`
+- 固有: ヒッパス（傭兵 の代替）
+- ユニットクラス: 傭兵
+- 兵科: 騎乗ユニット
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- ダメージ上限: 100
+- 退却率: 35
+- 先制攻撃のチャンス: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoWarWeariness`: 1
+  - `bNoDefaultRace`: 1
+  - `iGoldFromCombat`: -2
+  - `iWithdrawlProbDefensive`: 20
+
+### Horseman - 騎乗兵
+
+- 内部名: `UNIT_HORSEMAN`
+- ユニットクラス: 騎乗兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 昇格先: 弓騎兵 / 戦車兵
+- ダメージ上限: 100
+- 退却率: 50
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Boar Rider - 猪の騎乗兵
+
+- 内部名: `UNIT_BOAR_RIDER`
+- 固有: カザード・ノービアイ・ルシュイアープ（騎乗兵 の代替）
+- ユニットクラス: 騎乗兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 必要な資源: 豚
+- 初期昇進: ドワーフ
+- 昇格先: 戦車兵
+- ダメージ上限: 100
+- 退却率: 50
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoExtraHillsCost`: 1
+  - `NoExtraTerrainCosts`: 湿地
+  - `NoExtraFeatureCosts`: 密林
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Centaur - ケンタウロス
+
+- 内部名: `UNIT_CENTAUR`
+- 固有: クリオテイテ（騎乗兵 の代替）
+- ユニットクラス: 騎乗兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 初期昇進: ケンタウロス
+- 昇格先: 弓騎兵 / 戦車兵
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+
+### Wolf Rider - 狼の騎乗兵
+
+- 内部名: `UNIT_WOLF_RIDER`
+- 固有: ニバル・フロストリング・残り火一族・蛮族の国（騎乗兵 の代替）
+- ユニットクラス: 騎乗兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 昇格先: 戦車兵
+- ダメージ上限: 100
+- 退却率: 80
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+### War Tortoise - 戦象
+
+- 内部名: `UNIT_WAR_ELEPHANT`
+- ユニットクラス: 戦象
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 8
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- ダメージ上限: 100
+- 退却率: 40
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `UnitCombatTargets`: 騎乗ユニット
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCityAttack`: -20
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `NoExtraTerrainCosts`: 湿地
+  - `NoExtraFeatureCosts`: 密林
+  - `iWithdrawlProbDefensive`: 20
+
+### Chariot - 戦車兵
+
+- 内部名: `UNIT_CHARIOT`
+- ユニットクラス: 戦車兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 交易
+- 追加で必要なテクノロジー: 建設
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 退却率: 35
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 2
+  - `FeatureAttacks`: 森林 iFeatureAttack=-25 / 古代樹林 iFeatureAttack=-25 / 密林 iFeatureAttack=-25 / 深い密林 iFeatureAttack=-25 / 沼 iFeatureAttack=-25
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=40 / 白兵ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Centaur Charger - ケンタウロス突撃兵
+
+- 内部名: `UNIT_CENTAUR_CHARGER`
+- 固有: クリオテイテ（戦車兵 の代替）
+- ユニットクラス: 戦車兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 交易
+- 追加で必要なテクノロジー: 建設
+- 初期昇進: ケンタウロス
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 退却率: 35
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=40 / 白兵ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Wolf Chariot - 狼の戦車兵
+
+- 内部名: `UNIT_WOLF_CHARIOT`
+- 固有: 残り火一族・蛮族の国（戦車兵 の代替）
+- ユニットクラス: 戦車兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 90
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 交易
+- 追加で必要なテクノロジー: 建設
+- ダメージ上限: 100
+- 退却率: 55
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 2
+  - `FeatureAttacks`: 森林 iFeatureAttack=-25 / 古代樹林 iFeatureAttack=-25 / 沼 iFeatureAttack=-25
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=40 / 白兵ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Horse Archer - 弓騎兵
+
+- 内部名: `UNIT_HORSE_ARCHER`
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Camel Archer - 駱駝射手
+
+- 内部名: `UNIT_CAMEL_ARCHER`
+- 固有: マラキム（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 昇格先: 騎士 / 火縄銃兵
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iAirCombatLimit`: 30
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=25
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `NoExtraTerrainCosts`: 砂漠
+  - `NoExtraFeatureCosts`: オアシス / 灌木林
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Centaur Archer - ケンタウロス射手
+
+- 内部名: `UNIT_CENTAUR_ARCHER`
+- 固有: クリオテイテ（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 初期昇進: ケンタウロス
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+### Fyrdwell - フュルドウェル
+
+- 内部名: `UNIT_FYRDWELL`
+- 固有: リョースアールヴ（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 必要な資源: 鹿
+- 初期昇進: 森番Ⅰ
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `NoExtraFeatureCosts`: 森林 / 古代樹林
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Nyxkin - ニュクスの眷属
+
+- 内部名: `UNIT_NYXKIN`
+- 固有: スヴァルトアールヴ（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 初期昇進: ゲリラⅠ
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `NoExtraFeatureCosts`: 森林 / 古代樹林
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Royal Guard - 近衛騎兵
+
+- 内部名: `UNIT_ROYAL_GUARD`
+- ユニットクラス: 近衛騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 8
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 封建制
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 護衛 / 魂Ⅱ
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitClassDefenseMods`: 戦象 iUnitClassMod=100
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bAbandon`: 1
+  - `bNeverObsolete`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqCivic`: 貴族制
+
+### Knight - 騎士
+
+- 内部名: `UNIT_KNIGHT`
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 16
+- 防御力: 12
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Ophanim - 座天使
+
+- 内部名: `UNIT_OPHANIM`
+- 固有: マーキュリアン（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- 攻撃力: 12
+- 防御力: 9
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 天使 / 飛行
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 神聖 iCombat=3
+
+### Dwarven Hornguard - ドワーフホーンガード
+
+- 内部名: `UNIT_HORNGUARD`
+- 固有: カザード・ノービアイ・ルシュイアープ（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 17
+- 防御力: 13
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 初期昇進: ドワーフ
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoExtraHillsCost`: 1
+  - `NoExtraTerrainCosts`: 湿地
+  - `NoExtraFeatureCosts`: 密林
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Centaur Lancer - ケンタウロス槍騎兵
+
+- 内部名: `UNIT_CENTAUR_LANCER`
+- 固有: クリオテイテ（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 16
+- 防御力: 12
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 初期昇進: ケンタウロス
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+
+### War Tortoise - 戦亀
+
+- 内部名: `UNIT_WAR_TORTOISE`
+- 固有: ラヌーン（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 14
+- 防御力: 19
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な建造物: 攻城兵器工廠
+- 初期昇進: 水上歩行
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50 / 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Bison Rider - 野牛の騎士
+
+- 内部名: `UNIT_BISON_RIDER`
+- 固有: ドヴィエロ（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 17
+- 防御力: 15
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `NoExtraTerrainCosts`: 湿地
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Death Knight - 死の騎士
+
+- 内部名: `UNIT_DEATH_KNIGHT`
+- 固有: 地獄の軍勢・常闇ノ国・魔族（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 9
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 死Ⅰ / 魔族
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 死 iCombat=2 / 不浄 iCombat=2
+  - `PrereqBuildingClass`: 厩舎
+
+### Ratha - ラタ
+
+- 内部名: `UNIT_RATHA`
+- ユニットクラス: ラタ
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 6
+- 防御力: 8
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 交易
+- 追加で必要なテクノロジー: 建設
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 必要な宗教: 至光なる天空
+- 初期昇進: 勇気 / 行軍 / 太陽Ⅱ / 歩哨Ⅰ / 護衛
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 退却率: 35
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ReligionType`: 至光なる天空
+  - `StateReligion`: 至光なる天空
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50 / 偵察ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+
+### Shadowrider - 影の騎士
+
+- 内部名: `UNIT_SHADOWRIDER`
+- ユニットクラス: 影の騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 14
+- 防御力: 14
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 必要な宗教: エススの枢密院
+- 初期昇進: 国籍秘匿
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ReligionType`: エススの枢密院
+  - `StateReligion`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bAbandon`: 1
+  - `bImmuneToDefensiveStrike`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `BonusAffinities`: 影のマナ iAffinity=100
+
+### Herne - ヘルネ
+
+- 内部名: `UNIT_HERNE`
+- ユニットクラス: ヘルネ
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 鉄器
+- 追加で必要なテクノロジー: 動物の極意
+- 必要な文明: クリオテイテ
+- 初期昇進: ケンタウロス / 英雄 / 電撃戦
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art/Interface/Popups/Herne.dds
+
+### Magnadine - マグナダイン
+
+- 内部名: `UNIT_MAGNADINE`
+- ユニットクラス: マグナダイン
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 15
+- 防御力: 15
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 必要な文明: ヒッパス
+- 初期昇進: 特別奇襲 / 勇気 / 英雄
+- ダメージ上限: 100
+- 退却率: 80
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art/Interface/Popups/Magnadine.dds
+  - `iGoldFromCombat`: 10
+
+### The War Machine - ウォーマシン
+
+- 内部名: `UNIT_WAR_MACHINE`
+- ユニットクラス: ウォーマシン
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 24
+- 防御力: 24
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 機械
+- 必要な文明: ドヴィエロ
+- 初期昇進: 英雄
+- ダメージ上限: 100
+- 退却率: 25
+- 巻き添え被害: 100
+- 説明（ゲーム内ヘルプ）: 地物や敵対文明の整備を自動的に破壊する
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bMechanized`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 60
+  - `iCollateralDamageMaxUnits`: 6
+  - `iCityAttack`: 50
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAutoRaze`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art/Interface/Popups/The War Machine.dds
+
+### Valin Phanuel - ヴェイリン・ファヌエル
+
+- 内部名: `UNIT_VALIN`
+- ユニットクラス: ヴェイリン・ファヌエル
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 天界からの指令
+- 必要な宗教: 秩序の修道会
+- 初期昇進: 英雄 / 病気無効 / 魔族狩り
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ReligionType`: 秩序の修道会
+  - `StateReligion`: 秩序の修道会
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bAbandon`: 1
+  - `bNoDefaultRace`: 1
+  - `iModifyGlobalCounter`: -2
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art/Interface/Popups/Valin Phanuel.dds
+  - `DamageTypeCombats`: 神聖 iCombat=2
+
+### Kithra Kyriel - キスラ・キャリエル
+
+- 内部名: `UNIT_KITHRA`
+- ユニットクラス: キスラ・キャリエル
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 秘密の抜け道
+- 必要な宗教: 緑葉の同胞
+- 初期昇進: 歩哨Ⅰ / 英雄 / エルフ
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ReligionType`: 緑葉の同胞
+  - `StateReligion`: 緑葉の同胞
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `NoExtraFeatureCosts`: 森林 / 古代樹林
+  - `bAbandon`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art/Interface/Popups/Kithra Kyriel.dds
+
+### Rosier the Fallen - 堕落せしロジェ
+
+- 内部名: `UNIT_ROSIER`
+- ユニットクラス: 堕落せしロジェ
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 魂の堕落
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 英雄 / 病気無効
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ReligionType`: 蒼褪めたヴェール
+  - `StateReligion`: 蒼褪めたヴェール
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 信奉ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bAbandon`: 1
+  - `bNoDefaultRace`: 1
+  - `iModifyGlobalCounter`: 2
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art/Interface/Popups/Rosier the Fallen.dds
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Rosier Oathtaker - 誓いの騎士ロジェ
+
+- 内部名: `UNIT_ROSIER_OATHTAKER`
+- ユニットクラス: 誓いの騎士ロジェ
+- 兵科: 騎乗ユニット
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 3
+- 世代: 4
+- 初期昇進: 英雄 / 病気無効
+- ダメージ上限: 100
+- 退却率: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 信奉ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art/Interface/Popups/Rosier the Fallen.dds
+  - `DamageTypeCombats`: 神聖 iCombat=1
+
+### TumTum - タムタム
+
+- 内部名: `UNIT_TUMTUM`
+- ユニットクラス: タムタム
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 12
+- 防御力: 10
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 交易
+- 必要な文明: 蛮族の国
+- 初期昇進: オーガ / 武勇 / 英雄
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoExtraHillsCost`: 1
+  - `NoExtraTerrainCosts`: 湿地
+  - `NoExtraFeatureCosts`: 密林
+  - `Image`: Art/Interface/Popups/TumTum.dds
+
+### Ars Moriendi - 死の案内人
+
+- 内部名: `UNIT_ARS`
+- ユニットクラス: 死の案内人
+- 兵科: 騎乗ユニット
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 魔族 / 恐怖 / 英雄 / 魔法無効 / 忌まわしき抱擁 / 飛行 / PROMOTION_STAFF_OF_SOULS
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 地物や敵対文明の整備を自動的に破壊する
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAutoRaze`: 1
+  - `Image`: Art/Interface/Popups/Ars.dds
+  - `UnitCreateFromCombat`: 死霊
+  - `iUnitCreateFromCombatChance`: 100
+  - `PythonPostCombatLost`: postCombatArs
+  - `DamageTypeCombats`: 死 iCombat=11 / 不浄 iCombat=5
+
+### Buboes - ブーボーズ
+
+- 内部名: `UNIT_BUBOES`
+- ユニットクラス: ブーボーズ
+- 兵科: 騎乗ユニット
+- 攻撃力: 30
+- 防御力: 30
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 魔族 / 恐怖 / 英雄 / 魔法無効 / 電撃戦 / 飛行 / PROMOTION_WAR
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 地物や敵対文明の整備を自動的に破壊する
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAutoRaze`: 1
+  - `Image`: Art/Interface/Popups/Buboes.dds
+  - `PythonPostCombatLost`: postCombatBuboes
+  - `DamageTypeCombats`: 不浄 iCombat=2
+
+### Stephanos - ステファノス
+
+- 内部名: `UNIT_STEPHANOS`
+- ユニットクラス: ステファノス
+- 兵科: 騎乗ユニット
+- 攻撃力: 24
+- 防御力: 24
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 魔族 / 折伏Ⅰ / 折伏Ⅱ / 折伏Ⅲ / 恐怖 / 英雄 / 魔法無効 / 飛行 / PROMOTION_CROWN_OF_COMMAND
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 地物や敵対文明の整備を自動的に破壊する
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAutoRaze`: 1
+  - `Image`: Art/Interface/Popups/Stephanos.dds
+  - `PythonPostCombatLost`: postCombatStephanos
+  - `DamageTypeCombats`: 不浄 iCombat=5
+
+### Yersinia - エルシニア
+
+- 内部名: `UNIT_YERSINIA`
+- ユニットクラス: エルシニア
+- 兵科: 騎乗ユニット
+- 攻撃力: 20
+- 防御力: 20
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 魔族 / 保菌者 / 恐怖 / 魔法無効 / 人食い / 飛行 / PROMOTION_ATHAME / 英雄
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 地物や敵対文明の整備を自動的に破壊する
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAutoRaze`: 1
+  - `Image`: Art/Interface/Popups/Yersinia.dds
+  - `PythonPostCombatLost`: postCombatYersinia
+  - `DamageTypeCombats`: 毒 iCombat=7 / 不浄 iCombat=5
+
+### HoroMusya - 母衣武者
+
+- 内部名: `UNIT_HOROMUSYA`
+- 固有: エチゴ（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 14
+- 防御力: 11
+- 移動力: 5
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+### Uesugi Kenshin - 上杉謙信
+
+- 内部名: `UNIT_KENSHIN`
+- ユニットクラス: 上杉謙信
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 280
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 軍事戦略
+- 必要な建造物: 上杉謙信の玉座
+- 必要な文明: エチゴ
+- 初期昇進: 病気無効 / 英雄 / 忠誠 / 精神集中Ⅱ / 精神集中Ⅲ / 神術 / 超魔術Ⅱ
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art_Echigo/Interface/Popups/Kensin_echigo_Popups.dds
+  - `PythonPostCombatWon`: postCombatSeisyou
+  - `BonusAffinities`: 炎のマナ iAffinity=50 / 精神のマナ iAffinity=50
+
+### Seisyou Uesugi Kenshin - 聖将上杉謙信
+
+- 内部名: `UNIT_KENSHIN2`
+- ユニットクラス: 上杉謙信
+- 兵科: 騎乗ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 4
+- 世代: 3
+- 必要な文明: エチゴ
+- 初期昇進: 病気無効 / 勇気 / 英雄 / 忠誠 / 精神集中Ⅱ / 精神集中Ⅲ / 神術 / 超魔術Ⅱ
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- 必要レベル: 10
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art_Echigo/Interface/Popups/Kensin_echigo_Popups.dds
+  - `PythonPostCombatWon`: postCombatGunshin
+  - `BonusAffinities`: 炎のマナ iAffinity=50 / 精神のマナ iAffinity=50
+
+### Gunshin Uesugi Kenshin - 軍神上杉謙信
+
+- 内部名: `UNIT_KENSHIN3`
+- ユニットクラス: 上杉謙信
+- 兵科: 騎乗ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 4
+- 世代: 3
+- 必要な文明: エチゴ
+- 初期昇進: 病気無効 / 勇気 / 英雄 / 忠誠 / 精神集中Ⅱ / 精神集中Ⅲ / 神術 / 超魔術Ⅱ / 魔法無効
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- 必要レベル: 15
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bCanMoveImpassable`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art_Echigo/Interface/Popups/Kensin_echigo_Popups.dds
+  - `PythonPostCombatWon`: postCombatBisyamonten
+  - `BonusAffinities`: 炎のマナ iAffinity=50 / 精神のマナ iAffinity=50
+
+### Bisyamonten Uesugi Kenshin - 毘沙門天上杉謙信
+
+- 内部名: `UNIT_KENSHIN4`
+- ユニットクラス: 上杉謙信
+- 兵科: 騎乗ユニット
+- 攻撃力: 40
+- 防御力: 40
+- 移動力: 4
+- 世代: 3
+- 必要な文明: エチゴ
+- 初期昇進: 病気無効 / 勇気 / 魔法無効 / 英雄 / 忠誠 / 神術 / 精神集中Ⅱ / 精神集中Ⅲ / 超魔術Ⅱ / 潜在力 / 歩哨Ⅱ / 恐怖 / 衛生兵Ⅱ / 衛生兵Ⅲ / 水上歩行
+- ダメージ上限: 100
+- 退却率: 50
+- 巻き添え被害: 50
+- 武器の段階: 3
+- 必要レベル: 30
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bCanMoveImpassable`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 60
+  - `iCollateralDamageMaxUnits`: 7
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bImmortal`: 1
+  - `bCarnivorous`: 1
+  - `iWithdrawlProbDefensive`: 50
+  - `Image`: Art_Echigo/Interface/Popups/Kensin_echigo_Popups.dds
+  - `BonusAffinities`: 炎のマナ iAffinity=50 / 精神のマナ iAffinity=50
+
+### Griffon Regiment - グリフォン連隊
+
+- 内部名: `UNIT_GRIFFON_REGIMENT`
+- 固有: ニライカナイ（戦車兵 の代替）
+- ユニットクラス: 戦車兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 交易
+- 追加で必要なテクノロジー: 建設
+- 初期昇進: 飛行
+- ダメージ上限: 100
+- 退却率: 75
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityAttack`: -40
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=100 / 弓術ユニット iUnitCombatMod=-50
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+  - `BonusAffinities`: 馬 iAffinity=25
+
+### Griffon Knight - グリフォン騎士隊
+
+- 内部名: `UNIT_GRIFFON_ROYAL_GUARD`
+- 固有: ニライカナイ（近衛騎兵 の代替）
+- ユニットクラス: 近衛騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 3
+- 防御力: 7
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 封建制
+- 初期昇進: 護衛 / 魂Ⅱ / 飛行
+- ダメージ上限: 100
+- 退却率: 75
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -20
+  - `UnitClassDefenseMods`: 戦象 iUnitClassMod=100
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50 / 弓術ユニット iUnitCombatMod=-50
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bAbandon`: 1
+  - `bNeverObsolete`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqCivic`: 貴族制
+  - `BonusAffinities`: 馬 iAffinity=25
+
+### Temple Guard - 神殿騎士
+
+- 内部名: `UNIT_TEMPLE_GUARD`
+- 固有: イース・エロヒム・バンノール・ラーナ（近衛騎兵 の代替）
+- ユニットクラス: 近衛騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 4
+- 防御力: 8
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 封建制
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 護衛 / 魂Ⅱ / 行軍
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitClassDefenseMods`: 戦象 iUnitClassMod=100
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNeverObsolete`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+### Giant Cobra - 巨大コブラ
+
+- 内部名: `UNIT_GIANT_COBRA`
+- 固有: 残り火一族（カタパルト の代替）
+- ユニットクラス: カタパルト
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 2
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 追加で必要なテクノロジー: 追跡術
+- 初期昇進: 毒抵抗
+- ダメージ上限: 100
+- 退却率: 80
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 6
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iBombardRate`: 20
+  - `iCultureGarrison`: 2
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoExtraHillsCost`: 1
+  - `NoExtraTerrainCosts`: 湿地
+  - `NoExtraFeatureCosts`: 密林
+  - `bNoDefaultRace`: 1
+  - `DamageTypeCombats`: 毒 iCombat=3
+
+### Magic Rider - 術騎兵
+
+- 内部名: `UNIT_MAGIC_RIDER`
+- 固有: イース（騎乗兵 の代替）
+- ユニットクラス: 騎乗兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 追加で必要なテクノロジー: エーテルの知識
+- 必要な建造物: 魔術師ギルド
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 精神集中Ⅰ / 高速詠唱
+- 昇格先: 弓騎兵
+- ダメージ上限: 100
+- 退却率: 50
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bFreeXP`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Magic Cavalry - 魔導騎兵
+
+- 内部名: `UNIT_MAGIC_CAVALRY`
+- 固有: イース（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: エーテルの知識
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 高速詠唱
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- 必要レベル: 4
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `iWorkRate`: 300
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bFreeXP`: 1
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+### Nizar the Under Stupidity Selfishness - 我執の下愚ニザール
+
+- 内部名: `UNIT_NIZAR`
+- ユニットクラス: 我執の下愚ニザール
+- 兵科: 騎乗ユニット
+- 攻撃力: 7
+- 防御力: 6
+- 移動力: 5
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: デスピエル
+- 初期昇進: 英雄 / 壊人 / 烙印 / 精神集中Ⅱ / 肉体Ⅰ / 毒抵抗
+- ダメージ上限: 100
+- 退却率: 75
+- 先制攻撃: 2
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる / 引き入れに失敗したユニットを40%の確率でクチュマキックへと変えて配下に加える
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `BonusAffinities`: 肉体のマナ iAffinity=100
+  - `Image`: Art_Kaijin/Interface/Popups/NizarPop.dds
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+
+### Nizar the Under Stupidity Selfishness - 我執の下愚ニザール
+
+- 内部名: `UNIT_NIZAR_IMMORTAL`
+- ユニットクラス: 我執の下愚ニザール
+- 兵科: 騎乗ユニット
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 6
+- 世代: 4
+- 初期昇進: 行軍 / 英雄 / 壊人 / 烙印 / 精神集中Ⅱ / 肉体Ⅰ / 毒抵抗
+- ダメージ上限: 100
+- 退却率: 75
+- 先制攻撃: 2
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 生物ユニットを倒すと20%の確率で壊人として仲間に引き入れる / 引き入れに失敗したユニットを40%の確率でクチュマキックへと変えて配下に加える
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bImmortal`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `BonusAffinities`: 肉体のマナ iAffinity=100
+  - `Image`: Art_Kaijin/Interface/Popups/NizarPop.dds
+  - `PythonPostCombatWon`: postCombatDespielTransmigration
+
+### Sneered - 嘲笑う者
+
+- 内部名: `UNIT_SNEERED`
+- 固有: デスピエル（騎乗兵 の代替）
+- ユニットクラス: 騎乗兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 50
+- 攻撃力: 4
+- 防御力: 2
+- 移動力: 4
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 昇格先: 弓騎兵 / 戦車兵
+- ダメージ上限: 100
+- 退却率: 50
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bFreeXP`: 1
+  - `iWithdrawlProbDefensive`: 35
+  - `DamageTypeCombats`: 不浄 iCombat=1
+  - `PrereqBuildingClass`: 厩舎
+
+### Tranced - 心を失くす者
+
+- 内部名: `UNIT_TRANCED`
+- 固有: デスピエル（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 6
+- 防御力: 5
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 不浄の聖痕 / 暗黒魔法Ⅰ
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bFreeXP`: 1
+  - `bCarnivorous`: 1
+  - `iFreePromotionPick`: 1
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 35
+  - `PromotionFromCombat`: 自失
+  - `DamageTypeCombats`: 不浄 iCombat=1
+  - `PrereqBuildingClass`: 厩舎
+
+### Nameless - 名前を忘れし者
+
+- 内部名: `UNIT_NAMELESS`
+- 固有: デスピエル（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 9
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 追加で必要なテクノロジー: ミスリル器
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 精神集中Ⅰ / 精神集中Ⅱ / 死Ⅰ / 魔法無効 / 忠誠
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bImmortal`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 不浄 iCombat=2
+  - `PrereqBuildingClass`: 厩舎
+
+### Martin - マルティン
+
+- 内部名: `UNIT_MARTIN`
+- ユニットクラス: マルティン
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 10
+- 防御力: 2
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 鐙
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 必要な文明: リネージ
+- 初期昇進: 英雄 / 風の盾 / 異邦人
+- ダメージ上限: 100
+- 退却率: 60
+- 先制攻撃: 2
+- 先制攻撃のチャンス: 2
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ProductionTraits`: 無神論志向 iProductionTrait=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art_Kaijin/Interface/Popups/MartinPop.dds
+
+### Harrows - ハロース
+
+- 内部名: `UNIT_LINEAGE_HARROWS`
+- 固有: リネージ（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 10
+- 防御力: 2
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 製錬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 退却率: 50
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 2
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `BonusProductionModifiers`: 鉄 iProductonModifier=10 / ミスリル iProductonModifier=10
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Ox-Tongue - オクスタン
+
+- 内部名: `UNIT_LINEAGE_OXTONGUE`
+- 固有: リネージ（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 21
+- 防御力: 7
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Dragoon - 竜騎兵
+
+- 内部名: `UNIT_DRAGOON`
+- 固有: メカノス（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 必要な資源: 火薬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 間接攻撃力: 3
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 35
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=50 / 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Ice Shadowrider - 氷の影の乗り手
+
+- 内部名: `UNIT_SHADOWRIDER_FROSTLING_NIVAL`
+- 固有: ニバル（影の騎士 の代替）
+- ユニットクラス: 影の騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 14
+- 防御力: 14
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な宗教: エススの枢密院
+- 初期昇進: 国籍秘匿 / フロストリング / 氷の道 / 魔法抵抗
+- ダメージ上限: 100
+- 退却率: 80
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ReligionType`: エススの枢密院
+  - `StateReligion`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bAbandon`: 1
+  - `bImmuneToDefensiveStrike`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 毒 iCombat=2
+  - `BonusAffinities`: 影のマナ iAffinity=100 / 氷のマナ iAffinity=100
+
+### Horse Axeman - 斧騎兵
+
+- 内部名: `UNIT_HORSE_AXEMAN_RARNA`
+- 固有: ラーナ（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 7
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 青銅器
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 20
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### White kight - 白の騎士
+
+- 内部名: `UNIT_WHITE_KNIGHT_RARNA`
+- 固有: ラーナ（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 16
+- 防御力: 12
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 行軍 / 法Ⅰ / 法Ⅱ
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCityAttack`: 20
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Fox - フォックス
+
+- 内部名: `UNIT_FOX`
+- ユニットクラス: フォックス
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 通貨
+- 必要な文明: ティーグル
+- 初期昇進: 傭兵隊長 / 駿馬
+- ダメージ上限: 100
+- 退却率: 80
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `TerrainAttacks`: 草原 iTerrainAttack=10 / 平原 iTerrainAttack=10
+  - `TerrainDefenses`: 草原 iTerrainDefense=10 / 平原 iTerrainDefense=10
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iGoldFromCombat`: 10
+  - `iWithdrawlProbDefensive`: 40
+  - `Image`: Art_Kaijin/Interface/popups/FOX_POP.dds
+
+### Vulepes - ブランフォード
+
+- 内部名: `UNIT_VULEPES`
+- ユニットクラス: ブランフォード
+- 兵科: 騎乗ユニット
+- 攻撃力: 5
+- 防御力: 4
+- 移動力: 3
+- 世代: 3
+- 必要な文明: ティーグル
+- 初期昇進: 忠誠 / 衛生兵Ⅱ
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: -10
+  - `iHillsDefense`: -10
+  - `TerrainAttacks`: 草原 iTerrainAttack=10 / 平原 iTerrainAttack=10
+  - `TerrainDefenses`: 草原 iTerrainDefense=10 / 平原 iTerrainDefense=10
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoWarWeariness`: 1
+  - `iGoldFromCombat`: 5
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art_Kaijin/Interface/popups/Vulepes_Popups.dds
+
+### Louisa - ルイーザ
+
+- 内部名: `UNIT_LOUISA`
+- ユニットクラス: ルイーザ
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 4
+- 世代: 3
+- 必要テクノロジー: 通貨
+- 追加で必要なテクノロジー: 名誉
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 必要な文明: ティーグル
+- ダメージ上限: 100
+- 退却率: 80
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 30
+  - `Image`: Art_Kaijin/Interface/Popups/Louisa_Pop.dds
+
+### Antonio - アントニオ
+
+- 内部名: `UNIT_ANTONIO`
+- ユニットクラス: アントニオ
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 通貨
+- 追加で必要なテクノロジー: 軍事行動
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 必要な文明: ティーグル
+- 初期昇進: 武勇
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `Image`: Art_Kaijin/Interface/Popups/Antonio_Pop.dds
+
+### Cortez - コルテス
+
+- 内部名: `UNIT_CORTEZ`
+- ユニットクラス: コルテス
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 通貨
+- 追加で必要なテクノロジー: 詐欺
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 必要な文明: ティーグル
+- 初期昇進: 野心
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bCarnivorous`: 1
+  - `iGoldFromCombat`: 20
+  - `iWithdrawlProbDefensive`: 20
+  - `PromotionFromCombat`: 高揚
+  - `Image`: Art_Kaijin/Interface/Popups/Cortez_Pop.dds
+
+### Fox Mercenaries - 山狐部隊
+
+- 内部名: `UNIT_MERCENARIES_FOX`
+- ユニットクラス: 山狐部隊
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 150
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 鐙
+- 必要な文明: ティーグル
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iHillsAttack`: -10
+  - `iHillsDefense`: -10
+  - `TerrainAttacks`: 草原 iTerrainAttack=10 / 平原 iTerrainAttack=10
+  - `TerrainDefenses`: 草原 iTerrainDefense=10 / 平原 iTerrainDefense=10
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoWarWeariness`: 1
+  - `iGoldFromCombat`: -2
+  - `iWithdrawlProbDefensive`: 25
+
+### Vigilate - 監視者
+
+- 内部名: `UNIT_VIGILATE`
+- 固有: バルドルアールヴ（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 7
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 瘴烟 / 歩哨Ⅰ
+- 昇格先: 騎士
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `NoExtraFeatureCosts`: 森林 / 古代樹林
+  - `bNeverObsolete`: 1
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Barrow Horsemen - 土塚の騎乗兵
+
+- 内部名: `UNIT_BARROW_HORSEMAN`
+- 固有: アリストラク（騎乗兵 の代替）
+- ユニットクラス: 騎乗兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 40
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 騎乗
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- 昇格先: 弓騎兵 / 戦車兵
+- ダメージ上限: 100
+- 退却率: 50
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 3
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Deathknell Gravecharger - 弔鐘の墓騎兵
+
+- 内部名: `UNIT_GRAVECHARGER`
+- 固有: アリストラク（戦車兵 の代替）
+- ユニットクラス: 戦車兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 交易
+- 追加で必要なテクノロジー: 建設
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- ダメージ上限: 100
+- 退却率: 35
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 2
+  - `FeatureAttacks`: 森林 iFeatureAttack=-25 / 古代樹林 iFeatureAttack=-25 / 密林 iFeatureAttack=-25 / 深い密林 iFeatureAttack=-25 / 沼 iFeatureAttack=-25
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=40 / 白兵ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `PrereqBuildingClass`: 攻城兵器工廠
+
+### Pale Rider - 青褪めた騎手
+
+- 内部名: `UNIT_PALE_RIDER`
+- 固有: アリストラク（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 屍人 / 木偶 / 永久の隷属
+- ダメージ上限: 100
+- 間接攻撃力: 2
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 30
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Vampire Prince - ヴァンパイアデューク
+
+- 内部名: `UNIT_VAMPIRE_DUKE`
+- 固有: アリストラク（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 騎乗ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 16
+- 防御力: 12
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- 初期昇進: 吸血鬼 / 肉体Ⅲ / 屍霊術
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `PrereqBuildingClass`: 厩舎
+
+### Light cavalry - 軽装騎兵
+
+- 内部名: `UNIT_TRANSITION_LIGHT_CAVALRY`
+- ユニットクラス: 軽装騎兵
+- 兵科: 騎乗ユニット
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 3
+- 世代: 3
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- ダメージ上限: 100
+- 間接攻撃力: 1
+- 間接攻撃の射程: 1
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iAirCombatLimit`: 40
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoDefaultRace`: 1
+  - `bDefensiveStrikes`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+### Hussar - ハサー
+
+- 内部名: `UNIT_TRANSITION_HUSSAR`
+- ユニットクラス: ハサー
+- 兵科: 騎乗ユニット
+- 攻撃力: 10
+- 防御力: 10
+- 移動力: 3
+- 世代: 3
+- ダメージ上限: 100
+- 退却率: 50
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCityAttack`: 40
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoWarWeariness`: 1
+  - `bNoDefaultRace`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+### Cataphract - カタフラクト
+
+- 内部名: `UNIT_TRANSITION_CATAPHRACT`
+- ユニットクラス: カタフラクト
+- 兵科: 騎乗ユニット
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 3
+- 世代: 4
+- 必要な資源（いずれか）: 馬 / ナイトメア
+- ダメージ上限: 100
+- 退却率: 60
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bExtraMovementCostInBadlands`: 1
+  - `bNoDefaultRace`: 1
+  - `iWithdrawlProbDefensive`: 20
+
+## 魔獣ユニット
+
+### Hill Giant - 丘巨人
+
+- 内部名: `UNIT_HILL_GIANT`
+- ユニットクラス: 丘巨人
+- 兵科: 魔獣ユニット
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 長身
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `TerrainNatives`: 砂漠
+  - `iBombardRate`: 15
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Sea Serpent - 大海蛇
+
+- 内部名: `UNIT_SEA_SERPENT`
+- ユニットクラス: 大海蛇
+- 兵科: 魔獣ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 2
+- 世代: 3
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bRenderBelowWater`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `TerrainNatives`: 外洋
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Beast of Agares - アガレスの魔獣
+
+- 内部名: `UNIT_BEAST_OF_AGARES`
+- ユニットクラス: アガレスの魔獣
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: エーテル移動
+- 必要な建造物: ヴェールの神殿
+- 必要な宗教: 蒼褪めたヴェール
+- 初期昇進: 魔族
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `ReligionType`: 蒼褪めたヴェール
+  - `StateReligion`: 蒼褪めたヴェール
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitClassAttackMods`: 聖騎士 iUnitClassMod=25
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bCarnivorous`: 1
+  - `iModifyGlobalCounter`: 1
+  - `PythonPostCombatWon`: postCombatBeastOfAgares
+  - `DamageTypeCombats`: 不浄 iCombat=5
+  - `DamageTypeResists`: 火炎 iResist=200 / 神聖 iResist=200
+
+### Blooded Werewolf - 血塗れの狼人間
+
+- 内部名: `UNIT_WEREWOLF`
+- ユニットクラス: 血塗れの狼人間
+- 兵科: 魔獣ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 2
+- 世代: 3
+- 初期昇進: 狼人間
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `UnitConvertFromCombat`: 強大な狼人間
+  - `iUnitConvertFromCombatChance`: 25
+  - `UnitCreateFromCombat`: 飢えた狼人間
+  - `iUnitCreateFromCombatChance`: 45
+
+### Ravenous Werewolf - 飢えた狼人間
+
+- 内部名: `UNIT_RAVENOUS_WEREWOLF`
+- ユニットクラス: 飢えた狼人間
+- 兵科: 魔獣ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 動物の馴致
+- 初期昇進: 狼人間 / 狂乱
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `UnitConvertFromCombat`: 血塗れの狼人間
+  - `iUnitConvertFromCombatChance`: 100
+  - `UnitCreateFromCombat`: 飢えた狼人間
+  - `iUnitCreateFromCombatChance`: 30
+  - `PythonPostCombatWon`: postCombatRavenousWerewolf
+
+### Greater Werewolf - 強大な狼人間
+
+- 内部名: `UNIT_GREATER_WEREWOLF`
+- ユニットクラス: 強大な狼人間
+- 兵科: 魔獣ユニット
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 野生の触れ合い
+- 初期昇進: 狼人間
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `UnitCreateFromCombat`: 飢えた狼人間
+  - `iUnitCreateFromCombatChance`: 60
+
+### Manticore - マンティコア
+
+- 内部名: `UNIT_MANTICORE`
+- ユニットクラス: マンティコア
+- 兵科: 魔獣ユニット
+- 攻撃力: 12
+- 防御力: 8
+- 移動力: 3
+- 世代: 4
+- 必要な建造物: 次元界の門
+- 初期昇進: 人食い / 飛行
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Kraken - クラーケン
+
+- 内部名: `UNIT_KRAKEN`
+- ユニットクラス: クラーケン
+- 兵科: 魔獣ユニット
+- 攻撃力: 17
+- 防御力: 17
+- 移動力: 4
+- 世代: 4
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `Invisible`: INVISIBLE_UNDERWATER
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bRenderBelowWater`: 1
+  - `iMinAreaSize`: 20
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+
+### Pit Beast - 奈落の魔獣
+
+- 内部名: `UNIT_PIT_BEAST`
+- ユニットクラス: 奈落の魔獣
+- 兵科: 魔獣ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 魔族
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `iDurationFromCombat`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Sand Lion - 砂獅子
+
+- 内部名: `UNIT_SAND_LION`
+- ユニットクラス: 砂獅子
+- 兵科: 魔獣ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 初期昇進: 砂漠の民 / 精霊 / 火炎抵抗
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=50
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=50
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bNoWarWeariness`: 1
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Eurabatres the Gold Dragon - 黄金竜アウラバトレス
+
+- 内部名: `UNIT_EURABATRES`
+- ユニットクラス: 黄金竜アウラバトレス
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 36
+- 防御力: 36
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 必要な文明: クリオテイテ
+- 初期昇進: 魔法無効 / ドラゴン / 長身 / 看破の目 / 原初のドラゴン
+- ダメージ上限: 100
+- 間接攻撃力: 18
+- 間接攻撃の射程: 1
+- 先制攻撃: 1
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iAirCombatLimit`: 75
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 7
+  - `UnitCombatCollateralImmunes`: 攻城兵器 iUnitCombatCollateralImmune=1
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Eurabatres the Gold Dragon.dds
+
+### Abashi the Black Dragon - 黒竜王アバシ
+
+- 内部名: `UNIT_ABASHI`
+- ユニットクラス: 黒竜王アバシ
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 36
+- 防御力: 36
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 必要な文明: シェアイム
+- 初期昇進: 魔法無効 / ドラゴン / 長身 / 原初のドラゴン
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 7
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Abashi the Black Dragon.dds
+  - `DamageTypeCombats`: 毒 iCombat=4
+
+### Drifa the White Dragon - 白邪竜ドリファ
+
+- 内部名: `UNIT_DRIFA`
+- ユニットクラス: 白邪竜ドリファ
+- 兵科: 魔獣ユニット
+- 攻撃力: 29
+- 防御力: 29
+- 移動力: 3
+- 世代: 4
+- 必要な文明: イリアン
+- 初期昇進: 魔法無効 / ドラゴン / 長身 / 可燃性 / 寒冷種 / 原初のドラゴン
+- ダメージ上限: 100
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `TerrainAttacks`: 氷原 iTerrainAttack=50 / 凍土 iTerrainAttack=10
+  - `TerrainDefenses`: 氷原 iTerrainDefense=50 / 凍土 iTerrainDefense=10
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Drifa.dds
+  - `DamageTypeCombats`: 冷気 iCombat=7
+  - `DamageTypeResists`: 冷気 iResist=100
+
+### Baron Duin Halfmorn - 半獣のデュイン男爵
+
+- 内部名: `UNIT_DUIN`
+- ユニットクラス: 半獣のデュイン男爵
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 野生の触れ合い
+- 初期昇進: 狼人間 / 魔法抵抗 / 行軍
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 25
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bCarnivorous`: 1
+  - `Image`: Art/Interface/Popups/Baron Duin Halfmorn.dds
+  - `UnitCreateFromCombat`: 飢えた狼人間
+  - `iUnitCreateFromCombatChance`: 90
+
+### Acheron the Red Dragon - 赤炎竜アケロン
+
+- 内部名: `UNIT_ACHERON`
+- ユニットクラス: 赤炎竜アケロン
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 25
+- 攻撃力: 24
+- 防御力: 24
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 蛮族の国
+- 初期昇進: 魔法無効 / ドラゴン / 石の皮膚 / 長身 / 原初のドラゴン
+- ダメージ上限: 100
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 128
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Acheron the Red Dragon.dds
+  - `PythonPostCombatLost`: postCombatAcheron
+
+### Gurid - グーリド
+
+- 内部名: `UNIT_GURID`
+- ユニットクラス: グーリド
+- 兵科: 魔獣ユニット
+- 攻撃力: 22
+- 防御力: 22
+- 移動力: 1
+- 世代: 4
+- 必要な文明: 野生の動物
+- 初期昇進: 長身
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Gurid.dds
+  - `BonusAffinities`: バナナ iAffinity=50
+
+### Margalard - マルガラルド
+
+- 内部名: `UNIT_MARGALARD`
+- ユニットクラス: マルガラルド
+- 兵科: 魔獣ユニット
+- 攻撃力: 24
+- 防御力: 24
+- 移動力: 1
+- 世代: 4
+- 必要な文明: 野生の動物
+- 初期昇進: 長身
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art/Interface/Popups/Margalard.dds
+
+### Leviathan - リヴァイアサン
+
+- 内部名: `UNIT_LEVIATHAN`
+- ユニットクラス: リヴァイアサン
+- 兵科: 魔獣ユニット
+- 攻撃力: 24
+- 防御力: 24
+- 移動力: 4
+- 世代: 4
+- 必要な文明: 野生の動物
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_SEA
+  - `SeeInvisible`: INVISIBLE_UNDERWATER
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bRenderBelowWater`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `Image`: Art/Interface/Popups/Leviathan.dds
+  - `PythonPostCombatLost`: postCombatLeviathan
+
+### Amaterasu - アマテラス
+
+- 内部名: `UNIT_AMATERASU`
+- ユニットクラス: アマテラス
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 160
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 野生の触れ合い
+- 必要な建造物: 御神木
+- 必要な文明: ニライカナイ
+- 初期昇進: 神術 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 不死身 / 病気無効 / 忠誠 / 英雄 / 勇気 / ドラゴン狩り / 大地Ⅰ / 自然Ⅰ / 水Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `Builds`: 大気のノードを展開 / 肉体のノードを展開 / 混沌のノードを展開 / 死のノードを展開 / 大地のノードを展開 / 呪付のノードを展開 / 不可逆のノードを展開 / 炎のノードを展開 / 法のノードを展開 / 生命のノードを展開 / 超魔術のノードを展開 / 精神のノードを展開 / 自然のノードを展開 / 魂のノードを展開 / 水のノードを展開 / 影のノードを展開 / 太陽のノードを展開 / 次元のノードを展開
+  - `ReligionType`: 緑葉の同胞
+  - `iWorkRate`: 400
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/popups/Amaterasu_pop.dds
+  - `iModifyGlobalCounter`: -5
+  - `BonusAffinities`: 死のマナ iAffinity=-100 / 不可逆のマナ iAffinity=-100 / 生命のマナ iAffinity=100 / 自然のマナ iAffinity=100 / 太陽のマナ iAffinity=100 / 影のマナ iAffinity=-100
+
+### Fenrir - フェンリル
+
+- 内部名: `UNIT_FENRIR`
+- 固有: ニライカナイ（影法師 の代替）
+- ユニットクラス: 影法師
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 12
+- 防御力: 9
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: ギルド
+- 追加で必要なテクノロジー: 毒物
+- 必要な宗教: エススの枢密院
+- 初期昇進: 魔法抵抗 / 狙撃 / 不可視
+- ダメージ上限: 100
+- 退却率: 10
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bInvestigate`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ReligionType`: エススの枢密院
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `iCityDefense`: -25
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `BonusAffinities`: 羊 iAffinity=25
+
+### Berserk - ベルセルク
+
+- 内部名: `UNIT_BEAR_OF_BERSERK`
+- 固有: ニライカナイ（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 11
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 自然との共生
+- ダメージ上限: 100
+- 巻き添え被害: 30
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `UnitCombatMods`: 偵察ユニット iUnitCombatMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: 魚 iAffinity=25
+
+### Rukh - ルフ
+
+- 内部名: `UNIT_RUKH`
+- 固有: ニライカナイ（不死者 の代替）
+- ユニットクラス: 不死者
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 13
+- 防御力: 13
+- 移動力: 4
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 初期昇進: 飛行 / 森番Ⅰ / 行軍
+- ダメージ上限: 100
+- 退却率: 60
+- 巻き添え被害: 30
+- 武器の段階: 3
+- 必要レベル: 6
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitClassAttackMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitClassDefenseMods`: ダイヤモンドの騎士 iUnitClassMod=100
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50 / 弓術ユニット iUnitCombatMod=-50
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmortal`: 1
+  - `iEnemyWithdrawalModify`: -15
+  - `DamageTypeCombats`: 火炎 iCombat=1
+  - `BonusAffinities`: 馬 iAffinity=25
+
+### Vayu - ヴァーユ
+
+- 内部名: `UNIT_VAYU`
+- 固有: ニライカナイ（弩兵 の代替）
+- ユニットクラス: 弩兵
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 360
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 初期昇進: 魔法抵抗 / ゲリラⅠ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 70
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCityDefense`: 25
+  - `iHillsDefense`: 25
+  - `iBombardRate`: 30
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `BonusAffinities`: バナナ iAffinity=25
+
+### Garuda - ガルダ
+
+- 内部名: `UNIT_GARUDA`
+- 固有: ニライカナイ（騎士 の代替）
+- ユニットクラス: 騎士
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 14
+- 防御力: 14
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 軍馬
+- 初期昇進: 飛行
+- ダメージ上限: 100
+- 退却率: 90
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 5
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50 / 弓術ユニット iUnitCombatMod=-50
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `iWithdrawlProbDefensive`: 20
+  - `BonusAffinities`: 馬 iAffinity=25
+
+### Fiacra the North Wind - 北風のフィアクラ
+
+- 内部名: `UNIT_FIACRA`
+- ユニットクラス: 北風のフィアクラ
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 2
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 必要な文明: イリアン
+- 初期昇進: 飛行 / 英雄 / 寒冷種 / 歩哨Ⅰ
+- ダメージ上限: 100
+- 退却率: 50
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bRivalTerritory`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=-50 / 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/Popups/Fiacra.dds
+
+### Ahalpuh - アハルプー
+
+- 内部名: `UNIT_AHALPUH`
+- ユニットクラス: アハルプー
+- 兵科: 魔獣ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 魔族 / 病気 / 保菌者 / 烙印
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `TerrainImpassables`: 草原 / 平原 / 湿地
+  - `FeatureImpassables`: 密林 / オアシス / 氾濫原 / 森林 / 若き森林 / 古代樹林
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 4
+  - `TerrainAttacks`: 死滅の大地 iTerrainAttack=40 / 破滅の原野 iTerrainAttack=40 / 灼熱の砂地 iTerrainAttack=40
+  - `TerrainDefenses`: 死滅の大地 iTerrainDefense=40 / 破滅の原野 iTerrainDefense=40 / 灼熱の砂地 iTerrainDefense=40
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoWarWeariness`: 1
+  - `iDurationFromCombat`: 2
+  - `DamageTypeCombats`: 不浄 iCombat=6
+  - `BonusAffinities`: 不可逆のマナ iAffinity=200
+
+### Cuchumaquic - クチュマキック
+
+- 内部名: `UNIT_CUCHUMAQUIC`
+- ユニットクラス: クチュマキック
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 1
+- 防御力: 1
+- 移動力: 1
+- 世代: 1
+- 必要テクノロジー: Never
+- 初期昇進: 人食い
+- 昇格先: 勇士 / 魔術師 / 十字軍 / 聖戦士
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bFreeXP`: 1
+  - `bCarnivorous`: 1
+  - `PythonPostCombatLost`: postCombatSplitCuchumaquic
+  - `PythonPostCombatWon`: postCombatWonCuchumaquic
+  - `DamageTypeCombats`: 毒 iCombat=2
+
+### Marchosias - マルコシアス
+
+- 内部名: `UNIT_MARCHOSIAS`
+- ユニットクラス: マルコシアス
+- 兵科: 魔獣ユニット
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 1
+- 世代: 3
+- 初期昇進: 人食い / 飛行 / 魔族 / 太陽Ⅱ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=25
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `iDurationFromCombat`: 1
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Dragonliche - ドラゴンリッチ
+
+- 内部名: `UNIT_DRAGONLICHE`
+- ユニットクラス: ドラゴンリッチ
+- 兵科: 魔獣ユニット
+- 攻撃力: 10
+- 防御力: 8
+- 移動力: 1
+- 世代: 4
+- 初期昇進: 屍人 / 魔法無効 / 人食い / 不可逆Ⅰ / 精神Ⅰ / 不安定 / 原初のドラゴン
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 1
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 死 iCombat=3
+  - `BonusAffinities`: 死のマナ iAffinity=100
+
+### Coatlann the Wyvern - 亜翼竜コートラン
+
+- 内部名: `UNIT_COATLANN`
+- ユニットクラス: 亜翼竜コートラン
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 320
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 4
+- 世代: 4
+- 必要テクノロジー: 秘術の伝承知識
+- 必要な文明: マサトル
+- 初期昇進: 魔法無効 / ドラゴン / 長身 / 原初のドラゴン
+- ダメージ上限: 100
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/Popups/Coatlann.dds
+
+### Dragon puppy - ドラゴンパピー
+
+- 内部名: `UNIT_DRAGON_PUPPY`
+- ユニットクラス: ドラゴンパピー
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 60
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 2
+- 世代: 1
+- 必要テクノロジー: Never
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 下級ドラゴン / 特別奇襲
+- 昇格先: 火竜サラマンダー / 黒竜ウシュムガル / 翼竜ナナワトル / 地竜ジャムシード
+- ダメージ上限: 100
+- 退却率: 25
+- 先制攻撃: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=20 / 弓術ユニット iUnitCombatMod=20 / 魔獣ユニット iUnitCombatMod=20
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+
+### Salamander the Fire Dragon - 火竜サラマンダー
+
+- 内部名: `UNIT_DRAGON_SALAMANDER`
+- ユニットクラス: 火竜サラマンダー
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 四大元素
+- 追加で必要なテクノロジー: 製錬
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗
+- 昇格先: 炎獄竜フレアブラス
+- ダメージ上限: 100
+- 間接攻撃力: 4
+- 間接攻撃の射程: 1
+- 巻き添え被害: 100
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iWorkRate`: 100
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 40
+  - `iCollateralDamageMaxUnits`: 6
+  - `iBombardRate`: 15
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Ushumgallu the Black Dragon - 黒竜ウシュムガル
+
+- 内部名: `UNIT_DRAGON_USHUMGALLU`
+- ユニットクラス: 黒竜ウシュムガル
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 屍霊術
+- 追加で必要なテクノロジー: 製錬
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗
+- 昇格先: 魔竜ティアマット
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `TerrainAttacks`: 灼熱の砂地 iTerrainAttack=10 / 湿地 iTerrainAttack=10 / 地獄の浅瀬 iTerrainAttack=10
+  - `TerrainDefenses`: 灼熱の砂地 iTerrainDefense=10 / 湿地 iTerrainDefense=10 / 地獄の浅瀬 iTerrainDefense=10
+  - `FeatureAttacks`: 悪霊の地 iFeatureAttack=10
+  - `FeatureDefenses`: 悪霊の地 iFeatureDefense=10
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=40 / 弓術ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 7
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 不浄 iCombat=1
+
+### Nanahuatl the Winged Dragon - 翼竜ナナワトル
+
+- 内部名: `UNIT_DRAGON_NANAHUATL`
+- ユニットクラス: 翼竜ナナワトル
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 3
+- 世代: 2
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 製錬
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗 / 飛行
+- 昇格先: 陽煌竜ケツアルコアトル
+- ダメージ上限: 100
+- 退却率: 35
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 電撃 iCombat=2
+
+### Jamsheed the Earth Dragon - 地竜ジャムシード
+
+- 内部名: `UNIT_DRAGON_JAMSHEED`
+- ユニットクラス: 地竜ジャムシード
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 100
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 軍事戦略
+- 追加で必要なテクノロジー: 製錬
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗 / ゲリラⅡ / 大地Ⅰ / 鉄壁 / 護衛
+- 昇格先: 覇竜ザッハーク
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 巻き添え被害: 40
+- 必要レベル: 1
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=40
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=40
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 毒 iCombat=1
+
+### Flarebrass the Infernal Dragon - 炎獄竜フレアブラス
+
+- 内部名: `UNIT_DRAGON_FLAREBRASS`
+- ユニットクラス: 炎獄竜フレアブラス
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 220
+- 攻撃力: 11
+- 防御力: 11
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 爆薬
+- 追加で必要なテクノロジー: ミスリル器
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗 / 病気無効 / 炎Ⅰ / 炎Ⅱ
+- 昇格先: 水晶竜バハムート
+- ダメージ上限: 100
+- 間接攻撃力: 8
+- 間接攻撃の射程: 1
+- 巻き添え被害: 100
+- 必要レベル: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `iWorkRate`: 100
+  - `iAirCombatLimit`: 55
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 45
+  - `iCollateralDamageMaxUnits`: 7
+  - `iHillsAttack`: 20
+  - `iBombardRate`: 30
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 火炎 iCombat=6
+
+### Tiamat the Evil Dragon - 魔竜ティアマット
+
+- 内部名: `UNIT_DRAGON_TIAMAT`
+- ユニットクラス: 魔竜ティアマット
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 220
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 秘術の伝承知識
+- 追加で必要なテクノロジー: ミスリル器
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗 / 病気無効 / 保菌者 / 不可逆Ⅲ
+- 昇格先: 水晶竜バハムート
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 必要レベル: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `TerrainAttacks`: 灼熱の砂地 iTerrainAttack=10 / 湿地 iTerrainAttack=10 / 地獄の浅瀬 iTerrainAttack=10
+  - `TerrainDefenses`: 灼熱の砂地 iTerrainDefense=10 / 湿地 iTerrainDefense=10 / 地獄の浅瀬 iTerrainDefense=10
+  - `FeatureAttacks`: 悪霊の地 iFeatureAttack=10
+  - `FeatureDefenses`: 悪霊の地 iFeatureDefense=10
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=40 / 弓術ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 毒 iCombat=2 / 不浄 iCombat=3
+
+### Quetzalcoatl the Solar Dragon - 陽煌竜ケツアルコアトル
+
+- 内部名: `UNIT_DRAGON_QUETZALCOATL`
+- ユニットクラス: 陽煌竜ケツアルコアトル
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 220
+- 攻撃力: 12
+- 防御力: 10
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 軍馬
+- 追加で必要なテクノロジー: ミスリル器
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗 / 病気無効 / 歩哨Ⅱ / 飛行 / 大気Ⅰ / 大気Ⅱ
+- 昇格先: 水晶竜バハムート
+- ダメージ上限: 100
+- 退却率: 35
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 2
+- 必要レベル: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `UnitCombatMods`: 弓術ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 9
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 電撃 iCombat=6
+  - `DamageTypeResists`: 電撃 iResist=100
+
+### Zahhak the Supreme Dragon - 覇竜ザッハーク
+
+- 内部名: `UNIT_DRAGON_ZAHHAK`
+- ユニットクラス: 覇竜ザッハーク
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 220
+- 攻撃力: 14
+- 防御力: 16
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 機械
+- 追加で必要なテクノロジー: ミスリル器
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗 / ゲリラⅡ / 病気無効 / 隠れる技能 / 大地Ⅰ / 大地Ⅱ / 鉄壁 / 護衛
+- 昇格先: 水晶竜バハムート
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 先制攻撃のチャンス: 1
+- 巻き添え被害: 50
+- 必要レベル: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 30
+  - `iCollateralDamageMaxUnits`: 4
+  - `TerrainAttacks`: 砂漠 iTerrainAttack=40
+  - `TerrainDefenses`: 砂漠 iTerrainDefense=40
+  - `iCultureGarrison`: 11
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 毒 iCombat=3
+
+### Bahamut the Crystal Dragon - 水晶竜バハムート
+
+- 内部名: `UNIT_DRAGON_BAHAMUT`
+- ユニットクラス: 水晶竜バハムート
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 300
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 神学
+- 追加で必要なテクノロジー: ミスリル器
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 魔法抵抗 / 病気無効
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 必要レベル: 8
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 20
+  - `iCollateralDamageMaxUnits`: 3
+  - `TerrainAttacks`: 氷原 iTerrainAttack=50
+  - `TerrainDefenses`: 氷原 iTerrainDefense=50
+  - `iCultureGarrison`: 12
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 冷気 iCombat=1
+
+### Metatoron - メタトロン
+
+- 内部名: `UNIT_METATORON1`
+- ユニットクラス: メタトロン
+- 兵科: 魔獣ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 1
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 忠誠 / 上級ドラゴン / 特別奇襲 / 病気無効
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 死亡すると指導者の志向を全て失う
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=40 / 魔獣ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: ,Art_Kaijin/Interface/Popups/MetatoronPop.dds
+  - `PythonPostCombatLost`: postCombatMetatoronLost
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Metatoron the Populace - 蒼生のメタトロン
+
+- 内部名: `UNIT_METATORON2`
+- ユニットクラス: メタトロン
+- 兵科: 魔獣ユニット
+- 攻撃力: 3
+- 防御力: 3
+- 移動力: 1
+- 世代: 2
+- 必要テクノロジー: 青銅器
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 英雄 / 忠誠 / 病気無効 / 上級ドラゴン / 特別奇襲
+- ダメージ上限: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 死亡すると指導者の志向を全て失う
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=40 / 魔獣ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: ,Art_Kaijin/Interface/Popups/MetatoronPop.dds
+  - `PythonPostCombatLost`: postCombatMetatoronLost
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Metatoron the Uncivilized wasteland - 天荒のメタトロン
+
+- 内部名: `UNIT_METATORON3`
+- ユニットクラス: メタトロン
+- 兵科: 魔獣ユニット
+- 攻撃力: 6
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 鉄器
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 英雄 / 忠誠 / 病気無効 / 偉大なドラゴン / 特別奇襲
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 死亡すると指導者の志向を全て失う
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=40 / 魔獣ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: ,Art_Kaijin/Interface/Popups/MetatoronPop.dds
+  - `PythonPostCombatLost`: postCombatMetatoronLost
+  - `DamageTypeCombats`: 火炎 iCombat=1
+
+### Metatoron the Dragonling Load - 人竜王メタトロン
+
+- 内部名: `UNIT_METATORON4`
+- ユニットクラス: メタトロン
+- 兵科: 魔獣ユニット
+- 攻撃力: 12
+- 防御力: 12
+- 移動力: 2
+- 世代: 4
+- 必要テクノロジー: 神々の本質
+- 必要な文明: アルタイル
+- 初期昇進: ドラゴン / 英雄 / 忠誠 / 病気無効 / 特別奇襲 / 原初のドラゴン / 炎Ⅱ
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 100
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 死亡すると指導者の志向を全て失う
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `iWorkRate`: 100
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 6
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitCombatMods`: 動物ユニット iUnitCombatMod=40 / 魔獣ユニット iUnitCombatMod=40
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: ,Art_Kaijin/Interface/Popups/MetatoronPop.dds
+  - `PythonPostCombatLost`: postCombatMetatoronLost
+  - `DamageTypeCombats`: 火炎 iCombat=3
+
+### Froideur - フロイデ
+
+- 内部名: `UNIT_FROIDEUR`
+- ユニットクラス: フロイデ
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 400
+- 攻撃力: 7
+- 防御力: 7
+- 移動力: 9
+- 世代: 3
+- 必要テクノロジー: 野生の触れ合い
+- 必要な文明: ニバル
+- 初期昇進: 英雄 / 冷気抵抗 / 飛行 / 看破の目 / 歩哨Ⅰ / 歩哨Ⅱ / 不可視
+- ダメージ上限: 100
+- 間接攻撃力: 7
+- 間接攻撃の射程: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `iAirCombatLimit`: 45
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `Image`: Art_Kaijin/Interface/Popups/Nival_Froideur_pop.dds
+
+### White Fang - 氷の牙
+
+- 内部名: `UNIT_WHITE_FANG`
+- 固有: ニバル（レンジャー の代替）
+- ユニットクラス: レンジャー
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 85
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 動物の馴致
+- 初期昇進: 冷気抵抗 / 歩哨Ⅰ / 氷の道
+- 昇格先: 魔獣使い
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iWorkRate`: 200
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 40
+  - `TerrainAttacks`: 氷原 iTerrainAttack=10
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PrereqBuildingClass`: 狩猟小屋
+
+### Shadows of Ice - 氷の影
+
+- 内部名: `UNIT_SHADOWS_OF_ICE`
+- 固有: ニバル（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 140
+- 攻撃力: 9
+- 防御力: 8
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 必要な建造物: 鎮守の杜
+- 初期昇進: 冷気抵抗 / 歩哨Ⅰ / 氷の道 / 魔法抵抗 / 隠れる技能
+- ダメージ上限: 100
+- 積載量: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `TerrainAttacks`: 氷原 iTerrainAttack=10
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `DamageTypeCombats`: 冷気 iCombat=3
+
+### Snow Lizard - 雪蜥蜴
+
+- 内部名: `UNIT_SNOW_LIZARD`
+- 固有: ニバル（暗殺者 の代替）
+- ユニットクラス: 暗殺者
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 80
+- 攻撃力: 6
+- 防御力: 4
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 毒物
+- 初期昇進: 狙撃 / 冷気抵抗 / 歩哨Ⅰ / 氷の道
+- 昇格先: 狙撃手
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `ProductionTraits`: 野戦志向 iProductionTrait=100
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -30
+  - `iCityDefense`: -30
+  - `iCultureGarrison`: 3
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bImmuneToDefensiveStrike`: 1
+  - `DamageTypeCombats`: 冷気 iCombat=1
+
+### Snowstorm Avatar - 吹雪の化身
+
+- 内部名: `UNIT_SNOWSTORM_AVATAR`
+- 固有: ニバル（狙撃手 の代替）
+- ユニットクラス: 狙撃手
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 240
+- 攻撃力: 9
+- 防御力: 7
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 毒物
+- 追加で必要なテクノロジー: ギルド
+- 初期昇進: 狙撃 / 冷気抵抗 / 歩哨Ⅰ / 氷の道 / 吹雪の衣
+- ダメージ上限: 100
+- 先制攻撃: 1
+- 巻き添え被害: 40
+- 武器の段階: 2
+- 必要レベル: 5
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `SeeInvisible`: INVISIBLE_STEALTH
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 90
+  - `iCollateralDamageMaxUnits`: 1
+  - `FeatureAttacks`: 猛吹雪 iFeatureAttack=50
+  - `FeatureDefenses`: 猛吹雪 iFeatureDefense=50
+  - `iCultureGarrison`: 10
+  - `FormationType`: FORMATION_TYPE_RANGED
+  - `bImmuneToDefensiveStrike`: 1
+  - `DamageTypeCombats`: 冷気 iCombat=3
+
+### Swamp Troll - 沼トロール
+
+- 内部名: `UNIT_TROLL`
+- ユニットクラス: 沼トロール
+- 兵科: 魔獣ユニット
+- 攻撃力: 4
+- 防御力: 4
+- 移動力: 1
+- 世代: 2
+- 初期昇進: 水陸両用 / 行軍
+- ダメージ上限: 100
+- 説明（ゲーム内ヘルプ）: 進入不可: 海洋
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: -25
+  - `FeatureNatives`: 沼
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+
+### Hippogriff - ヒポグリフ
+
+- 内部名: `UNIT_HIPPOGRIFF`
+- ユニットクラス: ヒポグリフ
+- 兵科: 魔獣ユニット
+- 攻撃力: 8
+- 防御力: 8
+- 移動力: 2
+- 世代: 4
+- 初期昇進: 飛行 / 歩哨Ⅰ / 歩哨Ⅱ / 大気Ⅱ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bAnimal`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `TerrainImpassables`: 外洋
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `UnitCombatMods`: 騎乗ユニット iUnitCombatMod=50
+  - `iCultureGarrison`: 4
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bNoDefaultRace`: 1
+  - `bCarnivorous`: 1
+  - `UnitCreateFromCombat`: グリフォン
+  - `iUnitCreateFromCombatChance`: 45
+
+### Ose - オセ
+
+- 内部名: `UNIT_OSE`
+- ユニットクラス: オセ
+- 兵科: 魔獣ユニット
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 1
+- 世代: 4
+- 必要な文明: 野生の動物
+- 初期昇進: 潜在力 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 暗黒魔法Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bFreeXP`: 1
+  - `bNoDefaultRace`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Animals_Ose_pop.dds
+  - `PythonPostCombatLost`: postCombatOse
+
+### Tezcatlipoca - テスカトリポカ
+
+- 内部名: `UNIT_TEZCATLIPOCA`
+- ユニットクラス: テスカトリポカ
+- 兵科: 魔獣ユニット
+- 攻撃力: 20
+- 防御力: 20
+- 移動力: 1
+- 世代: 4
+- 必要な文明: 野生の動物
+- 初期昇進: 潜在力 / 精神集中Ⅰ / 精神集中Ⅱ / 精神集中Ⅲ / 太陽Ⅰ
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bFreeXP`: 1
+  - `bNoDefaultRace`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Animals_Tezcatlipoca_pop.dds
+  - `PythonPostCombatLost`: postCombatTezcatlipoca
+
+### Inugami - 狗神
+
+- 内部名: `UNIT_INUGAMI`
+- ユニットクラス: 狗神
+- 兵科: 魔獣ユニット
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 1
+- 世代: 4
+- 必要な文明: 野生の動物
+- 初期昇進: 精霊 / 不可視 / 人食い
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_ANIMAL
+  - `bNoDefaultRace`: 1
+  - `Image`: Art_Kaijin/Interface/Popups/Animals_Inugami_pop.dds
+  - `PythonPostCombatLost`: postCombatInugami
+
+### Ceryneian Hind - ケリュネイアの鹿
+
+- 内部名: `UNIT_CERYNEIAN_HIND`
+- ユニットクラス: ケリュネイアの鹿
+- 兵科: 魔獣ユニット
+- 攻撃力: 18
+- 防御力: 18
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 野生の動物
+- ダメージ上限: 100
+- 退却率: 50
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_MACHINE
+  - `bNoDefaultRace`: 1
+  - `iWithdrawlProbDefensive`: 25
+  - `Image`: Art_Kaijin/Interface/Popups/Animals_CeryneianHind_pop.dds
+  - `PythonPostCombatLost`: postCombatCeryneianHind
+
+### Lemegeton - レメゲトン
+
+- 内部名: `UNIT_LEMEGETON`
+- ユニットクラス: レメゲトン
+- 兵科: 魔獣ユニット
+- 攻撃力: 16
+- 防御力: 16
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: 精霊 / 魔法抵抗 / 長身 / 原初のドラゴン
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/Popups/Lemegeton_pop.dds
+  - `PythonPostCombatLost`: postCombatLemegeton
+  - `DamageTypeCombats`: 不浄 iCombat=16
+  - `DamageTypeResists`: 不浄 iResist=100
+
+### Alexander the Dragon Lord - 神竜王アレキサンダー
+
+- 内部名: `UNIT_ALEXANDER`
+- ユニットクラス: 神竜王アレキサンダー
+- 兵科: 魔獣ユニット
+- 攻撃力: 32
+- 防御力: 32
+- 移動力: 3
+- 世代: 4
+- 必要な文明: 魔族
+- 初期昇進: ドラゴン / 魔法抵抗 / 長身 / 原初のドラゴン
+- ダメージ上限: 100
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitaryProduction`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bCanMoveImpassable`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `iXPValueAttack`: 32
+  - `iXPValueDefense`: 16
+  - `iCultureGarrison`: 16
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `Image`: Art_Kaijin/Interface/Popups/Alexander_pop.dds
+  - `PythonPostCombatLost`: postCombatAlexander
+  - `DamageTypeResists`: 不浄 iResist=100 / 死 iResist=100 / 神聖 iResist=100
+
+### Ithaqua - イタカ
+
+- 内部名: `UNIT_ITHAQUA`
+- 固有: ゾス（勇士 の代替）
+- ユニットクラス: 勇士
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 8
+- 防御力: 6
+- 移動力: 1
+- 世代: 3
+- 必要テクノロジー: 製錬
+- 初期昇進: 魔族 / 飛行
+- 昇格先: 狂戦士
+- ダメージ上限: 100
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCityAttack`: 20
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 斧兵 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 斧兵 iUnitClassMod=40
+  - `iConscription`: 7
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bCarnivorous`: 1
+
+### Byakhee - バイアクヘー
+
+- 内部名: `UNIT_BYAKHEE`
+- 固有: ゾス（狂戦士 の代替）
+- ユニットクラス: 狂戦士
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 180
+- 攻撃力: 14
+- 防御力: 7
+- 移動力: 1
+- 世代: 4
+- 必要テクノロジー: 狂暴
+- 初期昇進: 魔族 / 飛行
+- ダメージ上限: 100
+- 巻き添え被害: 40
+- 武器の段階: 3
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bCanMoveAllTerrain`: 1
+  - `ReligionType`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 50
+  - `iCollateralDamageMaxUnits`: 2
+  - `iCityAttack`: 40
+  - `iCityDefense`: 20
+  - `UnitClassAttackMods`: 勇士 iUnitClassMod=40
+  - `UnitClassDefenseMods`: 勇士 iUnitClassMod=40
+  - `iConscription`: 10
+  - `iCultureGarrison`: 8
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bCarnivorous`: 1
+
+### The Hounds of Tindalos - ティンダロスの猟犬
+
+- 内部名: `UNIT_TINDALOS`
+- 固有: ゾス（弓騎兵 の代替）
+- ユニットクラス: 弓騎兵
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 120
+- 攻撃力: 5
+- 防御力: 5
+- 移動力: 3
+- 世代: 3
+- 必要テクノロジー: 鐙
+- 追加で必要なテクノロジー: 弓術
+- 初期昇進: 魔族 / 精神集中Ⅰ / 精神集中Ⅱ / 水上歩行 / 人食い
+- ダメージ上限: 100
+- 退却率: 60
+- 先制攻撃: 1
+- 武器の段階: 2
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bPillage`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreTerrainCost`: 1
+  - `FlankingStrikes`: カタパルト iFlankingStrength=100 / 大砲 iFlankingStrength=100
+  - `ReligionType`: 深海の旧支配者
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iCollateralDamageLimit`: 100
+  - `iCollateralDamageMaxUnits`: 4
+  - `iCultureGarrison`: 5
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `bIgnoreRaceUpgradeTo`: 1
+  - `bCarnivorous`: 1
+  - `iWithdrawlProbDefensive`: 20
+  - `DamageTypeCombats`: 不浄 iCombat=1
+  - `DamageTypeResists`: 火炎 iResist=-50
+
+### Dracolich - 火竜の屍骸
+
+- 内部名: `UNIT_BONE_DRAKE`
+- 固有: アリストラク（魔獣使い の代替）
+- ユニットクラス: 魔獣使い
+- 兵科: 魔獣ユニット
+- コスト[ハンマー]: 200
+- 攻撃力: 9
+- 防御力: 9
+- 移動力: 3
+- 世代: 4
+- 必要テクノロジー: 動物の極意
+- 初期昇進: 病気無効 / 屍人
+- ダメージ上限: 100
+- 退却率: 20
+- 積載量: 1
+- 武器の段階: 3
+- 説明（ゲーム内ヘルプ）: 戦闘に勝利することで殺意の熱狂を得る
+- その他の設定:
+  - `Domain`: DOMAIN_LAND
+  - `Invisible`: INVISIBLE_ANIMAL
+  - `SeeInvisible`: INVISIBLE_ANIMAL
+  - `bNoBadGoodies`: 1
+  - `bMilitaryHappiness`: 1
+  - `bMilitarySupport`: 1
+  - `bMilitaryProduction`: 1
+  - `bFirstStrikeImmune`: 1
+  - `bNoDefensiveBonus`: 1
+  - `bIgnoreBuildingDefense`: 1
+  - `bFlatMovementCost`: 1
+  - `iXPValueAttack`: 8
+  - `iXPValueDefense`: 4
+  - `iHillsAttack`: 25
+  - `UnitCombatMods`: 白兵ユニット iUnitCombatMod=25 / 騎乗ユニット iUnitCombatMod=25 / 動物ユニット iUnitCombatMod=50 / 魔獣ユニット iUnitCombatMod=50
+  - `SpecialCargo`: SPECIALUNIT_BIRD
+  - `DomainCargo`: DOMAIN_AIR
+  - `iCultureGarrison`: 6
+  - `FormationType`: FORMATION_TYPE_DEFAULT
+  - `PythonPostCombatWon`: postCombatBattleFrenzy
+  - `DamageTypeCombats`: 不浄 iCombat=5

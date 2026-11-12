@@ -2,6 +2,10 @@
 
 出典はすべて Civ4/FfH2情報局（http://kentasis.web.fc2.com/）。
 
+## OAC 0.57 のデータ（oac-057/、ゲームのXMLから生成）
+
+- `oac-057/OAC-057_TechData.md`: テクノロジー（`tools/gen_tech.py` で生成。Pythonで実装された効果と文明固有の別ルートは含まない）
+
 ## OAC 0.56 非公式Patch29 のデータ（oac-p29/）
 
 - `oac-p29/OAC-P29_AbilityData.md`: その他の呪文・特殊技能
